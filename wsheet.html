@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<body>
+<center>
+<style type="text/css" >
+
+body { min-height: 380px; }
+
+table.numbtn td {
+	border:1px solid gray;
+	border-radius: 5px;
+    background-color: silver;
+	width: 60px;
+	text-align: center;
+	font-size: 200%;
+}
+
+.num {
+	border:1px solid gray;
+	border-radius: 5px;
+	width: 200px;
+	text-align: right;
+	font-size: 230%;
+}
+#answerId {
+	border-top: solid; 
+	clear: both;
+	text-align: right;
+	background-color: transparent;
+}
+
+#sessionlog {
+    font-size: 8pt;
+    text-align: left;
+    width: 200px;
+	border-radius: 5px;
+	border:1px solid gray;
+}
+
+
+#historytbl {
+    font-size: 8pt;
+    text-align: left;
+    width: 200px;
+	border-radius: 5px;
+	border:1px solid gray;
+}
+
+#historytbl tr {
+}
+
+#historytbl tr th {
+    border-bottom: 1px solid gray;
+}
+
+#historytbl td {
+    border-bottom: 1px solid gray;
+}
+
+.score {
+	border:1px solid gray;
+	border-radius: 5px;
+	width: 100px;
+	text-align: center;
+	font-size: 100%;
+}
+
+
+.right {
+    color: green;
+}
+
+.wrong {
+    color: red;
+}
+
+</style>
+
+<br>
+<table cellspacing="0px" class="num" align="center">
+<tr><td id="first" >nje</td></tr>
+<tr><td id="second" >dy</td></tr>
+<tr><td id="answerId" >_</td></tr>
+</table>
+
+<table id="numentry" class="numbtn" cellspacing="7px" align="center">
+</table>
+
+<table align="center"><tr>
+<td id="score" class="score" >Pike: 0</td>
+<!-- onclick='if(confirm("Wipe clean history?")) { localStorage.setItem("wsheetdata", ""); location.reload(); }' -->
+<td id="result" class="score" onclick="showHideHist();" >&darr; 0:0</td>
+<td id="time" class="score" align="right">00:00</td>
+</tr></table>
+
+<table id="historytbl"></table>
+<p id="sessionlog"></p>
+<!--
+<p id="errors"></p>
+getEl('errors').innerHTML += 'ap='+ap+' bp='+bp+' borrw='+borrow+' count='+count;
+-->
+
+<script>
+
+var correct = 0;
+var total = 0;
+var stAnsw = 0;
+var corAnsw = 0;
+var counter = 0;
+var lastcounter = 0;
+var score = 0;
+var first = 0;
+var second = 0;
+
+var step = (new Date()).getTime();
+var withcarry = 1;
+var withborrow = 1;
+var today = getToday();
+
+var myInterval;
+var interval_delay = 1000;
+var is_interval_running = false; //Optional
+var maxval = 19;
+var minval = 6;
+var carryBorrowBias = 0.6;
+var op;
+var histShown = false;
+
+//if browser window has ontouchend capability its a mobile browser
+var clickOrTouch = (('ontouchend' in window)) ? 'touchend' : 'click';
+var sessiontxt = "";
+var historytxt = "";
+var negBias = 0.7;
+
+loadSession();
+refreshVal();
+window.onfocus = onFocus;
+window.onblur = onBlur;
+onFocus();
+populateTable();
+
+//hide address bar on iphone
+window.addEventListener("load", function() {
+    setTimeout(function() {window.scrollTo(0,0); }, 0);
+});
+
+
+function getEl(elName) {
+    return document.getElementById(elName);
+}
+
+
+function appendToRes (c) {
+  var el = getEl("answerId");
+  el.innerHTML = '_' + c + el.innerHTML.substring(1,el.innerHTML.length);
+}
+
+document.onkeydown = function(e) { 
+    var kk = parseInt(e.keyCode || e.which);
+    if(48 <= kk && kk <= 57)
+        appendToRes(kk-48);
+    if(kk == 88)
+        delLeftRes();
+    if(kk == 13)
+        checkAnsw();
+}
+
+function delLeftRes (c) {
+  var el = getEl("answerId");
+  var txtv = el.innerHTML;
+  if(txtv.length < 2) return;
+  el.innerHTML = '_' + el.innerHTML.substring(2,el.innerHTML.length);
+}
+
+
+function getRand(minval, maxval) {
+    return parseInt( (Math.random() * 100000) % (maxval-minval)) + minval;
+}
+
+function getOper() {
+    return (Math.random() > negBias) ? "+" : "-";
+}
+
+function shouldHaveCarryOrBorrow() {
+    return (Math.random() > carryBorrowBias);
+}
+
+//way to check if it has html5 storage
+//nowadays almost all the relevant machines have this
+function supports_html5_storage() {
+  try {
+    return 'localStorage' in window && window['localStorage'] !== null;
+  } catch (e) {
+    return false;
+  }
+}
+
+function subtractionDifficulty(a, b) {
+    var borrow = 0;
+    var count = 0;
+    while(a > 0 && b > 0) {
+        var ap = a % 10;
+        var bp = b % 10;
+        if(ap < bp + borrow) {
+            count++;
+            borrow = 1;
+        }
+        else borrow = 0;
+        a = parseInt(a / 10);
+        b = parseInt(b / 10);
+    }
+
+    return count;
+}
+
+function additionDifficulty(a, b) {
+    var carry = 0;
+    var count = 0;
+    while(a > 0 || b > 0) {
+        var ap = a % 10;
+        var bp = b % 10;
+        var o = ap + bp + carry;
+        if(o >= 10) {
+            count++;
+            carry = 1;
+        }
+        else carry = 0;
+        a /= 10;
+        b /= 10;
+    }
+
+    return count;
+}
+
+function intervalFunction () {
+     is_interval_running = true; //Optional
+
+     // Code running while window is in focus: update timer label
+    ++counter;
+    m = checkTime(parseInt(counter / 60));
+    s = checkTime(parseInt(counter % 60));
+    getEl('time').innerHTML = m + ":" + s;
+}
+
+//creates the buttons as cells, 
+//sets the content of the btn to be the val passed
+//ads listener to call func when clicked
+function createTd(row, val, func, bgCol) {
+    var td = document.createElement("td");
+    td.innerHTML = val;
+    if(func)
+        td.addEventListener(clickOrTouch, function() { 
+            func(td.innerHTML); 
+            if(bgCol && !('ontouchend' in window))
+                this.bgColor = bgCol[0]
+        });
+    if(bgCol) {
+        td.addEventListener("mouseover", function() {this.bgColor = bgCol[1]; });
+        td.addEventListener("mouseout", function() {this.bgColor = bgCol[2]; });
+    }
+    row.appendChild(td);    
+}
+
+
+function populateTable() {
+    var count = 0;
+    var i;
+    var j;
+    var tbl = getEl("numentry");
+    for(i = 0; i < 3; i++) {
+      var row = document.createElement("tr");
+      for(j = 0; j < 3; j++) {
+        createTd(row, ++count, appendToRes);
+      }
+      tbl.appendChild(row);
+    }
+
+    {
+        var row = document.createElement("tr");
+        createTd(row, 'x', delLeftRes);
+        createTd(row, '0', appendToRes);
+        createTd(row, '&rarr;', checkAnsw);
+        tbl.appendChild(row);
+    }
+
+}
+
+function onFocus () {
+    clearInterval(myInterval); // Clearing interval if for some reason it has not been cleared yet
+    if  (!is_interval_running) //Optional
+        myInterval = setInterval(intervalFunction, interval_delay);
+}
+
+function onBlur() {
+    clearInterval(myInterval); // Clearing interval on window blur
+    is_interval_running = false; //Optional
+}
+
+
+function getCookie(cname)
+{
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++)
+    {
+        var c = ca[i].trim();
+        if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+    }
+    return "";
+} 
+
+function refreshVal() {
+	v1 = getRand(minval, maxval);
+	v2 = getRand(minval, maxval);
+	op = getOper();
+
+    if(v1 < v2) {     
+        temp = v1;
+        v1 = v2;
+        v2 = temp; 
+    }
+	if(op == "+") {
+        if(shouldHaveCarryOrBorrow() && ((v1 % 10) + (v2 % 10)) < 10) {
+            return refreshVal();
+        }
+        corAnsw = v1 + v2;
+    }
+	else if(op == "-") {
+        if(shouldHaveCarryOrBorrow() && ((v1 % 10) - (v2 % 10)) >= 0) {
+            return refreshVal();
+        }
+        corAnsw = v1 - v2;
+    }
+
+    first = v1;
+    second = v2;
+	getEl("first").innerHTML = v1; 
+	getEl("second").innerHTML = op + "  " + v2;
+	getEl("answerId").innerHTML = "_";
+}
+
+
+function getScoreColor(score) {
+    col = 255 - Math.round(score/10);
+    if(col < 0) col = '00';
+    else if(col < 10) col = '0' + col;
+    hexcol = col.toString(16);
+    return '#'+hexcol+'ff'+hexcol;
+}
+
+function checkAnsw() {
+    var el = getEl("answerId");
+    var txtansw = el.innerHTML 
+    if(txtansw == "_") return; //no numbers entered
+    do { //chew away '_' in first pos and all the prepending zeros
+        txtansw = txtansw.substring(1,txtansw.length); 
+    } while(txtansw.length > 1 && txtansw[0] == '0');
+	var st = parseInt(txtansw);
+    var st2 = parseInt(st);   //will be NaN for non integer values
+    if(st != st2) return; //dont allow non int values
+
+    var difficulty = (op == '+' ? 1 + additionDifficulty(first, second)
+                            : 2 + 2 * subtractionDifficulty(first, second));
+
+    cls = "wrong"
+	if(corAnsw == st) {
+		correct++;
+        cls = "right";
+        score += (difficulty * 20 + 10);
+	}
+
+	total++;
+	getEl("result").innerHTML = getEl("result").innerHTML.substring(0,1) + correct + ":" + total;
+    var nextst = (new Date()).getTime();
+
+
+    sessiontxt = "<div class=\"" + cls + "\"> " + parseInt(total) + ") "
+                 + first + " " + op + "  " + second + " = "
+                 + txtansw + " ("
+                 + (counter - lastcounter) + "s, "
+                 + parseInt((nextst-step)/1000) + "s, "+difficulty+")</div>"
+                 + sessiontxt;
+
+    step = nextst;
+    lastcounter = counter;
+	getEl("score").innerHTML = "Pike: " + Math.round(score);
+	getEl("score").bgColor = getScoreColor(score);
+    
+    saveSession(score, correct, total, sessiontxt);
+	refreshVal();
+    window.scrollTo(0,0);
+
+    var dt = getToday();
+    if(dt != today) {
+        today = dt;
+        loadSession();
+    }
+}
+
+
+function loadSession() {
+    historytxt = localStorage.getItem("wsheetdata");
+    if(historytxt) { 
+        var historyObj = JSON.parse(historytxt);
+        var ht = historyObj[today];
+        if(ht) {
+            score = ht.points;
+            correct = ht.correct;
+            total = ht.total;
+            sessiontxt = ht.session;
+        }
+    }
+
+	getEl("score").innerHTML = "Pike: " + Math.round(score);
+	getEl("score").bgColor = getScoreColor(score);
+	getEl("result").innerHTML = "&darr; " + correct + ":" + total;
+}
+
+
+function saveSession(score, numcorrect, numtotal, sessiontxt) {
+    historytxt = localStorage.getItem("wsheetdata");
+    var historyObj = {}; 
+    if(historytxt) historyObj = JSON.parse(historytxt);
+
+    historyObj[today] = { points: score, correct: numcorrect, total: numtotal, session: sessiontxt}; 
+    //historyObj["20140522"] = { points: 102, correct: 1, total: 1, session: "1) 53 + 18 = 73 (11s, 11s)"}; 
+
+    var tmpstr = JSON.stringify(historyObj);
+    localStorage.setItem("wsheetdata", tmpstr); 
+}
+
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+
+
+function getToday() {
+    var gldt = new Date();
+    y = gldt.getFullYear();
+    m = checkTime(gldt.getMonth()+1);
+    d = checkTime(gldt.getDate());
+    return ""+y+m+d;
+}
+
+function showHideHist() {
+    histShown = !histShown;
+    var el = getEl("result");
+    var txtv = el.innerHTML;
+    //alert(" " + window.innerHeight);
+    txtv = txtv.substring(1,txtv.length); //0 - is arrow
+    var hEl = getEl("historytbl");
+
+    if(histShown) {
+      el.innerHTML = "&uarr;" + txtv;
+        document.getElementsByTagName('body')[0].style.minHeight = "765px";
+        //window.scrollTo(0,window.innerHeight);
+        window.scrollTo(0,450);
+        var historyObj = JSON.parse(historytxt);
+        {
+            var row = document.createElement("th");
+            createTd(row, "History", null);
+            hEl.appendChild(row);
+        }
+        for(key in historyObj) {
+            var row = document.createElement("tr");
+            var hk = historyObj[key];
+
+            /* var locdt = key.substring(0,4) + '-' + key.substring(4,6)
+                + '-' + key.substring(6,8); */
+            createTd(row, 
+                    key+" "+Math.round(hk.points)+" "+hk.correct+":"+hk.total,
+                    showSession, ['#99cc99', '#C0C0C0', '#FFFFFF']);
+            hEl.appendChild(row);
+        }
+
+        getEl("sessionlog").innerHTML = sessiontxt;
+    } 
+    else {
+        el.innerHTML = "&darr;" + txtv;
+        document.getElementsByTagName('body')[0].style.minHeight = "380px";
+        window.scrollTo(0,0);
+        getEl("sessionlog").innerHTML = "";
+        hEl.innerHTML = "";
+    }
+}
+
+
+function showSession(txt) {
+    var elms = txt.split(" ");
+    var dt = elms[0];
+    var historyObj = JSON.parse(historytxt);
+    if(dt && historyObj[dt]) {
+        var tmptxt = historyObj[dt].session;
+        getEl("sessionlog").innerHTML = tmptxt;
+    }
+}
+
+</script>
+
+</body>
+</html>

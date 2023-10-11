@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+
+<body>
+<center>
+<style type="text/css" >
+
+body { min-height: 380px; }
+
+.num {
+	border:1px solid gray;
+	border-radius: 5px;
+	width: 300px;
+	text-align: center;
+	font-family: serif;
+}
+
+#wordcell {
+	font-size: 430%;
+}
+
+.right {
+    color: green;
+}
+
+.wrong {
+    color: red;
+}
+
+</style>
+
+<br>
+<table cellspacing="0px" class="num" align="center">
+<tr> <td id="wordcell" >BA</td> </tr>
+</table>
+
+<table cellspacing="0px" align="center">
+<tr>
+<td id="prev" align="left">BA</td>
+<td id="current" width='300px' align="center"></td>
+<td id="next" align="right">BA</td>
+</tr>
+</table>
+
+
+
+<script>
+
+var vowels = ["i","u","a","e","o","y","&euml;"];
+var consonants = ["b","c","&ccedil;","d","dh","f","g","gj","h","j","k","l","ll","m","n","nj","p","q","r","rr","s","sh","t","th","v","x","xh","z","zh"];
+var numvowels = 7;
+var numcons = 36-numvowels;
+var vowelBias = 0.5;
+var upperBias = 0.5;
+var next = getNextWord();
+var current = "";
+var previous = "";
+var showingPrev = 0;
+
+function nextWord() { 
+    previous = current;
+    current = next;
+    next = getNextWord();
+    getEl("wordcell").innerHTML = current;
+    getEl("prev").innerHTML = previous;
+    getEl("current").innerHTML = current;
+    getEl("next").innerHTML = next;
+}
+
+function getNextWord() {
+    var first_letter;
+    var v = vowels[getRand(0, numvowels)];
+    var c = consonants[getRand(0, numcons)];
+    var v2 = vowels[getRand(0, numvowels)];
+    var c2 = consonants[getRand(0, numcons)];
+    var word;
+    var firstl;
+    var secl;
+    if(isVowelFirst()) {
+	firstl = v;
+        secl = c;
+	thirdl = v2;
+	fourth = c2;
+    } 
+    else {
+	firstl = c;
+        secl = v;
+	thirdl = c2;
+	fourth = v2;
+    }
+
+    if(isUpperFirst()) {
+        firstl = toupper(firstl);
+        if(isUpperSecond()) {
+            secl = toupper(secl);
+            thirdl = toupper(thirdl);
+            fourth = toupper(fourth);
+	}
+    }
+    return firstl+secl+thirdl+fourth;
+}
+
+function toupper(c) {
+    var len = c.length;
+    if(len <= 2)
+	return c.toUpperCase();
+    
+    if(len == 6) //e
+	return "&Euml;";
+    if(len == 8) //c
+	return "&Ccedil;";
+}
+
+//if browser window has ontouchend capability its a mobile browser
+//var clickOrTouch = (('ontouchend' in window)) ? 'touchend' : 'click';
+var clickOrTouch = 'click';
+
+
+//<p id="parag"> this is aha </p>
+//getEl("parag").innerHTML += clickOrTouch;
+
+
+nextWord();
+getEl("wordcell").addEventListener(clickOrTouch, nextWord)
+getEl("wordcell").addEventListener('touchmove', function(e){
+   e.prevenDefault();
+}, false)
+
+function getEl(elName) {
+    return document.getElementById(elName);
+}
+
+function getRand(minval, maxval) {
+    return parseInt( (Math.random() * 100000) % (maxval-minval)) + minval;
+}
+
+function isVowelFirst() {
+    return (Math.random() > vowelBias);
+}
+
+function isUpperFirst() {
+    return (Math.random() > upperBias);
+}
+
+function isUpperSecond() {
+    return (Math.random() > upperBias);
+}
+
+var startX;
+var startY;
+document.getElementsByTagName('body')[0].addEventListener('touchstart', function (e) {
+   var obj = e.changedTouches[0];
+   startX = obj.pageX;
+   startY = obj.pageY;
+   e.preventDefault();
+}, false);
+
+document.getElementsByTagName('body')[0].addEventListener('touchmove', function (e) {
+   e.preventDefault();
+}, false);
+
+document.getElementsByTagName('body')[0].addEventListener('touchend', function (e) {
+   var obj = e.changedTouches[0];
+   var dist = obj.pageX - startX;
+   if (dist > 0) { //right swipe to get previous
+     if(showingPrev != 1 && previous != "") {
+       getEl("wordcell").innerHTML = previous;
+       showingPrev = 1;
+     }
+   }
+   else { //left swipe, next word
+     if(!showingPrev)
+       nextWord();
+     else {
+       getEl("wordcell").innerHTML = current;
+     }
+     showingPrev = 0;
+   }
+   e.preventDefault();
+}, false);
+
+
+
+
+</script>
+
+</body>
+</html>
