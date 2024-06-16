@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Selectable Pairs with Points and Delayed Substitution</title>
+<title>Selectable Pairs with Points</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -44,7 +44,7 @@
 </style>
 </head>
 <body>
-    <h1>Selectable Pairs with Points and Delayed Substitution</h1>
+    <h1>Selectable Pairs with Points</h1>
     <div class="container">
         <div class="column" id="leftColumn"></div>
         <div class="column" id="rightColumn"></div>
@@ -53,28 +53,41 @@
 
     <script>
         // Define your pairs of symbols
-        const pairs = [
-            { key: 'a', value: 'A' },
-            { key: 'b', value: 'B' },
-            { key: 'c', value: 'C' },
-            { key: 'd', value: 'D' },
-            { key: 'e', value: 'E' },
-            { key: 'f', value: 'F' },
-            { key: 'g', value: 'G' },
-            { key: 'h', value: 'H' },
-            { key: 'i', value: 'I' },
-            { key: 'j', value: 'J' },
-            { key: 'k', value: 'K' },
-            { key: 'l', value: 'L' },
-            { key: 'm', value: 'M' },
-            { key: 'n', value: 'N' },
-            { key: 'o', value: 'O' }
-            // Add more pairs as needed
-        ];
+const pairs = [
+    { key: 'a', value: 'A' },
+    { key: 'b', value: 'B' },
+    { key: 'c', value: 'C' },
+    { key: 'd', value: 'D' },
+    { key: 'e', value: 'E' },
+    { key: 'f', value: 'F' },
+    { key: 'g', value: 'G' },
+    { key: 'h', value: 'H' },
+    { key: 'i', value: 'I' },
+    { key: 'j', value: 'J' },
+    { key: 'k', value: 'K' },
+    { key: 'l', value: 'L' },
+    { key: 'm', value: 'M' },
+    { key: 'n', value: 'N' },
+    { key: 'o', value: 'O' },
+    { key: 'p', value: 'P' },
+    { key: 'q', value: 'Q' },
+    { key: 'r', value: 'R' },
+    { key: 's', value: 'S' },
+    { key: 't', value: 'T' },
+    { key: 'u', value: 'U' },
+    { key: 'v', value: 'V' },
+    { key: 'w', value: 'W' },
+    { key: 'x', value: 'X' }
+];
+
 
         let selectedLeftBox = null; // Track currently selected box in the left column
         let selectedRightBox = null; // Track currently selected box in the right column
         let points = 0; // Track user points
+        let correctPairsCount = 0; // Track count of correctly guessed pairs
+
+        let leftInvisibleBoxes = []; // Array to store invisible left boxes
+        let rightInvisibleBoxes = []; // Array to store invisible right boxes
 
         // Function to shuffle array randomly
         function shuffleArray(array) {
@@ -118,24 +131,60 @@
                         points++;
                         document.getElementById('points').textContent = points;
 
-                        // Mark boxes as correct and hide them
+                        // Mark boxes as correct
                         selectedLeftBox.classList.add('correct');
                         selectedRightBox.classList.add('correct');
 
-                        // Set a brief timeout to change opacity to 0
+                        // Make correct pairs invisible
+                      setTimeout(() => {
+                        selectedLeftBox.classList.add('invisible');
+                        selectedRightBox.classList.add('invisible');
+			}, 200);
+
+                        // Increment correct pairs count
+                        correctPairsCount++;
+
+
+                        // Check if 3 correct pairs have been guessed
+                        if (correctPairsCount === 3) {
+                            // Reset correct pairs count
+                            correctPairsCount--;
+
+                            // Pick a new pair randomly
+                            const shuffledPairs = shuffleArray(pairs.slice());
+                            const newPair = shuffledPairs[0];
+
+                            // Randomly select boxes from invisible boxes arrays
+                            const leftBoxIndex = Math.floor(Math.random() * leftInvisibleBoxes.length);
+                            const rightBoxIndex = Math.floor(Math.random() * rightInvisibleBoxes.length);
+
+                            // Set new pair in randomly selected boxes
+                            leftInvisibleBoxes[leftBoxIndex].textContent = newPair.key;
+                            rightInvisibleBoxes[rightBoxIndex].textContent = newPair.value;
+
+                            // Make these boxes visible and remove from arrays
+                            leftInvisibleBoxes[leftBoxIndex].classList.remove('invisible');
+                            rightInvisibleBoxes[rightBoxIndex].classList.remove('invisible');
+
+                            leftInvisibleBoxes.splice(leftBoxIndex, 1);
+                            rightInvisibleBoxes.splice(rightBoxIndex, 1);
+                	
+			        // Append to invisible boxes arrays
+        	                leftInvisibleBoxes.push(selectedLeftBox);
+	                        rightInvisibleBoxes.push(selectedRightBox);
+                        } else {
+ 	                       // Append to invisible boxes arrays
+        	                leftInvisibleBoxes.push(selectedLeftBox);
+                	        rightInvisibleBoxes.push(selectedRightBox);
+			}
+
+                        // Reset selected boxes after a brief delay
                         setTimeout(() => {
-                            selectedLeftBox.classList.add('invisible');
-                            selectedRightBox.classList.add('invisible');
-                        }, 500);
-
-                        // Generate new random pairs immediately
-                        displayNewPair();
-
-                        // Reset selected boxes
-                        selectedLeftBox.classList.remove('on', 'correct');
-                        selectedRightBox.classList.remove('on', 'correct');
-                        selectedLeftBox = null;
-                        selectedRightBox = null;
+                            selectedLeftBox.classList.remove('on', 'correct');
+                            selectedRightBox.classList.remove('on', 'correct');
+                            selectedLeftBox = null;
+                            selectedRightBox = null;
+                        }, 300);
                     } else {
                         // Reset boxes if not correct
                         setTimeout(() => {
@@ -143,61 +192,22 @@
                             selectedRightBox.classList.remove('on');
                             selectedLeftBox = null;
                             selectedRightBox = null;
-                        }, 500);
+                        }, 300);
                     }
                 }
             }
-        }
-
-        // Function to display new random pairs in invisible boxes
-        function displayNewPair() {
-            // Shuffle pairs randomly
-            const shuffledPairs = shuffleArray(pairs.slice()); // Create a copy to avoid modifying the original array
-
-            // Get left and right column elements
-            const leftColumn = document.getElementById('leftColumn');
-            const rightColumn = document.getElementById('rightColumn');
-
-            // Find invisible boxes
-            const invisibleLeftBoxes = leftColumn.querySelectorAll('.box.invisible');
-            const invisibleRightBoxes = rightColumn.querySelectorAll('.box.invisible');
-
-            // Randomly assign new pairs to invisible boxes
-            const index1 = Math.floor(Math.random() * invisibleLeftBoxes.length);
-            const index2 = Math.floor(Math.random() * invisibleRightBoxes.length);
-
-            invisibleLeftBoxes[index1].textContent = shuffledPairs[0].key;
-            invisibleRightBoxes[index2].textContent = shuffledPairs[0].value;
-
-            // Check if there are two invisible boxes available
-            if (invisibleLeftBoxes.length > 1 && invisibleRightBoxes.length > 1) {
-                const index3 = index1 === 0 ? 1 : 0; // Ensure index3 is different from index1
-                const index4 = index2 === 0 ? 1 : 0; // Ensure index4 is different from index2
-
-                invisibleLeftBoxes[index3].textContent = shuffledPairs[1].key;
-                invisibleRightBoxes[index4].textContent = shuffledPairs[1].value;
-            }
-
-            // Make all invisible boxes visible after assigning pairs
-            const allInvisibleBoxes = document.querySelectorAll('.box.invisible');
-            allInvisibleBoxes.forEach(box => {
-                box.style.opacity = 1;
-                box.style.pointerEvents = 'auto'; // Make boxes clickable again
-            });
         }
 
         // Function to display pairs in two columns with randomized order
         function displayPairs() {
             // Shuffle pairs randomly
             const shuffledPairs = shuffleArray(pairs.slice()); // Create a copy to avoid modifying the original array
-
-            // Take 5 random pairs
-            const selectedPairs = shuffledPairs.slice(0, 5);
+            // take 6 random pairs
+            const selectedPairs = shuffledPairs.slice(0, 6);
 
             // Shuffle keys and values separately
             const shuffledKeys = shuffleArray(selectedPairs.map(pair => pair.key));
             const shuffledValues = shuffleArray(selectedPairs.map(pair => pair.value));
-
             // Get left and right column elements
             const leftColumn = document.getElementById('leftColumn');
             const rightColumn = document.getElementById('rightColumn');
@@ -207,7 +217,7 @@
             rightColumn.innerHTML = '';
 
             // Display pairs in two columns with randomized order
-            for (let i = 0; i < 5; i++) {
+            for (let i = 0; i < 6; i++) {
                 const boxLeft = document.createElement('div');
                 boxLeft.classList.add('box');
                 boxLeft.textContent = shuffledKeys[i];
