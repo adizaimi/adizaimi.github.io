@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selectable Pairs with Points and Delayed Substitution</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .column {
+        padding: 10px;
+        border: 1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .box {
+        margin: 5px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 80px; /* Adjust width as needed */
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .on {
+        background-color: yellow; /* Change to desired 'on' color */
+    }
+    .correct {
+        background-color: lightgray; /* Color for correct pair */
+    }
+    .disabled {
+        pointer-events: none; /* Disable pointer events */
+        opacity: 0.5; /* Optional: reduce opacity to indicate disabled state */
+    }
+</style>
+</head>
+<body>
+    <h1>Selectable Pairs with Points and Delayed Substitution</h1>
+    <div class="container">
+        <div class="column" id="leftColumn"></div>
+        <div class="column" id="rightColumn"></div>
+    </div>
+    <p>Points: <span id="points">0</span></p>
+
+    <script>
+        // Define your pairs of symbols
+        const pairs = [
+            { key: 'a', value: '1' },
+            { key: 'b', value: '2' },
+            { key: 'c', value: '3' },
+            { key: 'd', value: '4' },
+            { key: 'e', value: '5' },
+            { key: 'f', value: '6' },
+            { key: 'g', value: '7' },
+            { key: 'h', value: '8' },
+            { key: 'i', value: '9' },
+            { key: 'j', value: '10' },
+            { key: 'k', value: '11' },
+            { key: 'l', value: '12' },
+            { key: 'm', value: '13' },
+            { key: 'n', value: '14' },
+            { key: 'o', value: '15' }
+            // Add more pairs as needed
+        ];
+
+        let selectedLeftBox = null; // Track currently selected box in the left column
+        let selectedRightBox = null; // Track currently selected box in the right column
+        let points = 0; // Track user points
+
+        // Function to shuffle array randomly
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Function to handle click on a box
+        function boxClickHandler(column, boxElement, keyOrValue) {
+            const isSelected = boxElement.classList.contains('on');
+
+            // Reset previously selected box in the same column
+            if (column === 'left' && selectedLeftBox !== null) {
+                selectedLeftBox.classList.remove('on');
+            } else if (column === 'right' && selectedRightBox !== null) {
+                selectedRightBox.classList.remove('on');
+            }
+
+            // Toggle current box
+            if (!isSelected) {
+                boxElement.classList.add('on');
+                if (column === 'left') {
+                    selectedLeftBox = boxElement;
+                } else if (column === 'right') {
+                    selectedRightBox = boxElement;
+                }
+
+                // Check if both boxes are selected
+                if (selectedLeftBox !== null && selectedRightBox !== null) {
+                    const selectedKey = selectedLeftBox.textContent;
+                    const selectedValue = selectedRightBox.textContent;
+
+                    // Check if selected pair is correct
+                    const isCorrectPair = pairs.some(pair => pair.key === selectedKey && pair.value === selectedValue);
+
+                    if (isCorrectPair) {
+                        // Increment points
+                        points++;
+                        document.getElementById('points').textContent = points;
+
+                        // Mark boxes as correct
+                        selectedLeftBox.classList.add('correct', 'disabled');
+                        selectedRightBox.classList.add('correct', 'disabled');
+
+                        // Temporarily disable boxes for 0.5 seconds
+                        setTimeout(() => {
+                            // Generate new random pairs
+                            displayNewPair(selectedLeftBox, selectedRightBox);
+
+                            // Reset selected boxes
+                            selectedLeftBox.classList.remove('on', 'correct', 'disabled');
+                            selectedRightBox.classList.remove('on', 'correct', 'disabled');
+                            selectedLeftBox = null;
+                            selectedRightBox = null;
+                        }, 1000);
+                    } else {
+                        // Reset boxes if not correct
+                        setTimeout(() => {
+                            selectedLeftBox.classList.remove('on');
+                            selectedRightBox.classList.remove('on');
+                            selectedLeftBox = null;
+                            selectedRightBox = null;
+                        }, 500);
+                    }
+                }
+            }
+        }
+
+        // Function to display new random pairs
+        function displayNewPair(leftBox, rightBox) {
+            // Get left and right column elements
+            const leftColumn = document.getElementById('leftColumn');
+            const rightColumn = document.getElementById('rightColumn');
+
+            // Find index of selected pair
+            const leftIndex = Array.from(leftColumn.children).indexOf(leftBox);
+            const rightIndex = Array.from(rightColumn.children).indexOf(rightBox);
+
+            // Shuffle pairs randomly
+            const shuffledPairs = shuffleArray(pairs.slice()); // Create a copy to avoid modifying the original array
+
+            // Take a new random pair
+            const newPair = shuffledPairs[Math.floor(Math.random() * shuffledPairs.length)];
+
+            // Update selected boxes with new pair
+            leftColumn.children[leftIndex].textContent = newPair.key;
+            rightColumn.children[rightIndex].textContent = newPair.value;
+
+            // Allow boxes to be selectable again after 0.5 seconds
+            setTimeout(() => {
+                leftColumn.children[leftIndex].classList.remove('disabled');
+                rightColumn.children[rightIndex].classList.remove('disabled');
+            }, 500);
+        }
+
+        // Function to display pairs in two columns with randomized order
+        function displayPairs() {
+            // Shuffle pairs randomly
+            const shuffledPairs = shuffleArray(pairs.slice()); // Create a copy to avoid modifying the original array
+
+            // Take 5 random pairs
+            const selectedPairs = shuffledPairs.slice(0, 5);
+
+            // Shuffle keys and values separately
+            const shuffledKeys = shuffleArray(selectedPairs.map(pair => pair.key));
+            const shuffledValues = shuffleArray(selectedPairs.map(pair => pair.value));
+
+            // Get left and right column elements
+            const leftColumn = document.getElementById('leftColumn');
+            const rightColumn = document.getElementById('rightColumn');
+
+            // Clear previous content
+            leftColumn.innerHTML = '';
+            rightColumn.innerHTML = '';
+
+            // Display pairs in two columns with randomized order
+            for (let i = 0; i < 5; i++) {
+                const boxLeft = document.createElement('div');
+                boxLeft.classList.add('box');
+                boxLeft.textContent = shuffledKeys[i];
+                boxLeft.addEventListener('click', () => boxClickHandler('left', boxLeft, 'Key'));
+                leftColumn.appendChild(boxLeft);
+
+                const boxRight = document.createElement('div');
+                boxRight.classList.add('box');
+                boxRight.textContent = shuffledValues[i];
+                boxRight.addEventListener('click', () => boxClickHandler('right', boxRight, 'Value'));
+                rightColumn.appendChild(boxRight);
+            }
+        }
+
+        // Call displayPairs function when the page loads
+        window.onload = displayPairs;
+    </script>
+</body>
+</html>
