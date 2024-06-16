@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Selectable Pairs with Points</title>
+<title>Select Valid Pairs</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -37,6 +37,10 @@
         background-color: lightgreen; /* Color for correct pair */
         transition: background-color 0.5s ease; /* Smooth transition */
     }
+    .incorrect {
+        background-color: red; /* Color for incorrect pair */
+        transition: background-color 0.5s ease; /* Smooth transition */
+    }
     .invisible {
         opacity: 0;
         pointer-events: none;
@@ -44,46 +48,50 @@
 </style>
 </head>
 <body>
-    <h1>Selectable Pairs with Points</h1>
+    <h1>Select Valid Pairs</h1>
     <div class="container">
         <div class="column" id="leftColumn"></div>
         <div class="column" id="rightColumn"></div>
     </div>
-    <p>Points: <span id="points">0</span></p>
+    <p>Points: <span id="points">0</span>
+       Errors: <span id="errors">0</span></p>
+    <p>LeftArr: <span id="leftArr">0</span>
+       RightArr: <span id="rightArr">0</span></p>
 
     <script>
         // Define your pairs of symbols
-const pairs = [
-    { key: 'a', value: 'A' },
-    { key: 'b', value: 'B' },
-    { key: 'c', value: 'C' },
-    { key: 'd', value: 'D' },
-    { key: 'e', value: 'E' },
-    { key: 'f', value: 'F' },
-    { key: 'g', value: 'G' },
-    { key: 'h', value: 'H' },
-    { key: 'i', value: 'I' },
-    { key: 'j', value: 'J' },
-    { key: 'k', value: 'K' },
-    { key: 'l', value: 'L' },
-    { key: 'm', value: 'M' },
-    { key: 'n', value: 'N' },
-    { key: 'o', value: 'O' },
-    { key: 'p', value: 'P' },
-    { key: 'q', value: 'Q' },
-    { key: 'r', value: 'R' },
-    { key: 's', value: 'S' },
-    { key: 't', value: 'T' },
-    { key: 'u', value: 'U' },
-    { key: 'v', value: 'V' },
-    { key: 'w', value: 'W' },
-    { key: 'x', value: 'X' }
-];
+	const pairs = [
+	    { key: 'a', value: 'A' },
+	    { key: 'b', value: 'B' },
+	    { key: 'c', value: 'C' },
+	    { key: 'd', value: 'D' },
+	    { key: 'e', value: 'E' },
+	    { key: 'f', value: 'F' },
+	    { key: 'g', value: 'G' },
+	    { key: 'h', value: 'H' },
+	    { key: 'i', value: 'I' },
+	    { key: 'j', value: 'J' },
+	    { key: 'k', value: 'K' },
+	    { key: 'l', value: 'L' },
+	    { key: 'm', value: 'M' },
+	    { key: 'n', value: 'N' },
+	    { key: 'o', value: 'O' },
+	    { key: 'p', value: 'P' },
+	    { key: 'q', value: 'Q' },
+	    { key: 'r', value: 'R' },
+	    { key: 's', value: 'S' },
+	    { key: 't', value: 'T' },
+	    { key: 'u', value: 'U' },
+	    { key: 'v', value: 'V' },
+	    { key: 'w', value: 'W' },
+	    { key: 'x', value: 'X' }
+	];
 
 
-        let selectedLeftBox = null; // Track currently selected box in the left column
-        let selectedRightBox = null; // Track currently selected box in the right column
+	let selectedLeftBox = null; // Track currently selected box in the left column
+	let selectedRightBox = null; // Track currently selected box in the right column
         let points = 0; // Track user points
+        let errors = 0; // Track user errors
         let correctPairsCount = 0; // Track count of correctly guessed pairs
 
         let leftInvisibleBoxes = []; // Array to store invisible left boxes
@@ -110,92 +118,95 @@ const pairs = [
             }
 
             // Toggle current box
-            if (!isSelected) {
-                boxElement.classList.add('on');
-                if (column === 'left') {
-                    selectedLeftBox = boxElement;
-                } else if (column === 'right') {
-                    selectedRightBox = boxElement;
-                }
-
-                // Check if both boxes are selected
-                if (selectedLeftBox !== null && selectedRightBox !== null) {
-                    const selectedKey = selectedLeftBox.textContent;
-                    const selectedValue = selectedRightBox.textContent;
-
-                    // Check if selected pair is correct
-                    const isCorrectPair = pairs.some(pair => pair.key === selectedKey && pair.value === selectedValue);
-
-                    if (isCorrectPair) {
-                        // Increment points
-                        points++;
-                        document.getElementById('points').textContent = points;
-
-                        // Mark boxes as correct
-                        selectedLeftBox.classList.add('correct');
-                        selectedRightBox.classList.add('correct');
-
-                        // Make correct pairs invisible
-                      setTimeout(() => {
-                        selectedLeftBox.classList.add('invisible');
-                        selectedRightBox.classList.add('invisible');
-			}, 200);
-
-                        // Increment correct pairs count
-                        correctPairsCount++;
-
-
-                        // Check if 3 correct pairs have been guessed
-                        if (correctPairsCount === 3) {
-                            // Reset correct pairs count
-                            correctPairsCount--;
-
-                            // Pick a new pair randomly
-                            const shuffledPairs = shuffleArray(pairs.slice());
-                            const newPair = shuffledPairs[0];
-
-                            // Randomly select boxes from invisible boxes arrays
-                            const leftBoxIndex = Math.floor(Math.random() * leftInvisibleBoxes.length);
-                            const rightBoxIndex = Math.floor(Math.random() * rightInvisibleBoxes.length);
-
-                            // Set new pair in randomly selected boxes
-                            leftInvisibleBoxes[leftBoxIndex].textContent = newPair.key;
-                            rightInvisibleBoxes[rightBoxIndex].textContent = newPair.value;
-
-                            // Make these boxes visible and remove from arrays
-                            leftInvisibleBoxes[leftBoxIndex].classList.remove('invisible');
-                            rightInvisibleBoxes[rightBoxIndex].classList.remove('invisible');
-
-                            leftInvisibleBoxes.splice(leftBoxIndex, 1);
-                            rightInvisibleBoxes.splice(rightBoxIndex, 1);
-                	
-			        // Append to invisible boxes arrays
-        	                leftInvisibleBoxes.push(selectedLeftBox);
-	                        rightInvisibleBoxes.push(selectedRightBox);
-                        } else {
- 	                       // Append to invisible boxes arrays
-        	                leftInvisibleBoxes.push(selectedLeftBox);
-                	        rightInvisibleBoxes.push(selectedRightBox);
-			}
-
-                        // Reset selected boxes after a brief delay
-                        setTimeout(() => {
-                            selectedLeftBox.classList.remove('on', 'correct');
-                            selectedRightBox.classList.remove('on', 'correct');
-                            selectedLeftBox = null;
-                            selectedRightBox = null;
-                        }, 300);
-                    } else {
-                        // Reset boxes if not correct
-                        setTimeout(() => {
-                            selectedLeftBox.classList.remove('on');
-                            selectedRightBox.classList.remove('on');
-                            selectedLeftBox = null;
-                            selectedRightBox = null;
-                        }, 300);
-                    }
-                }
+            if (isSelected) {
+                return;
             }
+            boxElement.classList.add('on');
+            if (column === 'left') {
+                selectedLeftBox = boxElement;
+            } else if (column === 'right') {
+                selectedRightBox = boxElement;
+            }
+
+            // We need both boxes selected to do further processing
+            if (selectedLeftBox === null || selectedRightBox === null) {
+                return;
+            }
+
+            const selectedKey = selectedLeftBox.textContent;
+            const selectedValue = selectedRightBox.textContent;
+
+            // Check if selected pair is correct
+            const isCorrectPair = pairs.some(pair => pair.key === selectedKey && pair.value === selectedValue);
+            selectedLeftBox.classList.remove('on');
+            selectedRightBox.classList.remove('on');
+
+            if (!isCorrectPair) {
+                errors++;
+                document.getElementById('errors').textContent = errors;
+                selectedLeftBox.classList.add('incorrect');
+                selectedRightBox.classList.add('incorrect');
+
+                // Reset boxes if not correct
+                setTimeout(() => {
+                    selectedLeftBox.classList.remove('incorrect');
+                    selectedRightBox.classList.remove('incorrect');
+                    selectedLeftBox = null;
+                    selectedRightBox = null;
+                }, 200);
+                return;
+            }
+
+            // Increment points
+            points++;
+            document.getElementById('points').textContent = points;
+
+            // Mark boxes as correct
+            selectedLeftBox.classList.add('correct');
+            selectedRightBox.classList.add('correct');
+
+            // Make correct pairs invisible
+            setTimeout(() => {
+                selectedLeftBox.classList.add('invisible');
+                selectedRightBox.classList.add('invisible');
+                selectedLeftBox.classList.remove('correct');
+                selectedRightBox.classList.remove('correct');
+                selectedLeftBox = null;
+                selectedRightBox = null;
+            }, 200);
+
+            // Check if 3 correct pairs have been guessed
+            if (leftInvisibleBoxes.length >= 2) {
+                pickNewPairAndDisplay();
+                pickNewPairAndDisplay();
+            }
+
+            // Append to invisible boxes arrays
+            leftInvisibleBoxes.push(selectedLeftBox);
+            rightInvisibleBoxes.push(selectedRightBox);
+            document.getElementById('leftArr').textContent = leftInvisibleBoxes.length;
+            document.getElementById('rightArr').textContent = rightInvisibleBoxes.length;
+        }
+
+        function pickNewPairAndDisplay() {
+            // Pick a new pair randomly
+            const shuffledPairs = shuffleArray(pairs.slice());
+            const newPair = shuffledPairs[0];
+
+            // Randomly select boxes from invisible boxes arrays
+            const leftBoxIndex = Math.floor(Math.random() * leftInvisibleBoxes.length);
+            const rightBoxIndex = Math.floor(Math.random() * rightInvisibleBoxes.length);
+
+            // Set new pair in randomly selected boxes
+            leftInvisibleBoxes[leftBoxIndex].textContent = newPair.key;
+            rightInvisibleBoxes[rightBoxIndex].textContent = newPair.value;
+
+            // Make these boxes visible and remove from arrays
+            leftInvisibleBoxes[leftBoxIndex].classList.remove('invisible');
+            rightInvisibleBoxes[rightBoxIndex].classList.remove('invisible');
+
+            leftInvisibleBoxes.splice(leftBoxIndex, 1);
+            rightInvisibleBoxes.splice(rightBoxIndex, 1);
         }
 
         // Function to display pairs in two columns with randomized order
