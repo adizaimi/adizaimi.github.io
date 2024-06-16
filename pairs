@@ -34,11 +34,12 @@
         background-color: yellow; /* Change to desired 'on' color */
     }
     .correct {
-        background-color: lightgray; /* Color for correct pair */
+        background-color: lightgreen; /* Color for correct pair */
+        transition: background-color 0.5s ease; /* Smooth transition */
     }
-    .disabled {
-        pointer-events: none; /* Disable pointer events */
-        opacity: 0.5; /* Optional: reduce opacity to indicate disabled state */
+    .invisible {
+        opacity: 0;
+        pointer-events: none;
     }
 </style>
 </head>
@@ -53,21 +54,21 @@
     <script>
         // Define your pairs of symbols
         const pairs = [
-            { key: 'a', value: '1' },
-            { key: 'b', value: '2' },
-            { key: 'c', value: '3' },
-            { key: 'd', value: '4' },
-            { key: 'e', value: '5' },
-            { key: 'f', value: '6' },
-            { key: 'g', value: '7' },
-            { key: 'h', value: '8' },
-            { key: 'i', value: '9' },
-            { key: 'j', value: '10' },
-            { key: 'k', value: '11' },
-            { key: 'l', value: '12' },
-            { key: 'm', value: '13' },
-            { key: 'n', value: '14' },
-            { key: 'o', value: '15' }
+            { key: 'a', value: 'A' },
+            { key: 'b', value: 'B' },
+            { key: 'c', value: 'C' },
+            { key: 'd', value: 'D' },
+            { key: 'e', value: 'E' },
+            { key: 'f', value: 'F' },
+            { key: 'g', value: 'G' },
+            { key: 'h', value: 'H' },
+            { key: 'i', value: 'I' },
+            { key: 'j', value: 'J' },
+            { key: 'k', value: 'K' },
+            { key: 'l', value: 'L' },
+            { key: 'm', value: 'M' },
+            { key: 'n', value: 'N' },
+            { key: 'o', value: 'O' }
             // Add more pairs as needed
         ];
 
@@ -117,21 +118,24 @@
                         points++;
                         document.getElementById('points').textContent = points;
 
-                        // Mark boxes as correct
-                        selectedLeftBox.classList.add('correct', 'disabled');
-                        selectedRightBox.classList.add('correct', 'disabled');
+                        // Mark boxes as correct and hide them
+                        selectedLeftBox.classList.add('correct');
+                        selectedRightBox.classList.add('correct');
 
-                        // Temporarily disable boxes for 0.5 seconds
+                        // Set a brief timeout to change opacity to 0
                         setTimeout(() => {
-                            // Generate new random pairs
-                            displayNewPair(selectedLeftBox, selectedRightBox);
+                            selectedLeftBox.classList.add('invisible');
+                            selectedRightBox.classList.add('invisible');
+                        }, 500);
 
-                            // Reset selected boxes
-                            selectedLeftBox.classList.remove('on', 'correct', 'disabled');
-                            selectedRightBox.classList.remove('on', 'correct', 'disabled');
-                            selectedLeftBox = null;
-                            selectedRightBox = null;
-                        }, 1000);
+                        // Generate new random pairs immediately
+                        displayNewPair();
+
+                        // Reset selected boxes
+                        selectedLeftBox.classList.remove('on', 'correct');
+                        selectedRightBox.classList.remove('on', 'correct');
+                        selectedLeftBox = null;
+                        selectedRightBox = null;
                     } else {
                         // Reset boxes if not correct
                         setTimeout(() => {
@@ -145,31 +149,41 @@
             }
         }
 
-        // Function to display new random pairs
-        function displayNewPair(leftBox, rightBox) {
+        // Function to display new random pairs in invisible boxes
+        function displayNewPair() {
+            // Shuffle pairs randomly
+            const shuffledPairs = shuffleArray(pairs.slice()); // Create a copy to avoid modifying the original array
+
             // Get left and right column elements
             const leftColumn = document.getElementById('leftColumn');
             const rightColumn = document.getElementById('rightColumn');
 
-            // Find index of selected pair
-            const leftIndex = Array.from(leftColumn.children).indexOf(leftBox);
-            const rightIndex = Array.from(rightColumn.children).indexOf(rightBox);
+            // Find invisible boxes
+            const invisibleLeftBoxes = leftColumn.querySelectorAll('.box.invisible');
+            const invisibleRightBoxes = rightColumn.querySelectorAll('.box.invisible');
 
-            // Shuffle pairs randomly
-            const shuffledPairs = shuffleArray(pairs.slice()); // Create a copy to avoid modifying the original array
+            // Randomly assign new pairs to invisible boxes
+            const index1 = Math.floor(Math.random() * invisibleLeftBoxes.length);
+            const index2 = Math.floor(Math.random() * invisibleRightBoxes.length);
 
-            // Take a new random pair
-            const newPair = shuffledPairs[Math.floor(Math.random() * shuffledPairs.length)];
+            invisibleLeftBoxes[index1].textContent = shuffledPairs[0].key;
+            invisibleRightBoxes[index2].textContent = shuffledPairs[0].value;
 
-            // Update selected boxes with new pair
-            leftColumn.children[leftIndex].textContent = newPair.key;
-            rightColumn.children[rightIndex].textContent = newPair.value;
+            // Check if there are two invisible boxes available
+            if (invisibleLeftBoxes.length > 1 && invisibleRightBoxes.length > 1) {
+                const index3 = index1 === 0 ? 1 : 0; // Ensure index3 is different from index1
+                const index4 = index2 === 0 ? 1 : 0; // Ensure index4 is different from index2
 
-            // Allow boxes to be selectable again after 0.5 seconds
-            setTimeout(() => {
-                leftColumn.children[leftIndex].classList.remove('disabled');
-                rightColumn.children[rightIndex].classList.remove('disabled');
-            }, 500);
+                invisibleLeftBoxes[index3].textContent = shuffledPairs[1].key;
+                invisibleRightBoxes[index4].textContent = shuffledPairs[1].value;
+            }
+
+            // Make all invisible boxes visible after assigning pairs
+            const allInvisibleBoxes = document.querySelectorAll('.box.invisible');
+            allInvisibleBoxes.forEach(box => {
+                box.style.opacity = 1;
+                box.style.pointerEvents = 'auto'; // Make boxes clickable again
+            });
         }
 
         // Function to display pairs in two columns with randomized order
@@ -209,7 +223,9 @@
         }
 
         // Call displayPairs function when the page loads
-        window.onload = displayPairs;
+        window.onload = () => {
+            displayPairs(); // Display initial pairs
+        };
     </script>
 </body>
 </html>
