@@ -22,10 +22,10 @@
         align-items: center;
     }
     .box {
-        margin: 5px;
-        padding: 1px;
+        margin: 3px;
+        padding: 3px;
         border: 1px solid #ccc;
-        width: 140px; /* Adjust width as needed */
+        width: 120px; /* Adjust width as needed */
         text-align: center;
         display: inline-block;
         cursor: pointer;
@@ -90,8 +90,7 @@
 	];
     */
 
-
-    const wordRows = 6; // how many rows of words to display on the page
+	const wordRows = 6; // how many rows of words to display on the page
 	let selectedLeftBox = null; // Track currently selected box in the left column
 	let selectedRightBox = null; // Track currently selected box in the right column
         let points = 0; // Track user points
@@ -111,7 +110,7 @@
         }
 
         // Function to handle click on a box
-        function boxClickHandler(column, boxElement, keyOrValue) {
+        function boxClickHandler(column, boxElement) {
             const isSelected = boxElement.classList.contains('on');
 
             // Reset previously selected box in the same column
@@ -176,7 +175,7 @@
                 selectedRightBox = null;
             }, 200);
 
-            // Check if 3 correct pairs have been guessed
+            // Check if 3 or more correct pairs have been guessed
             if (leftInvisibleBoxes.length >= 2) {
                 pickNewPairAndDisplay();
                 pickNewPairAndDisplay();
@@ -248,7 +247,7 @@
                 boxLeft.classList.add('box');
                 pair = selectedPairs[shuffledLeft[i]];
                 boxLeft.textContent = pair.key;
-                boxLeft.addEventListener('click', () => boxClickHandler('left', boxLeft, 'Key'));
+                boxLeft.addEventListener('click', () => boxClickHandler('left', boxLeft));
                 boxLeft.hiddenValue = shuffledLeft[i];
                 leftColumn.appendChild(boxLeft);
 
@@ -256,7 +255,7 @@
                 const boxRight = document.createElement('div');
                 boxRight.classList.add('box');
                 boxRight.textContent = pair.value;
-                boxRight.addEventListener('click', () => boxClickHandler('right', boxRight, 'Value'));
+                boxRight.addEventListener('click', () => boxClickHandler('right', boxRight));
                 boxRight.hiddenValue = shuffledRight[i];
                 rightColumn.appendChild(boxRight);
             }
