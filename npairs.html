@@ -23,11 +23,13 @@
     }
     .box {
         margin: 3px;
-        padding: 10px 3px;
+        padding: 3px 3px;
         border: 1px solid #ccc;
         width: 120px; /* Adjust width as needed */
-        text-align: center;
-        display: inline-block;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
     }
     .on {
@@ -116,8 +118,10 @@
             // Reset previously selected box in the same column
             if (column === 'left' && selectedLeftBox !== null) {
                 selectedLeftBox.classList.remove('on');
+                selectedLeftBox = null;
             } else if (column === 'right' && selectedRightBox !== null) {
                 selectedRightBox.classList.remove('on');
+                selectedRightBox = null;
             }
 
             // Toggle current box
