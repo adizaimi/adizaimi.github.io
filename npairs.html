@@ -22,7 +22,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: 2px solid lightyellow;
+        border: 0px solid lightyellow;
 	border-radius: 8px; /* Rounded corners */
     }
     .box {
@@ -42,11 +42,12 @@
         background-color: darkgray; /* Change to desired 'on' color */
     }
     .correct {
-        background-color: lightgreen; /* Color for correct pair */
+        background-color: green; /* Color for correct pair */
         pointer-events: none;
     }
     .incorrect {
         background-color: red; /* Color for incorrect pair */
+        transition: background-color 0.2s ease; /* Smooth transition */
     }
     .invisible {
         opacity: 0;
@@ -156,13 +157,15 @@
                 selectedLeftBox.classList.add('incorrect');
                 selectedRightBox.classList.add('incorrect');
 
-                // Reset boxes if not correct
+
+                // Reset boxes if not correct, note that if you are too quick to select another item at this point,
+	        // the timeout will get cancelled
                 setTimeout(() => {
-                    selectedLeftBox.classList.remove('incorrect');
+	            selectedLeftBox.classList.remove('incorrect');
                     selectedRightBox.classList.remove('incorrect');
                     selectedLeftBox = null;
                     selectedRightBox = null;
-                }, 350);
+                }, 100);
                 return;
             }
 
