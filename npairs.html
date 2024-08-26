@@ -40,6 +40,7 @@
     }
     .on {
         background-color: darkgray; /* Change to desired 'on' color */
+        transition: background-color 0s ease; /* Smooth transition */
     }
     .correct {
         background-color: green; /* Color for correct pair */
@@ -157,15 +158,16 @@
                 selectedLeftBox.classList.add('incorrect');
                 selectedRightBox.classList.add('incorrect');
 
-
-                // Reset boxes if not correct, note that if you are too quick to select another item at this point,
-	        // the timeout will get cancelled
-                setTimeout(() => {
+		const clearIncorrectPair = () => {
 	            selectedLeftBox.classList.remove('incorrect');
                     selectedRightBox.classList.remove('incorrect');
                     selectedLeftBox = null;
                     selectedRightBox = null;
-                }, 100);
+                }
+                // Reset boxes if not correct, note that if you are too quick to select another item at this point,
+                // the first clearIncorrectPair will get cancelled, so we may need to save it and call it manually
+                // before issuing a second setTimeout call
+                setTimeout(clearIncorrectPair, 100);
                 return;
             }
 
