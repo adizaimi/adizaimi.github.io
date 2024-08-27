@@ -13,16 +13,15 @@
 	background-color: black;
     }
     .container {
-        display: flex;
+        margin: auto;
         justify-content: center;
-        margin-top: 20px;
+        border: 1px solid lightyellow;
+	border-radius: 8px; /* Rounded corners */
     }
     .column {
-        padding: 1px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        border: 0px solid lightyellow;
 	border-radius: 8px; /* Rounded corners */
     }
     .box {
@@ -36,7 +35,7 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        transition: opacity 2.5s ease, background-color 0.35s ease; /* Smooth transition */
+        transition: opacity 2.7s ease, background-color 0.35s ease; /* Smooth transition */
     }
     .on {
         background-color: darkgray; /* Change to desired 'on' color */
@@ -45,6 +44,7 @@
     .correct {
         background-color: green; /* Color for correct pair */
         pointer-events: none;
+        transition: background-color 0s ease; /* Smooth transition */
     }
     .incorrect {
         background-color: red; /* Color for incorrect pair */
@@ -54,22 +54,25 @@
         opacity: 0;
         background-color: lightgreen; /* Color for correct pair */
         pointer-events: none;
+	transition: opacity 0.7s ease;
     }
 </style>
 </head>
 <body>
-    <div class="container">
-        <div class="column" id="leftColumn"></div>
-        <div class="column" id="rightColumn"></div>
-    </div>
-    <p>Points: <span id="points">0</span>
+  <p>
+    <table class="container">
+      <tr><td><div class="column" id="leftColumn"></div></td>
+          <td><div class="column" id="rightColumn"></div></td></tr>
+    </table>
+  </p>
+  <p>Points: <span id="points">0</span>
        Errors: <span id="errors">0</span></p>
-    <p>LeftArr: <span id="leftArr">0</span>
+  <p>LeftArr: <span id="leftArr">0</span>
        RightArr: <span id="rightArr">0</span></p>
 
-    <script src="wl.js"></script>
+  <script src="wl.js"></script>
 
-    <script>
+  <script>
         /* Define your pairs of symbols
 	const pairs = [
 	    { key: 'a', value: 'A' },
@@ -180,16 +183,12 @@
             selectedRightBox.classList.add('correct');
 
             // Make correct pairs invisible
-            setTimeout(() => {
-                selectedLeftBox.classList.add('invisible');
-                selectedRightBox.classList.add('invisible');
-                selectedLeftBox.classList.remove('correct');
-                selectedRightBox.classList.remove('correct');
-                selectedLeftBox = null;
-                selectedRightBox = null;
-            }, 200);
+            selectedLeftBox.classList.add('invisible');
+            selectedRightBox.classList.add('invisible');
+            selectedLeftBox.classList.remove('correct');
+            selectedRightBox.classList.remove('correct');
 
-            // Check if 3 or more correct pairs have been guessed
+            // Check if 2 or more correct pairs have been guessed
             if (leftInvisibleBoxes.length >= 2) {
                 pickNewPairAndDisplay();
                 pickNewPairAndDisplay();
@@ -200,6 +199,19 @@
             rightInvisibleBoxes.push(selectedRightBox);
             document.getElementById('leftArr').textContent = leftInvisibleBoxes.length;
             document.getElementById('rightArr').textContent = rightInvisibleBoxes.length;
+            selectedLeftBox = null;
+            selectedRightBox = null;
+            if (leftInvisibleBoxes.length >= 2) {
+		// If 2 or more correct pairs have been guessed get next delayed
+	        setTimeout(() => {
+                    pickNewPairAndDisplay();
+                    pickNewPairAndDisplay();
+                }, 1000);
+            } else if (leftInvisibleBoxes.length >= 1) {
+	        setTimeout(() => {
+                    pickNewPairAndDisplay();
+                }, 3000);
+	    }
         }
 
         function pickNewPairAndDisplay() {
