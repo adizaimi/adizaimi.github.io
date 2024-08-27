@@ -8,29 +8,28 @@
 <style>
     body {
         font-family: Arial, sans-serif;
-	color: cyan;
+        color: cyan;
         text-align: center;
-	background-color: black;
+        background-color: black;
     }
     .container {
         margin: auto;
         justify-content: center;
-        border: 1px solid lightyellow;
-	border-radius: 8px; /* Rounded corners */
+        border: 0px solid lightyellow;
+        /* border-radius: 6px; /* Rounded corners */
     }
     .column {
         display: flex;
         flex-direction: column;
-        align-items: center;
-	border-radius: 8px; /* Rounded corners */
+        border-radius: 6px; /* Rounded corners */
     }
     .box {
-        margin: 3px;
-        padding: 3px 3px;
+        margin: 1px;
+        padding: 1px 1px;
         border: 1px solid #ccc;
-	border-radius: 8px; /* Rounded corners */
-        width: 120px; /* Adjust width as needed */
-        height: 40px;
+        border-radius: 6px; /* Rounded corners */
+        width: 115px; /* Adjust width as needed */
+        height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -38,11 +37,10 @@
         transition: opacity 2.7s ease, background-color 0.35s ease; /* Smooth transition */
     }
     .on {
-        background-color: darkgray; /* Change to desired 'on' color */
+        background-color: #607080; /* Color for 'selected' box */
         transition: background-color 0s ease; /* Smooth transition */
     }
     .correct {
-        background-color: green; /* Color for correct pair */
         pointer-events: none;
         transition: background-color 0s ease; /* Smooth transition */
     }
@@ -51,20 +49,19 @@
         transition: background-color 0.2s ease; /* Smooth transition */
     }
     .invisible {
-        opacity: 0;
-        background-color: lightgreen; /* Color for correct pair */
+        opacity: 0.2;
+        background-color: lightgreen; /* Color for correct pair fainting */
         pointer-events: none;
-	transition: opacity 0.7s ease;
+        transition: opacity 0.7s ease;
     }
 </style>
 </head>
 <body>
-  <p>
     <table class="container">
-      <tr><td><div class="column" id="leftColumn"></div></td>
+      <tr class="container"><td><div class="column" id="leftColumn"></div></td>
           <td><div class="column" id="rightColumn"></div></td></tr>
     </table>
-  </p>
+
   <p>Points: <span id="points">0</span>
        Errors: <span id="errors">0</span></p>
   <p>LeftArr: <span id="leftArr">0</span>
@@ -74,37 +71,37 @@
 
   <script>
         /* Define your pairs of symbols
-	const pairs = [
-	    { key: 'a', value: 'A' },
-	    { key: 'b', value: 'B' },
-	    { key: 'c', value: 'C' },
-	    { key: 'd', value: 'D' },
-	    { key: 'e', value: 'E' },
-	    { key: 'f', value: 'F' },
-	    { key: 'g', value: 'G' },
-	    { key: 'h', value: 'H' },
-	    { key: 'i', value: 'I' },
-	    { key: 'j', value: 'J' },
-	    { key: 'k', value: 'K' },
-	    { key: 'l', value: 'L' },
-	    { key: 'm', value: 'M' },
-	    { key: 'n', value: 'N' },
-	    { key: 'o', value: 'O' },
-	    { key: 'p', value: 'P' },
-	    { key: 'q', value: 'Q' },
-	    { key: 'r', value: 'R' },
-	    { key: 's', value: 'S' },
-	    { key: 't', value: 'T' },
-	    { key: 'u', value: 'U' },
-	    { key: 'v', value: 'V' },
-	    { key: 'w', value: 'W' },
-	    { key: 'x', value: 'X' }
-	];
+        const pairs = [
+            { key: 'a', value: 'A' },
+            { key: 'b', value: 'B' },
+            { key: 'c', value: 'C' },
+            { key: 'd', value: 'D' },
+            { key: 'e', value: 'E' },
+            { key: 'f', value: 'F' },
+            { key: 'g', value: 'G' },
+            { key: 'h', value: 'H' },
+            { key: 'i', value: 'I' },
+            { key: 'j', value: 'J' },
+            { key: 'k', value: 'K' },
+            { key: 'l', value: 'L' },
+            { key: 'm', value: 'M' },
+            { key: 'n', value: 'N' },
+            { key: 'o', value: 'O' },
+            { key: 'p', value: 'P' },
+            { key: 'q', value: 'Q' },
+            { key: 'r', value: 'R' },
+            { key: 's', value: 'S' },
+            { key: 't', value: 'T' },
+            { key: 'u', value: 'U' },
+            { key: 'v', value: 'V' },
+            { key: 'w', value: 'W' },
+            { key: 'x', value: 'X' }
+        ];
     */
 
-	const wordRows = 6; // how many rows of words to display on the page
-	let selectedLeftBox = null; // Track currently selected box in the left column
-	let selectedRightBox = null; // Track currently selected box in the right column
+        const wordRows = 6; // how many rows of words to display on the page
+        let selectedLeftBox = null; // Track currently selected box in the left column
+        let selectedRightBox = null; // Track currently selected box in the right column
         let points = 0; // Track user points
         let errors = 0; // Track user errors
         let correctPairsCount = 0; // Track count of correctly guessed pairs
@@ -161,8 +158,8 @@
                 selectedLeftBox.classList.add('incorrect');
                 selectedRightBox.classList.add('incorrect');
 
-		const clearIncorrectPair = () => {
-	            selectedLeftBox.classList.remove('incorrect');
+                const clearIncorrectPair = () => {
+                    selectedLeftBox.classList.remove('incorrect');
                     selectedRightBox.classList.remove('incorrect');
                     selectedLeftBox = null;
                     selectedRightBox = null;
@@ -202,19 +199,21 @@
             selectedLeftBox = null;
             selectedRightBox = null;
             if (leftInvisibleBoxes.length >= 2) {
-		// If 2 or more correct pairs have been guessed get next delayed
-	        setTimeout(() => {
+                // If 2 or more correct pairs have been guessed get next delayed
+                setTimeout(() => {
                     pickNewPairAndDisplay();
                     pickNewPairAndDisplay();
                 }, 1000);
             } else if (leftInvisibleBoxes.length >= 1) {
-	        setTimeout(() => {
+                setTimeout(() => {
                     pickNewPairAndDisplay();
                 }, 3000);
-	    }
+            }
         }
 
         function pickNewPairAndDisplay() {
+            if(leftInvisibleBoxes.length < 1)
+                return;
             // Pick a new pair randomly
             const idx = Math.floor(Math.random() * pairs.length);
             const newPair = pairs[idx];
