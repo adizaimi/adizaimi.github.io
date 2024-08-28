@@ -72,7 +72,7 @@
   <script>
         /* Define your pairs of symbols
         const pairs = [
-            { key: 'a', value: 'A' },
+            { key: 'a/A', value: 'a, A' },
             { key: 'b', value: 'B' },
             { key: 'c', value: 'C' },
             { key: 'd', value: 'D' },
@@ -96,8 +96,7 @@
             { key: 'v', value: 'V' },
             { key: 'w', value: 'W' },
             { key: 'x', value: 'X' }
-        ];
-    */
+        ]; */
 
         const wordRows = 6; // how many rows of words to display on the page
         let selectedLeftBox = null; // Track currently selected box in the left column
@@ -110,12 +109,12 @@
         let rightInvisibleBoxes = []; // Array to store invisible right boxes
 
         // Function to shuffle array randomly
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
+        function shuffleArray(arr) {
+            for (let i = arr.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
+                [arr[i], arr[j]] = [arr[j], arr[i]];
             }
-            return array;
+            return arr;
         }
 
         // Function to handle click on a box
@@ -147,7 +146,7 @@
                 return;
             }
 
-            // Check if selected pair is correct
+            // Check if selected pair is correct by comparing hiddenValue aka idx
             const isCorrectPair = selectedLeftBox.hiddenValue == selectedRightBox.hiddenValue;
             selectedLeftBox.classList.remove('on');
             selectedRightBox.classList.remove('on');
@@ -207,8 +206,20 @@
             } else if (leftInvisibleBoxes.length >= 1) {
                 setTimeout(() => {
                     pickNewPairAndDisplay();
-                }, 3000);
+                }, 4000);
             }
+        }
+
+        function pickRandomSplitEntry (str, splitChar) {
+            const entries = str.split(splitChar);
+            if (entries.length <= 1)
+                return str;
+            //console.log(entries); // debug print the pairs
+            const trimmedEntries = entries.map(item=>item.trim());
+            //console.log(trimmedEntries); // debug print the pairs
+            const randomIndex = Math.floor(Math.random() * trimmedEntries.length);
+            //console.log(randomIndex); // debug print the pairs
+            return trimmedEntries[randomIndex];
         }
 
         function pickNewPairAndDisplay() {
@@ -222,10 +233,12 @@
             const leftBoxIndex = Math.floor(Math.random() * leftInvisibleBoxes.length);
             const rightBoxIndex = Math.floor(Math.random() * rightInvisibleBoxes.length);
 
-            // Set new pair in randomly selected boxes
-            leftInvisibleBoxes[leftBoxIndex].textContent = newPair.key;
+            // Set new pair in the randomly selected boxes, hiddenValue will be used for correctness comparison.
+            // Split key by '/' and pick either entry randomly.
+
+            leftInvisibleBoxes[leftBoxIndex].textContent = pickRandomSplitEntry(newPair.key, '/');
             leftInvisibleBoxes[leftBoxIndex].hiddenValue = idx;
-            rightInvisibleBoxes[rightBoxIndex].textContent = newPair.value;
+            rightInvisibleBoxes[rightBoxIndex].textContent = pickRandomSplitEntry(newPair.value,',');
             rightInvisibleBoxes[rightBoxIndex].hiddenValue = idx;
 
             // Make these boxes visible and remove from arrays
@@ -237,27 +250,40 @@
         }
 
         // Function to display pairs in two columns with randomized order
-        function displayPairs() {
+        function displayAllPairs() {
             // take wordRows random pairs
-            let selectedPairs = {};
+            let selectedPairs = new Map();
             let shuffledLeft = [];
             let shuffledRight = [];
-            let prevIdx = -1;
-            for (let i = 0; i < wordRows; i++) {
-                //console.log(selectedPairs); // debug print the pairs
-                // Pick a new pair randomly
+            let i = 0;
+            while(i < wordRows){
+                // Pick a new pair randomly.
                 const idx = Math.floor(Math.random() * pairs.length);
-                if (idx == prevIdx)
-                    continue;
-                selectedPairs[idx] = pairs[idx];
-                prevIdx = idx;
+                if (selectedPairs.has(idx))
+                    continue; // Dont add same idx.
+                selectedPairs.set(idx, pairs[idx]);
                 shuffledLeft.push(idx);
                 shuffledRight.push(idx);
+                i++;
+            }
+            if (selectedPairs.size != wordRows) {
+                console.log(selectedPairs);
+                throw("incorrect map size");
             }
 
             // Shuffle keys and values separately
             shuffledLeft = shuffleArray(shuffledLeft);
+            if (shuffledLeft == undefined || shuffledLeft.length != wordRows) {
+                console.log(shuffledLeft.length);
+                console.log(shuffledLeft);
+                throw('undefined');
+            }
             shuffledRight = shuffleArray(shuffledRight);
+            if (shuffledRight == undefined || shuffledRight.length != wordRows) {
+                console.log(shuffledRight.length);
+                console.log(shuffledRight);
+                throw('undefined');
+            }
             // Get left and right column elements
             const leftColumn = document.getElementById('leftColumn');
             const rightColumn = document.getElementById('rightColumn');
@@ -270,25 +296,42 @@
             for (let i = 0; i < wordRows; i++) {
                 const boxLeft = document.createElement('div');
                 boxLeft.classList.add('box');
-                pair = selectedPairs[shuffledLeft[i]];
-                boxLeft.textContent = pair.key;
+                pair = selectedPairs.get(shuffledLeft[i]);
+                if (pair == undefined) {
+                    console.log("Pair is undefined");
+                    console.log(pair);
+                    console.log(i);
+                    console.log(shuffledLeft[i]);
+                    console.log(shuffledLeft);
+                    console.log(selectedPairs);
+                    throw("Pair is undefined");
+                }
+                boxLeft.textContent = pickRandomSplitEntry(pair.key, '/');
                 boxLeft.addEventListener('click', () => boxClickHandler('left', boxLeft));
                 boxLeft.hiddenValue = shuffledLeft[i];
                 leftColumn.appendChild(boxLeft);
 
-                pair = selectedPairs[shuffledRight[i]];
+                pair = selectedPairs.get(shuffledRight[i]);
+                if (pair == undefined) {
+                    console.log("Pair is undefined");
+                    console.log(pair);
+                    console.log(i);
+                    console.log(shuffledRight[i]);
+                    console.log(selectedPairs);
+                    throw("Pair is undefined");
+                }
                 const boxRight = document.createElement('div');
                 boxRight.classList.add('box');
-                boxRight.textContent = pair.value;
+                boxRight.textContent = pickRandomSplitEntry(pair.value, ',');
                 boxRight.addEventListener('click', () => boxClickHandler('right', boxRight));
                 boxRight.hiddenValue = shuffledRight[i];
                 rightColumn.appendChild(boxRight);
             }
         }
 
-        // Call displayPairs function when the page loads
+        // Call displayAllPairs function when the page loads
         window.onload = () => {
-            displayPairs(); // Display initial pairs
+            displayAllPairs(); // Display initial pairs
         };
     </script>
 </body>
