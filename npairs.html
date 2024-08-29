@@ -54,6 +54,14 @@
         pointer-events: none;
         transition: opacity 0.7s ease;
     }
+
+    .score {
+        border:1px solid gray;
+        border-radius: 5px;
+        width: 100px;
+        text-align: center;
+        font-size: 100%;
+    }
 </style>
 </head>
 <body>
@@ -62,277 +70,335 @@
           <td><div class="column" id="rightColumn"></div></td></tr>
     </table>
 
-  <p>Points: <span id="points">0</span>
-       Errors: <span id="errors">0</span></p>
-  <p>LeftArr: <span id="leftArr">0</span>
-       RightArr: <span id="rightArr">0</span></p>
+<table align="center">
+  <tr>
+    <td id="leftArrTr" class="score" >LeftArr: <span id="leftArr">0</span></td>
+    <td id="rightArrTr" class="score" >RightArr: <span id="rightArr">0</span></td>
+  </tr>
+  <tr>
+    <td id="result" class="score" onclick="showHideHist();" >&darr; 0:0</td>
+    <td id="timerLabel" class="score" align="right">00:00</td>
+  </tr>
+</table>
 
-  <script src="wl.js"></script>
+<table id="historytbl"></table>
 
-  <script>
-        /* Define your pairs of symbols
-        const pairs = [
-            { key: 'a/A', value: 'a, A' },
-            { key: 'b', value: 'B' },
-            { key: 'c', value: 'C' },
-            { key: 'd', value: 'D' },
-            { key: 'e', value: 'E' },
-            { key: 'f', value: 'F' },
-            { key: 'g', value: 'G' },
-            { key: 'h', value: 'H' },
-            { key: 'i', value: 'I' },
-            { key: 'j', value: 'J' },
-            { key: 'k', value: 'K' },
-            { key: 'l', value: 'L' },
-            { key: 'm', value: 'M' },
-            { key: 'n', value: 'N' },
-            { key: 'o', value: 'O' },
-            { key: 'p', value: 'P' },
-            { key: 'q', value: 'Q' },
-            { key: 'r', value: 'R' },
-            { key: 's', value: 'S' },
-            { key: 't', value: 'T' },
-            { key: 'u', value: 'U' },
-            { key: 'v', value: 'V' },
-            { key: 'w', value: 'W' },
-            { key: 'x', value: 'X' }
-        ]; */
+<script src="wl.js"></script>
 
-        const wordRows = 6; // how many rows of words to display on the page
-        let selectedLeftBox = null; // Track currently selected box in the left column
-        let selectedRightBox = null; // Track currently selected box in the right column
-        let points = 0; // Track user points
-        let errors = 0; // Track user errors
-        let correctPairsCount = 0; // Track count of correctly guessed pairs
+<script>
+/* Define your pairs of symbols
+const pairs = [
+    { key: 'a/A', value: 'a, A' },
+    { key: 'b', value: 'B' },
+    { key: 'c', value: 'C' },
+    { key: 'd', value: 'D' },
+    { key: 'e', value: 'E' },
+    { key: 'f', value: 'F' },
+    { key: 'g', value: 'G' },
+    { key: 'h', value: 'H' },
+    { key: 'i', value: 'I' },
+    { key: 'j', value: 'J' },
+    { key: 'k', value: 'K' },
+    { key: 'l', value: 'L' },
+    { key: 'm', value: 'M' },
+    { key: 'n', value: 'N' },
+    { key: 'o', value: 'O' },
+    { key: 'p', value: 'P' },
+    { key: 'q', value: 'Q' },
+    { key: 'r', value: 'R' },
+    { key: 's', value: 'S' },
+    { key: 't', value: 'T' },
+    { key: 'u', value: 'U' },
+    { key: 'v', value: 'V' },
+    { key: 'w', value: 'W' },
+    { key: 'x', value: 'X' }
+]; */
 
-        let leftInvisibleBoxes = []; // Array to store invisible left boxes
-        let rightInvisibleBoxes = []; // Array to store invisible right boxes
+const wordRows = 6; // how many rows of words to display on the page
+let selectedLeftBox = null; // Track currently selected box in the left column
+let selectedRightBox = null; // Track currently selected box in the right column
+let points = 0; // Track user points
+let total = 0;
+let correctPairsCount = 0; // Track count of correctly guessed pairs
 
-        // Function to shuffle array randomly
-        function shuffleArray(arr) {
-            for (let i = arr.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [arr[i], arr[j]] = [arr[j], arr[i]];
-            }
-            return arr;
-        }
+let leftInvisibleBoxes = []; // Array to store invisible left boxes
+let rightInvisibleBoxes = []; // Array to store invisible right boxes
+let histShown = false;
 
-        // Function to handle click on a box
-        function boxClickHandler(column, boxElement) {
-            const isSelected = boxElement.classList.contains('on');
+let myInterval;
+const interval_delay = 1000; // In ms.
+let is_interval_running = false; //Optional
+let intervalCounter = 0;
 
-            // Reset previously selected box in the same column
-            if (column === 'left' && selectedLeftBox !== null) {
-                selectedLeftBox.classList.remove('on');
-                selectedLeftBox = null;
-            } else if (column === 'right' && selectedRightBox !== null) {
-                selectedRightBox.classList.remove('on');
-                selectedRightBox = null;
-            }
+function getEl(elName) {
+    return document.getElementById(elName);
+}
 
-            // Toggle current box
-            if (isSelected) {
-                return;
-            }
-            boxElement.classList.add('on');
-            if (column === 'left') {
-                selectedLeftBox = boxElement;
-            } else if (column === 'right') {
-                selectedRightBox = boxElement;
-            }
+function onFocus () {
+    clearInterval(myInterval); // Clearing interval if for some reason it has not been cleared yet
+    if  (!is_interval_running) //Optional
+        myInterval = setInterval(intervalFunction, interval_delay);
+}
 
-            // We need both boxes selected to do further processing
-            if (selectedLeftBox === null || selectedRightBox === null) {
-                return;
-            }
+function onBlur() {
+    clearInterval(myInterval); // Clearing interval on window blur
+    is_interval_running = false; //Optional
+}
 
-            // Check if selected pair is correct by comparing hiddenValue aka idx
-            const isCorrectPair = selectedLeftBox.hiddenValue == selectedRightBox.hiddenValue;
-            selectedLeftBox.classList.remove('on');
-            selectedRightBox.classList.remove('on');
+function refreshLeftRightInvisLabels() {
+    getEl('leftArr').textContent = leftInvisibleBoxes.length;
+    getEl('rightArr').textContent = rightInvisibleBoxes.length;
+}
 
-            if (!isCorrectPair) {
-                errors++;
-                document.getElementById('errors').textContent = errors;
-                selectedLeftBox.classList.add('incorrect');
-                selectedRightBox.classList.add('incorrect');
+// Function to shuffle array randomly
+function shuffleArray(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+}
 
-                const clearIncorrectPair = () => {
-                    selectedLeftBox.classList.remove('incorrect');
-                    selectedRightBox.classList.remove('incorrect');
-                    selectedLeftBox = null;
-                    selectedRightBox = null;
-                }
-                // Reset boxes if not correct, note that if you are too quick to select another item at this point,
-                // the first clearIncorrectPair will get cancelled, so we may need to save it and call it manually
-                // before issuing a second setTimeout call
-                setTimeout(clearIncorrectPair, 100);
-                return;
-            }
+function checkTime(i) {
+    if (i > 9)
+        return i;
+    return ("0" + i);
+}
 
-            // Increment points
-            points++;
-            document.getElementById('points').textContent = points;
 
-            // Mark boxes as correct
-            selectedLeftBox.classList.add('correct');
-            selectedRightBox.classList.add('correct');
+function intervalFunction () {
+     is_interval_running = true; //Optional
 
-            // Make correct pairs invisible
-            selectedLeftBox.classList.add('invisible');
-            selectedRightBox.classList.add('invisible');
-            selectedLeftBox.classList.remove('correct');
-            selectedRightBox.classList.remove('correct');
+     // Code running while window is in focus: update timer label
+    ++intervalCounter;
+    m = checkTime(parseInt(intervalCounter / 60));
+    s = checkTime(parseInt(intervalCounter % 60));
+    getEl('timerLabel').innerHTML = m + ":" + s;
+}
 
-            // Check if 2 or more correct pairs have been guessed
-            if (leftInvisibleBoxes.length >= 2) {
-                pickNewPairAndDisplay();
-                pickNewPairAndDisplay();
-            }
 
-            // Append to invisible boxes arrays
-            leftInvisibleBoxes.push(selectedLeftBox);
-            rightInvisibleBoxes.push(selectedRightBox);
-            document.getElementById('leftArr').textContent = leftInvisibleBoxes.length;
-            document.getElementById('rightArr').textContent = rightInvisibleBoxes.length;
+// Function to handle click on a box
+function boxClickHandler(column, boxElement) {
+    const isSelected = boxElement.classList.contains('on');
+
+    // Reset previously selected box in the same column
+    if (column === 'left' && selectedLeftBox !== null) {
+        selectedLeftBox.classList.remove('on');
+        selectedLeftBox = null;
+    } else if (column === 'right' && selectedRightBox !== null) {
+        selectedRightBox.classList.remove('on');
+        selectedRightBox = null;
+    }
+
+    // Toggle current box
+    if (isSelected) {
+        return;
+    }
+    boxElement.classList.add('on');
+    if (column === 'left') {
+        selectedLeftBox = boxElement;
+    } else if (column === 'right') {
+        selectedRightBox = boxElement;
+    }
+
+    // We need both boxes selected to do further processing
+    if (selectedLeftBox === null || selectedRightBox === null) {
+        return;
+    }
+
+    // Check if selected pair is correct by comparing hiddenValue aka idx
+    const isCorrectPair = selectedLeftBox.hiddenValue == selectedRightBox.hiddenValue;
+    selectedLeftBox.classList.remove('on');
+    selectedRightBox.classList.remove('on');
+    total++;
+
+    if (!isCorrectPair) {
+        getEl("result").innerHTML = getEl("result").innerHTML.substring(0,1) + points + ":" + total;
+        selectedLeftBox.classList.add('incorrect');
+        selectedRightBox.classList.add('incorrect');
+
+        const clearIncorrectPair = () => {
+            selectedLeftBox.classList.remove('incorrect');
+            selectedRightBox.classList.remove('incorrect');
             selectedLeftBox = null;
             selectedRightBox = null;
-            if (leftInvisibleBoxes.length >= 2) {
-                // If 2 or more correct pairs have been guessed get next delayed
-                setTimeout(() => {
-                    pickNewPairAndDisplay();
-                    pickNewPairAndDisplay();
-                }, 1000);
-            } else if (leftInvisibleBoxes.length >= 1) {
-                setTimeout(() => {
-                    pickNewPairAndDisplay();
-                }, 4000);
-            }
         }
+        // Reset boxes if not correct, note that if you are too quick to select another item at this point,
+        // the first clearIncorrectPair will get cancelled, so we may need to save it and call it manually
+        // before issuing a second setTimeout call
+        setTimeout(clearIncorrectPair, 100);
+        return;
+    }
 
-        function pickRandomSplitEntry (str, splitChar) {
-            const entries = str.split(splitChar);
-            if (entries.length <= 1)
-                return str;
-            //console.log(entries); // debug print the pairs
-            const trimmedEntries = entries.map(item=>item.trim());
-            //console.log(trimmedEntries); // debug print the pairs
-            const randomIndex = Math.floor(Math.random() * trimmedEntries.length);
-            //console.log(randomIndex); // debug print the pairs
-            return trimmedEntries[randomIndex];
+    // Increment points.
+    points++;
+    getEl("result").innerHTML = getEl("result").innerHTML.substring(0,1) + points + ":" + total;
+
+    // Mark boxes as correct
+    selectedLeftBox.classList.add('correct');
+    selectedRightBox.classList.add('correct');
+
+    // Make correct pairs invisible
+    selectedLeftBox.classList.add('invisible');
+    selectedRightBox.classList.add('invisible');
+    selectedLeftBox.classList.remove('correct');
+    selectedRightBox.classList.remove('correct');
+
+    // Append to invisible boxes arrays.
+    leftInvisibleBoxes.push(selectedLeftBox);
+    rightInvisibleBoxes.push(selectedRightBox);
+    selectedLeftBox = null;
+    selectedRightBox = null;
+    refreshLeftRightInvisLabels();
+
+    if (leftInvisibleBoxes.length > 2) {
+        // If 3 or more correct pairs have been guessed, refresh now.
+        for (i = 0; i < leftInvisibleBoxes.length; i++) {
+            pickNewPairAndDisplay();
         }
+    } else if (leftInvisibleBoxes.length >= 2) {
+        // Refresh delayed.
+        setTimeout(() => {
+            pickNewPairAndDisplay();
+            pickNewPairAndDisplay();
+        }, 3000);
+    } else if (leftInvisibleBoxes.length >= 1) {
+        setTimeout(() => {
+            pickNewPairAndDisplay();
+        }, 5000);
+    }
+}
 
-        function pickNewPairAndDisplay() {
-            if(leftInvisibleBoxes.length < 1)
-                return;
-            // Pick a new pair randomly
-            const idx = Math.floor(Math.random() * pairs.length);
-            const newPair = pairs[idx];
+function pickRandomSplitEntry (str, splitChar) {
+    const entries = str.split(splitChar);
+    if (entries.length < 2)
+        return str;
+    //console.log(entries); // debug print the pairs
+    const trimmedEntries = entries.map(item=>item.trim());
+    //console.log(trimmedEntries); // debug print the pairs
+    const randomIndex = Math.floor(Math.random() * trimmedEntries.length);
+    //console.log(randomIndex); // debug print the pairs
+    return trimmedEntries[randomIndex];
+}
 
-            // Randomly select boxes from invisible boxes arrays
-            const leftBoxIndex = Math.floor(Math.random() * leftInvisibleBoxes.length);
-            const rightBoxIndex = Math.floor(Math.random() * rightInvisibleBoxes.length);
+function pickNewPairAndDisplay() {
+    if(leftInvisibleBoxes.length < 1)
+        return;
+    // Pick a new pair randomly
+    const idx = Math.floor(Math.random() * pairs.length);
+    const newPair = pairs[idx];
 
-            // Set new pair in the randomly selected boxes, hiddenValue will be used for correctness comparison.
-            // Split key by '/' and pick either entry randomly.
+    // Randomly select boxes from invisible boxes arrays
+    const leftBoxIndex = Math.floor(Math.random() * leftInvisibleBoxes.length);
+    const rightBoxIndex = Math.floor(Math.random() * rightInvisibleBoxes.length);
 
-            leftInvisibleBoxes[leftBoxIndex].textContent = pickRandomSplitEntry(newPair.key, '/');
-            leftInvisibleBoxes[leftBoxIndex].hiddenValue = idx;
-            rightInvisibleBoxes[rightBoxIndex].textContent = pickRandomSplitEntry(newPair.value,',');
-            rightInvisibleBoxes[rightBoxIndex].hiddenValue = idx;
+    // Set new pair in the randomly selected boxes, hiddenValue will be used for correctness comparison.
+    // Split key by '/' and pick either entry randomly.
 
-            // Make these boxes visible and remove from arrays
-            leftInvisibleBoxes[leftBoxIndex].classList.remove('invisible');
-            rightInvisibleBoxes[rightBoxIndex].classList.remove('invisible');
+    leftInvisibleBoxes[leftBoxIndex].textContent = pickRandomSplitEntry(newPair.key, '/');
+    leftInvisibleBoxes[leftBoxIndex].hiddenValue = idx;
+    rightInvisibleBoxes[rightBoxIndex].textContent = pickRandomSplitEntry(newPair.value,',');
+    rightInvisibleBoxes[rightBoxIndex].hiddenValue = idx;
 
-            leftInvisibleBoxes.splice(leftBoxIndex, 1);
-            rightInvisibleBoxes.splice(rightBoxIndex, 1);
+    // Make these boxes visible and remove from arrays
+    leftInvisibleBoxes[leftBoxIndex].classList.remove('invisible');
+    rightInvisibleBoxes[rightBoxIndex].classList.remove('invisible');
+
+    leftInvisibleBoxes.splice(leftBoxIndex, 1);
+    rightInvisibleBoxes.splice(rightBoxIndex, 1);
+    refreshLeftRightInvisLabels();
+}
+
+// Function to display pairs in two columns with randomized order
+function displayAllPairs() {
+    // take wordRows random pairs
+    let selectedPairs = new Map();
+    let shuffledLeft = [];
+    let shuffledRight = [];
+    let i = 0;
+    while(i < wordRows){
+        // Pick a new pair randomly.
+        const idx = Math.floor(Math.random() * pairs.length);
+        if (selectedPairs.has(idx))
+            continue; // Dont add same idx.
+        selectedPairs.set(idx, pairs[idx]);
+        shuffledLeft.push(idx);
+        shuffledRight.push(idx);
+        i++;
+    }
+    if (selectedPairs.size != wordRows) {
+        console.log(selectedPairs);
+        throw("incorrect map size");
+    }
+
+    // Shuffle keys and values separately
+    shuffledLeft = shuffleArray(shuffledLeft);
+    if (shuffledLeft == undefined || shuffledLeft.length != wordRows) {
+        console.log(shuffledLeft.length);
+        console.log(shuffledLeft);
+        throw('undefined');
+    }
+    shuffledRight = shuffleArray(shuffledRight);
+    if (shuffledRight == undefined || shuffledRight.length != wordRows) {
+        console.log(shuffledRight.length);
+        console.log(shuffledRight);
+        throw('undefined');
+    }
+    // Get left and right column elements
+    const leftColumn = getEl('leftColumn');
+    const rightColumn = getEl('rightColumn');
+
+    // Clear previous content
+    leftColumn.innerHTML = '';
+    rightColumn.innerHTML = '';
+
+    // Display pairs in two columns with randomized order
+    for (let i = 0; i < wordRows; i++) {
+        const boxLeft = document.createElement('div');
+        boxLeft.classList.add('box');
+        pair = selectedPairs.get(shuffledLeft[i]);
+        if (pair == undefined) {
+            console.log("Pair is undefined");
+            console.log(pair);
+            console.log(i);
+            console.log(shuffledLeft[i]);
+            console.log(shuffledLeft);
+            console.log(selectedPairs);
+            throw("Pair is undefined");
         }
+        boxLeft.textContent = pickRandomSplitEntry(pair.key, '/');
+        boxLeft.addEventListener('click', () => boxClickHandler('left', boxLeft));
+        boxLeft.hiddenValue = shuffledLeft[i];
+        leftColumn.appendChild(boxLeft);
 
-        // Function to display pairs in two columns with randomized order
-        function displayAllPairs() {
-            // take wordRows random pairs
-            let selectedPairs = new Map();
-            let shuffledLeft = [];
-            let shuffledRight = [];
-            let i = 0;
-            while(i < wordRows){
-                // Pick a new pair randomly.
-                const idx = Math.floor(Math.random() * pairs.length);
-                if (selectedPairs.has(idx))
-                    continue; // Dont add same idx.
-                selectedPairs.set(idx, pairs[idx]);
-                shuffledLeft.push(idx);
-                shuffledRight.push(idx);
-                i++;
-            }
-            if (selectedPairs.size != wordRows) {
-                console.log(selectedPairs);
-                throw("incorrect map size");
-            }
-
-            // Shuffle keys and values separately
-            shuffledLeft = shuffleArray(shuffledLeft);
-            if (shuffledLeft == undefined || shuffledLeft.length != wordRows) {
-                console.log(shuffledLeft.length);
-                console.log(shuffledLeft);
-                throw('undefined');
-            }
-            shuffledRight = shuffleArray(shuffledRight);
-            if (shuffledRight == undefined || shuffledRight.length != wordRows) {
-                console.log(shuffledRight.length);
-                console.log(shuffledRight);
-                throw('undefined');
-            }
-            // Get left and right column elements
-            const leftColumn = document.getElementById('leftColumn');
-            const rightColumn = document.getElementById('rightColumn');
-
-            // Clear previous content
-            leftColumn.innerHTML = '';
-            rightColumn.innerHTML = '';
-
-            // Display pairs in two columns with randomized order
-            for (let i = 0; i < wordRows; i++) {
-                const boxLeft = document.createElement('div');
-                boxLeft.classList.add('box');
-                pair = selectedPairs.get(shuffledLeft[i]);
-                if (pair == undefined) {
-                    console.log("Pair is undefined");
-                    console.log(pair);
-                    console.log(i);
-                    console.log(shuffledLeft[i]);
-                    console.log(shuffledLeft);
-                    console.log(selectedPairs);
-                    throw("Pair is undefined");
-                }
-                boxLeft.textContent = pickRandomSplitEntry(pair.key, '/');
-                boxLeft.addEventListener('click', () => boxClickHandler('left', boxLeft));
-                boxLeft.hiddenValue = shuffledLeft[i];
-                leftColumn.appendChild(boxLeft);
-
-                pair = selectedPairs.get(shuffledRight[i]);
-                if (pair == undefined) {
-                    console.log("Pair is undefined");
-                    console.log(pair);
-                    console.log(i);
-                    console.log(shuffledRight[i]);
-                    console.log(selectedPairs);
-                    throw("Pair is undefined");
-                }
-                const boxRight = document.createElement('div');
-                boxRight.classList.add('box');
-                boxRight.textContent = pickRandomSplitEntry(pair.value, ',');
-                boxRight.addEventListener('click', () => boxClickHandler('right', boxRight));
-                boxRight.hiddenValue = shuffledRight[i];
-                rightColumn.appendChild(boxRight);
-            }
+        pair = selectedPairs.get(shuffledRight[i]);
+        if (pair == undefined) {
+            console.log("Pair is undefined");
+            console.log(pair);
+            console.log(i);
+            console.log(shuffledRight[i]);
+            console.log(selectedPairs);
+            throw("Pair is undefined");
         }
+        const boxRight = document.createElement('div');
+        boxRight.classList.add('box');
+        boxRight.textContent = pickRandomSplitEntry(pair.value, ',');
+        boxRight.addEventListener('click', () => boxClickHandler('right', boxRight));
+        boxRight.hiddenValue = shuffledRight[i];
+        rightColumn.appendChild(boxRight);
+    }
+}
 
-        // Call displayAllPairs function when the page loads
-        window.onload = () => {
-            displayAllPairs(); // Display initial pairs
-        };
-    </script>
+function showHideHist() {
+    histShown = !histShown;
+}
+
+
+// Call displayAllPairs function when the page loads
+window.onload = displayAllPairs();
+window.onfocus = onFocus;
+window.onblur = onBlur;
+
+</script>
 </body>
 </html>
