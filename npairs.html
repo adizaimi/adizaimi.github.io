@@ -21,7 +21,6 @@
     .column {
         display: flex;
         flex-direction: column;
-        border-radius: 6px; /* Rounded corners */
     }
     .box {
         margin: 1px;
@@ -54,7 +53,6 @@
         pointer-events: none;
         transition: opacity 0.7s ease;
     }
-
     .score {
         border:1px solid gray;
         border-radius: 5px;
@@ -62,13 +60,23 @@
         text-align: center;
         font-size: 100%;
     }
+    .accmap {
+        border:1px solid gray;
+        border-radius: 5px;
+        width: 210px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+    }
 </style>
 </head>
 <body>
-    <table class="container">
-      <tr class="container"><td><div class="column" id="leftColumn"></div></td>
-          <td><div class="column" id="rightColumn"></div></td></tr>
-    </table>
+
+<table class="container">
+    <tr class="container"><td><div class="column" id="leftColumn"></div></td>
+        <td><div class="column" id="rightColumn"></div></td></tr>
+</table>
 
 <table align="center">
   <tr>
@@ -82,6 +90,7 @@
 </table>
 
 <table id="historytbl"></table>
+<table id="accuracyMapTbl" class='accmap' align="center" ></table>
 
 <script src="wl.js"></script>
 
@@ -117,7 +126,6 @@ const pairs = [
 const wordRows = 6; // how many rows of words to display on the page
 let selectedLeftBox = null; // Track currently selected box in the left column
 let selectedRightBox = null; // Track currently selected box in the right column
-let points = 0; // Track user points
 let total = 0;
 let correctPairsCount = 0; // Track count of correctly guessed pairs
 
@@ -129,6 +137,7 @@ let myInterval;
 const interval_delay = 1000; // In ms.
 let is_interval_running = false; //Optional
 let intervalCounter = 0;
+let accuracyMap = null;
 
 function getEl(elName) {
     return document.getElementById(elName);
@@ -177,22 +186,35 @@ function intervalFunction () {
 }
 
 
+function incInMap(str, correct, total) {
+    let vObj = accuracyMap.get(str);
+    if (vObj == undefined) {
+        vObj = {correct: correct, total: total};
+    } else {
+        vObj.correct += correct;
+        vObj.total += total;
+    }
+    accuracyMap.set(selectedLeftBox.textContent, vObj);
+}
+
 // Function to handle click on a box
 function boxClickHandler(column, boxElement) {
+    // Read isSelected state before we clear it.
     const isSelected = boxElement.classList.contains('on');
-
-    // Reset previously selected box in the same column
+    const deselectBox = (box) => {
+        box.classList.remove('on');
+        box = null;
+    }
+        
+    // Reset previously selected box in the same column.
     if (column === 'left' && selectedLeftBox !== null) {
-        selectedLeftBox.classList.remove('on');
-        selectedLeftBox = null;
+        deselectBox(selectedLeftBox);
     } else if (column === 'right' && selectedRightBox !== null) {
-        selectedRightBox.classList.remove('on');
-        selectedRightBox = null;
+        deselectBox(selectedRightBox);
     }
 
-    // Toggle current box
     if (isSelected) {
-        return;
+        return; // Nothing to do.
     }
     boxElement.classList.add('on');
     if (column === 'left') {
@@ -213,10 +235,10 @@ function boxClickHandler(column, boxElement) {
     total++;
 
     if (!isCorrectPair) {
-        getEl("result").innerHTML = getEl("result").innerHTML.substring(0,1) + points + ":" + total;
+        getEl("result").innerHTML = getEl("result").innerHTML.substring(0,1) + correctPairsCount + ":" + total;
         selectedLeftBox.classList.add('incorrect');
         selectedRightBox.classList.add('incorrect');
-
+        incInMap(selectedLeftBox.textContent, 0, 1);
         const clearIncorrectPair = () => {
             selectedLeftBox.classList.remove('incorrect');
             selectedRightBox.classList.remove('incorrect');
@@ -230,9 +252,9 @@ function boxClickHandler(column, boxElement) {
         return;
     }
 
-    // Increment points.
-    points++;
-    getEl("result").innerHTML = getEl("result").innerHTML.substring(0,1) + points + ":" + total;
+    // Increment correctPairsCount.
+    correctPairsCount++;
+    getEl("result").innerHTML = getEl("result").innerHTML.substring(0,1) + correctPairsCount + ":" + total;
 
     // Mark boxes as correct
     selectedLeftBox.classList.add('correct');
@@ -247,6 +269,11 @@ function boxClickHandler(column, boxElement) {
     // Append to invisible boxes arrays.
     leftInvisibleBoxes.push(selectedLeftBox);
     rightInvisibleBoxes.push(selectedRightBox);
+    incInMap(selectedLeftBox.textContent, 1, 1);
+    if (total % 5 == 1) {
+        saveSession();
+    }
+
     selectedLeftBox = null;
     selectedRightBox = null;
     refreshLeftRightInvisLabels();
@@ -373,11 +400,6 @@ function displayAllPairs() {
 
         pair = selectedPairs.get(shuffledRight[i]);
         if (pair == undefined) {
-            console.log("Pair is undefined");
-            console.log(pair);
-            console.log(i);
-            console.log(shuffledRight[i]);
-            console.log(selectedPairs);
             throw("Pair is undefined");
         }
         const boxRight = document.createElement('div');
@@ -389,11 +411,49 @@ function displayAllPairs() {
     }
 }
 
+function loadSession() {
+    let mapTxt = localStorage.getItem("accuracyMap");
+    accuracyMap = new Map(JSON.parse(mapTxt));
+    accuracyMap.forEach((value,key) => {
+        total += value.total;
+        correctPairsCount += value.correct;
+    });
+    getEl("result").innerHTML = getEl("result").innerHTML.substring(0,1) + correctPairsCount + ":" + total;
+}
+
+// Call this every n items to save the accuracy info for each word.
+function saveSession() {
+    // wordMap contains the map of words (by id) to the frequency of correct/total occurrences.
+    let str = JSON.stringify([...accuracyMap]);
+    console.log("saving accuracyMap" + str); // debug print the pairs
+    localStorage.setItem("accuracyMap", str);
+}
+
 function showHideHist() {
     histShown = !histShown;
+    var el = getEl("result");
+    var txtv = el.innerHTML;
+    txtv = txtv.substring(1,txtv.length); //0 - is arrow
+    var hEl = getEl("accuracyMapTbl");
+
+    if(histShown) {
+        el.innerHTML = "&uarr;" + txtv;
+        window.scrollTo(0,450);
+        const formattedEntries = [];
+        let i = 0;
+        accuracyMap.forEach((value,key) => {
+            const entry = `<div>${i++}: ${key}, ${value.correct}, ${value.total}</div>`;
+            formattedEntries.push(entry);
+        });
+        hEl.innerHTML = formattedEntries.join("\n");
+    } else {
+        el.innerHTML = "&darr;" + txtv;
+        hEl.innerHTML = "";
+    }
 }
 
 
+loadSession();
 // Call displayAllPairs function when the page loads
 window.onload = displayAllPairs();
 window.onfocus = onFocus;
