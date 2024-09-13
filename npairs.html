@@ -33,7 +33,7 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        transition: opacity 2.7s ease, background-color 0.35s ease; /* Smooth transition */
+        transition: opacity 2.7s ease, background-color 0.65s ease; /* Smooth transition */
     }
     .on {
         background-color: #607080; /* Color for 'selected' box */
@@ -47,11 +47,12 @@
         background-color: red; /* Color for incorrect pair */
         transition: background-color 0.2s ease; /* Smooth transition */
     }
-    .invisible {
-        opacity: 0.2;
+    .inactive {
+        opacity: 0.3;
         background-color: lightgreen; /* Color for correct pair fainting */
+        color: white;
         pointer-events: none;
-        transition: opacity 0.7s ease;
+        transition: opacity 0.7s ease; /* time to go from new color green to faded */
     }
     .score {
         border:1px solid gray;
@@ -129,8 +130,8 @@ let selectedRightBox = null; // Track currently selected box in the right column
 let total = 0;
 let correctPairsCount = 0; // Track count of correctly guessed pairs
 
-let leftInvisibleBoxes = []; // Array to store invisible left boxes
-let rightInvisibleBoxes = []; // Array to store invisible right boxes
+let leftInactiveBoxes = []; // Array to store inactive left boxes
+let rightInactiveBoxes = []; // Array to store inactive right boxes
 let histShown = false;
 
 let myInterval;
@@ -138,6 +139,8 @@ const interval_delay = 1000; // In ms.
 let is_interval_running = false; //Optional
 let intervalCounter = 0;
 let accuracyMap = null;
+let threeSecDispl = null;
+let fiveSecDispl = null;
 
 function getEl(elName) {
     return document.getElementById(elName);
@@ -155,8 +158,8 @@ function onBlur() {
 }
 
 function refreshLeftRightInvisLabels() {
-    getEl('leftArr').textContent = leftInvisibleBoxes.length;
-    getEl('rightArr').textContent = rightInvisibleBoxes.length;
+    getEl('leftArr').textContent = leftInactiveBoxes.length;
+    getEl('rightArr').textContent = rightInactiveBoxes.length;
 }
 
 // Function to shuffle array randomly
@@ -248,7 +251,7 @@ function boxClickHandler(column, boxElement) {
         // Reset boxes if not correct, note that if you are too quick to select another item at this point,
         // the first clearIncorrectPair will get cancelled, so we may need to save it and call it manually
         // before issuing a second setTimeout call
-        setTimeout(clearIncorrectPair, 100);
+        setTimeout(clearIncorrectPair, 150);
         return;
     }
 
@@ -260,15 +263,24 @@ function boxClickHandler(column, boxElement) {
     selectedLeftBox.classList.add('correct');
     selectedRightBox.classList.add('correct');
 
-    // Make correct pairs invisible
-    selectedLeftBox.classList.add('invisible');
-    selectedRightBox.classList.add('invisible');
+    // Make correct pairs inactive
+    selectedLeftBox.classList.add('inactive');
+    selectedRightBox.classList.add('inactive');
     selectedLeftBox.classList.remove('correct');
     selectedRightBox.classList.remove('correct');
 
-    // Append to invisible boxes arrays.
-    leftInvisibleBoxes.push(selectedLeftBox);
-    rightInvisibleBoxes.push(selectedRightBox);
+    if (leftInactiveBoxes.length >= 2) {
+        // If 2 or more correct pairs have been guessed, refresh now.
+        for (i = 0; i <= leftInactiveBoxes.length; i++) {
+            pickNewPairAndDisplay();
+        }
+	clearTimeout(fiveSecDispl);
+	clearTimeout(threeSecDispl);
+    }
+
+    // Append to inactive boxes arrays.
+    leftInactiveBoxes.push(selectedLeftBox);
+    rightInactiveBoxes.push(selectedRightBox);
     incInMap(selectedLeftBox.textContent, 1, 1);
     if (total % 5 == 1) {
         saveSession();
@@ -278,19 +290,15 @@ function boxClickHandler(column, boxElement) {
     selectedRightBox = null;
     refreshLeftRightInvisLabels();
 
-    if (leftInvisibleBoxes.length > 2) {
-        // If 3 or more correct pairs have been guessed, refresh now.
-        for (i = 0; i < leftInvisibleBoxes.length; i++) {
-            pickNewPairAndDisplay();
-        }
-    } else if (leftInvisibleBoxes.length >= 2) {
+    if (leftInactiveBoxes.length >= 2) {
         // Refresh delayed.
-        setTimeout(() => {
+        threeSecDispl = setTimeout(() => {
             pickNewPairAndDisplay();
             pickNewPairAndDisplay();
+	    clearTimeout(fiveSecDispl);
         }, 3000);
-    } else if (leftInvisibleBoxes.length >= 1) {
-        setTimeout(() => {
+    } else if (leftInactiveBoxes.length >= 1) {
+        fiveSecDispl = setTimeout(() => {
             pickNewPairAndDisplay();
         }, 5000);
     }
@@ -309,30 +317,30 @@ function pickRandomSplitEntry (str, splitChar) {
 }
 
 function pickNewPairAndDisplay() {
-    if(leftInvisibleBoxes.length < 1)
+    if(leftInactiveBoxes.length < 1)
         return;
     // Pick a new pair randomly
     const idx = Math.floor(Math.random() * pairs.length);
     const newPair = pairs[idx];
 
-    // Randomly select boxes from invisible boxes arrays
-    const leftBoxIndex = Math.floor(Math.random() * leftInvisibleBoxes.length);
-    const rightBoxIndex = Math.floor(Math.random() * rightInvisibleBoxes.length);
+    // Randomly select boxes from inactive boxes arrays
+    const leftBoxIndex = Math.floor(Math.random() * leftInactiveBoxes.length);
+    const rightBoxIndex = Math.floor(Math.random() * rightInactiveBoxes.length);
 
     // Set new pair in the randomly selected boxes, hiddenValue will be used for correctness comparison.
     // Split key by '/' and pick either entry randomly.
 
-    leftInvisibleBoxes[leftBoxIndex].textContent = pickRandomSplitEntry(newPair.key, '/');
-    leftInvisibleBoxes[leftBoxIndex].hiddenValue = idx;
-    rightInvisibleBoxes[rightBoxIndex].textContent = pickRandomSplitEntry(newPair.value,',');
-    rightInvisibleBoxes[rightBoxIndex].hiddenValue = idx;
+    leftInactiveBoxes[leftBoxIndex].textContent = pickRandomSplitEntry(newPair.key, '/');
+    leftInactiveBoxes[leftBoxIndex].hiddenValue = idx;
+    rightInactiveBoxes[rightBoxIndex].textContent = pickRandomSplitEntry(newPair.value,',');
+    rightInactiveBoxes[rightBoxIndex].hiddenValue = idx;
 
     // Make these boxes visible and remove from arrays
-    leftInvisibleBoxes[leftBoxIndex].classList.remove('invisible');
-    rightInvisibleBoxes[rightBoxIndex].classList.remove('invisible');
+    leftInactiveBoxes[leftBoxIndex].classList.remove('inactive');
+    rightInactiveBoxes[rightBoxIndex].classList.remove('inactive');
 
-    leftInvisibleBoxes.splice(leftBoxIndex, 1);
-    rightInvisibleBoxes.splice(rightBoxIndex, 1);
+    leftInactiveBoxes.splice(leftBoxIndex, 1);
+    rightInactiveBoxes.splice(rightBoxIndex, 1);
     refreshLeftRightInvisLabels();
 }
 
