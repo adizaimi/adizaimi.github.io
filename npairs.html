@@ -92,6 +92,7 @@
 
 <table id="historytbl"></table>
 <table id="accuracyMapTbl" class='accmap' align="center" ></table>
+<div id="gitversion" style="position: fixed; font-size: 0.5rem; bottom: 0; right: 0; padding: 3px; ">Version: Loading...</div>
 
 <script src="wl.js"></script>
 
@@ -466,7 +467,9 @@ loadSession();
 window.onload = displayAllPairs();
 window.onfocus = onFocus;
 window.onblur = onBlur;
-
+fetch('index.html').then(response => response.text())
+	.then(version => { getEl('gitversion').innerText = `Version: ${version}`;})
+	.catch(() => { getEl('gitversion').innerText = 'Version: unknown';});
 </script>
 </body>
 </html>
