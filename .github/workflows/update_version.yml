@@ -1,0 +1,17 @@
+name: Update Version of index.html
+
+on: 
+  push: 
+    branches:
+      - main
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Update version file
+      run: echo $(git rev-parse --short HEAD) > index.html
