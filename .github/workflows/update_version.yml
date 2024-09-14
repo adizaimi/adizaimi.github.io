@@ -14,4 +14,15 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Update version file
-        run: echo $(git rev-parse --short HEAD) > index.html
+        run: |
+          echo "const version = $(git rev-parse --short HEAD);" > version.js
+          echo "console.log('Version:', version);" >> version.js
+
+      - name: List dir content
+        run: ls -al
+
+      - name: Deploy to Github pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
