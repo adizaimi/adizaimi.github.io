@@ -1,2 +1,2 @@
-const version = '9b0abb8';
+const version = '58143e2';
 console.log('Version:', version);
