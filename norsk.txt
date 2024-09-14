@@ -43,7 +43,7 @@ mange           -- many, a lot : mange venner
 flere           -- several
 hvor            -- where, how : hvor er du -- where are you
 hva             -- what : wha har du -- what do you have
-hva enn         -- whatever : (that which ..)
+hva enn         -- whatever, that which
 hvilke/hvilket/hvilken  -- which
 hvem            -- who : hvem har vann -- who has water
 hvem sin/hvem sitt/hvem sine        -- whoose : e kujt: hvem sin barn er han -- whoose child is he?
@@ -98,11 +98,12 @@ høres           -- sounds : (høres bra ut  -- sounds good)
 hørt            -- heard : har hørt
 hørte           -- heard : did hear
 lytter/å lytte  -- to listen : lytter du -- are you listening? lytter til musikk -- listen to music
+en lyd/lyden/lyder/lydene -- sound
 en regning/regningen/regninger/regningene -- the bill, account
 en servitør/servitøren/servitører/servitørene -- the waiter : servitøren har regningen -- the waiter has the bill
 ser/å se        -- to see : jeg ser etter -- i'm looking for
 ser ut          -- looks, dukem : hun ser trist ut -- she looks sad
-ser frem        -- look forwards : så frem -- looked forwards
+ser frem        -- look forwards
 så              -- saw : did see : så du det -- did you see that?
 så frem         -- was looking forwards
 sett            -- seen : har sett -- have seen, jeg har sett lyset -- i have seen the light
@@ -139,7 +140,7 @@ høyere          -- higher, taller
 høyest          -- highest, loudest
 høyre           -- right : (til hoyre -- to the right)
 venstre         -- left : til venstre
-drikker         -- to drink, drinking : å drikke : ikke drikk -- dont drink
+drikker/å drikke -- to drink, drinking : ikke drikk -- dont drink
 drikken         -- the drink : en drikk/drikken/drikker/drikkene
 drakk           -- drank
 vannen          -- water : vann/vannen
@@ -180,7 +181,7 @@ kommer          -- to come: arrive : kommer frem -- arrive
 kom             -- came : hva kom først -- what came first
 kommet          -- come : har kommet -- had come
 kommer til      -- going to : vi kommer til å bruke alt -- were going to use everything
-svømmer         -- to swim : å svømme
+svømmer/å svømme -- to swim
 svømmet         -- swam : har svømmet
 svømte          -- swam : did swim
 svømt           -- swam : har svømt -- has swam
@@ -381,7 +382,7 @@ ut/ute          -- outside : hun går ut -- she's going out
 utenfor         -- outside, outside of : utenfor huset -- outside the house
 uten            -- without : uten deg, er jeg ingenting -- without you, i am nothing
 på              -- at, on : på jobb -- at work , på bordet -- on the table
-til             -- to, of : skrike till  -- yell to, kaken til moren min -- min morens kake -- keku i mamase time
+til             -- to, of : skrike til  -- yell to, kaken til moren min -- min morens kake -- keku i mamase time
 i Norge         -- in Norway
 i dag           -- today
 i går           -- dje, yesterday : var det sol i gar? -- was it sunny yesterday?
@@ -394,7 +395,7 @@ i nærheten      -- nearby : (easy search nerheten narheten)
 nær/nærme       -- near : (pl)
 nærmest         -- nearest
 en tid/tiden    -- the time : har du tid
-gjør/gjøre      -- to do : å gjøre : hva gjør du (easy search gjor/gjore)
+gjør/å gjøre    -- to do : hva gjør du (easy search gjor/gjore)
 gjort           -- done : har gjort
 gjorde          -- did : did do : gjorde du det -- did you do it?
 hos             -- at, with : oppe hos -- up at , bli hos meg -- stay with me
@@ -404,7 +405,8 @@ møtte           -- met : jeg møtte begge to -- i met both
 møtt            -- have met : har du møtt bandet -- have you met the band?
 mot             -- to, towards, against : hun gjøre det mot meg -- she did that to me
 kan             -- can : kan ikke  -- can not
-står            -- to stand, stay : å stå : bordet står her -- the table is here, de står -- they are standing (easy search: star)
+står/å stå      -- to stand, stay : bordet står her -- the table is here, de står -- they are standing (easy search: star)
+stod            -- stood
 bli             -- to stay, to become : bli i sengen (stay in bed), jeg vil bli lærer -- I want to become a teacher
 ble             -- was
 blitt           -- been : har blitt -- has become
@@ -451,22 +453,22 @@ kjempefint      -- terrific
 kjempetungt     -- really heavy : very heavy
 kjempestor      -- really big
 kjempevarmt     -- really warm
-kjenner         -- to know : njoh : jeg kjenner du
-kjent           -- known
+kjenner/å kjenne -- to know : njoh : jeg kjenner du
+kjent/kjente    -- known : -e pl
 ukjent          -- unknown
 et kjed/kjedet  -- the chain, necklace
-en krefte/kreften/?/kreftene -- the force, craft, power
+en krefte/kreften/kreftene -- the force, craft, power
 et uhell/uhellet -- the accident : misshap
 en ulykke/ulykken -- the accident
 kødder du       -- are you f*cking
 hele/helt       -- whole, totally, completely : hele tida -- all the time , hele dagen -- the whole day
-sikkert         -- surely: me siguri : helt sikkert -- definitely
-forsiktig       -- careful
-neste           -- next
-nesten          -- almost
+sikker/sikkert/sikre -- surely: me siguri : helt sikkert -- definitely
+forsiktig/forsiktige -- careful
+neste           -- next : (adj)
+nesten          -- almost : (adv)
 det eneste      -- the only thing
 seg selv        -- them selves
-holder          -- hold : du holder på med -- you're holding on to me
+holder/å holde  -- hold, keep : du holder på med -- you're holding on to me
 alt             -- everything : takk for alt -- thanks for everything
 alle            -- all, everybody : alle koppene -- all the cups
 altså           -- so, therefore
@@ -506,8 +508,6 @@ nå              -- now
 sen/sent        -- late : sent (-et) : du er sen -- you are late, det er sent -- it's late, det er for sent -- it's too late
 senere          -- later
 av              -- of : (en av dem -- one of them)
-minst           -- at least
-i hvert fall    -- at least
 tror            -- believe : tror du -- do you think?
 en drit/dritten -- shit
 selvfølgelig    -- surely : of course
@@ -545,7 +545,6 @@ en frokost/frokosten -- the breakfast : spis frokosten din -- eat your breakfast
 en lunsj/lunsjen -- the lunch
 en middag/middagen/middager/midaggene -- the dinner
 kveldsmat       -- supper
-seier           -- to say : saying ??
 sier/å si       -- to say : hva sier dere -- what do you say, si noe -- say something
 sa              -- said : did say, hva sa du -- what did you say?
 sagt            -- said : har sagt -- have said
@@ -594,10 +593,10 @@ regner          -- to rain, shi : det regner
 snør            -- to snow : det snør
 snøen           -- the snow : en snø/snøen
 overskyet       -- me re, cloudy : det er overskyet
-våren           -- the spring : en vår/våren : det or snart vår -- it is spring soon (easy search: varen)
-sommeren        -- the summer : en sommer/sommeren
-høsten          -- the fall, autumn : en høst/høsten
-vinteren        -- the winter : en vinter/vinteren
+en vår/våren    -- the spring : det or snart vår -- it is spring soon (easy search: varen), en vår med sol -- a spring with sunshine
+en sommer/sommeren -- the summer
+en høst/høsten -- the fall, autumn
+en vinter/vinteren -- the winter
 kald/kaldt/kaldene -- cold : det er kaldt : kaldere -- colder
 varm/vamrt/varme -- hot : det er varmt
 synger/å synge  -- to sing
@@ -617,7 +616,7 @@ likt            -- liked : has liked
 en seng/sengen  -- the bed :   (ei seng)
 et toalett/toalettet/toaletter/toalettene -- the restroom
 et bad/badet    -- the bath, bathroom : å ta et bad -- to take a bath
-bader           -- to bathe : å bade
+bader/å bade    -- to bathe
 baderommet      -- the bathroom
 en badedrakte/badetrakten -- the swimsuit
 ren/rent/rene   -- clean : (-et, -e pl) : et rent hus, gatene er rene
@@ -667,121 +666,129 @@ apen/apent/apne -- open :  (pl)
 åpnet           -- opened
 trenger/å trenge -- to need
 trengte         -- needed
-finner          -- to find : å finne
+finner/å finne  -- to find
 fant            -- found
 finner sted     -- to take place
 fant sted       -- took place
-avgangen        -- the departure : en avgang/avgangen
-onkel           -- the uncle : en onkel/onkelen/onkeler/onkelene
+en avgang/avgangen -- the departure
+en onkel/onkelen/onkeler/onkelene -- the uncle
 fantastisk      -- fantastic
-hyllen          -- the shelf : en hylle/hyllen
-teppet          -- the carpet : et teppe/teppet
-teppet          -- the blanket : et teppe/teppet
-blir            -- to come up to, costs, make : det blir -- that makes
-blir            -- to become : jeg blir maler -- i'll be a painter, jenta blir en kvinne -- the girl is becomming a woman.
+en hylle/hyllen -- the shelf
+et teppe/teppet -- the carpet
+et teppe/teppet -- the blanket
+blir/å bli      -- to become : come up to, costs, make : det blir -- that makes, jeg blir maler -- i'll be a painter, jenta blir en kvinne -- the girl is becomming a woman.
 blir du med     -- are you comming along, will you become
 ledig           -- free, available
 forsinket       -- delayed
-bestefar        -- grandfather : farfar, farmor
-bestemor        -- grandmother : mormor, morfar
-søt             -- sweet : søtere -- sweeter : søtest -- the sweetest
+bestefar/farfar/farmor -- grandfather
+bestemor/mormor/morfar -- grandmother
+søt/søtt/søtte  -- sweet
+søtere          -- sweeter
+søtest          -- the sweetest
 sukker          -- sugar
 rett            -- straight
 frem            -- ahead : rett frem -- straight ahead
-dyrehagen       -- the zoo : en dyrehage/dyrehagen
-elven           -- the river : en elv/elven/elver/elvene (elva)
-besøker         -- to visit : å besøke , hvem er dere på besøk hos? -- who are you visiting with? : får besøk -- take visitors
-besøk           -- the visitor : en besøk/besøken/besøk/besøkene (easy search besok)
+en dyrehage/dyrehagen -- the zoo
+en elv/elven/elver/elvene/elva -- the river
+besøker/å besøke -- to visit : hvem er dere på besøk hos? -- who are you visiting with? : får besøk -- take visitors
+en besøk/besøken/besøk/besøkene -- the visitor :  (easy search besok)
 besøkt          -- visited : har besøkt
 besøkte         -- visited : did visit
 sentrum         -- center : i sentrum -- in the city center
-sulten          -- hungry
-tørst           -- thirsty : (easy torst)
-bussen          -- the bus : en buss/bussen/busser
+sulten/sultent/sultne -- hungry : de er sultne
+tørst/tørste    -- thirsty : (easy torst)
+en buss/bussen/busser/bussene -- the bus
 bussholdeplassen -- the bus stop
 bussbilleten    -- the bus ticket
 busstasjonnen   -- the bus station
-pengene         -- the money : pengene mine -- my money : trenger penger -- need money
-nummeret        -- the number : et nummer/nummeret
-taxien          -- the taxi : en taxi/taxien
-taxituren       -- the taxiride : en taxitur/taxituren
-adressen        -- the adress : en adress/adressen/adresser/adressene
-gjentar         -- to repeat : å gjenta : historien gjentar seg -- history repeats itself
-deler           -- to split, divide, share : å dele : deler reiginingen -- split the bill, deler tiden med -- share time with
-familien        -- the family : en familie/familien
-suppen          -- the soup : en supp/suppen
+penger/pengene  -- the money : pengene mine -- my money : trenger penger -- need money
+et nummer/nummeret/numre/numrene -- the number
+en taxi/taxien -- the taxi
+en taxitur/taxituren -- the taxiride
+en adress/adressen/adresser/adressene -- the adress
+gjentar/å gjenta -- to repeat : historien gjentar seg -- history repeats itself
+deler/å dele    -- to split, divide, share : deler reiginingen -- split the bill, deler tiden med -- share time with
+en del/delen/deler/delene -- the piece
+en familie/familien/familier/familiene -- the family
+en supp/suppen/supper/suppene -- the soup
 nervøs          -- nervous
-hodet           -- the head : et hode/hodet/hoder/hodene
-vondt           -- hurt, pain : en vond fot -- a sore foot; vondt i hodet -- headache : det gjør vondt -- it hurts (easy search gjor vondt)
-trist           -- sad
-glad/glade      -- happy : glade (pl)
+et hode/hodet/hoder/hodene -- the head
+vond/vondt      -- hurt, pain : en vond fot -- a sore foot; vondt i hodet -- headache : det gjør vondt -- it hurts (easy search gjor vondt)
+trist/triste    -- sad
+glad/glade      -- happy : (-e pl)
 mindre          -- less, smaller : mer eller mindre -- more or less
-minste          -- smallest
-smaker          -- to taste, tastes : å smake
-håpen           -- the hope : en håpe/håpen
-håper           -- to hope : å håpe : håper det smaker -- hope it tastes good (enjoy your meal)
+minste          -- smallest, least : den miste leiligheten -- the smallest appartment
+minst           -- at least : du må vente minst en time -- you must wait at least an hour
+i hvert fall    -- at least, in any case
+smaker/å smake  -- to taste, tastes
+et håp/håpet    -- the hope
+håper/å håpe    -- to hope : håper det smaker -- hope it tastes good (enjoy your meal)
 forhåpentligvis -- hopefully
-glass           -- the glass : et glass/glass/glassene
-festen          -- the party : en fest/festen
-fester          -- to party : å feste
-brusen          -- the soda : en brus/brusen
-invitasjonen    -- the invitation : en invitasjon/invitasjonen/invitasjoner/invitasjonene
+et glass/glass/glassene -- the glass
+en fest/festen  -- the party
+fester/å feste  -- to party
+festet          -- partied
+en brus/brusen  -- the soda
+en invitasjon/invitasjonen/invitasjoner/invitasjonene -- the invitation
 rodvinen        -- the read wine
 hjemme          -- home : jeg er hjemme
 hurra           -- urra, horay, hooray
-bandet          -- the band : et band/bandet
-ballongen       -- the balloon : en ballong/ballongen
-klovnen         -- the clown : en klov/klovnen
-gjest           -- the guest : en gjest/gjesten/gjester/gjestene
-gaven           -- the gift : en gave/gaven
-lar             -- to let : å la : la oss -- let us
-danser          -- to dance : å danse : la oss donse -- let us dance
+et band/bandet  -- the band
+en ballong/ballongen -- the balloon
+en klov/klovnen -- the clown
+en gjest/gjesten/gjester/gjestene -- the guest
+en gave/gaven   -- the gift
+lar/å la        -- to let : la oss -- let us
+danser/å danse  -- to dance : la oss donse -- let us dance
 danset          -- danced
-feirer          -- to celebrate : å feire : la oss feire -- let us celebrate
-musikken        -- the music : en musik/musiken : jeg hører på musikk
-navnet          -- the name : et navne/navnet/navn
-fornavnet       -- the first name : et fornavn/fornavnet
-etternavnet     -- the last name : et etternavn/etternavnet
+feirer/å feire  -- to celebrate : la oss feire -- let us celebrate
+en musik/musiken -- the music : jeg hører på musikk
+et navn/navnet/navn -- the name : vi har mange navn å velge fra -- we have many names to choose from
+et fornavn/fornavnet -- the first name
+et etternavn/etternavnet -- the last name
 bedring         -- recovery : god bedring -- feel better
-feber           -- fever
+en feber/feberen/feber/feberne -- fever
 frisk           -- healthy
 lenger          -- anymore : ikke ... lenger
 lenge           -- long : hvor lenge -- how long
-festivalen      -- the festival : en festival/festivalen
-starter         -- to start : å starte
-begynte         -- began, started
-slutter         -- to end, stop, quit : å slutte
-slutten         -- the end : en slutt/slutten
-avslutte        -- finish
+en festival/festivalen -- the festival
+starter/å starte/start -- to start, initiate, launch : start bilen!
+startet         -- started
+begynner/å begynne -- to begin
+begynte         -- began
+slutter/å slutte -- to end, stop, quit
+en slutt/slutten -- the end
+avslutter/å avslutte -- to finish
 til slutt       -- finally
-studerer        -- to study : å studere
-drar            -- to go, leave : (å dra) : drar på telttur -- go camping
-skogen          -- the forest : en skog/skogen
-skogkatten      -- the forest cat : en skogkatt/skogkatten
+studerer/å studere -- to study
+drar/å dra      -- to go, leave : drar på telttur -- go camping
+en skog/skogen  -- the forest
+en skogkatt/skogkatten -- the forest cat
 dessverre       -- unfortunately
 allerede        -- already
-lyst            -- to want
+en lyst/lysten/lyster/lystene -- the desire : jeg har lyst på is -- i want icecream
+lys/lyst        -- bright, light : lys hud -- fair skin
 et lys/lyset    -- the light
-lys             -- bright, light : lys hud -- fair skin
-planen          -- the plan : en plan/plannen
-instrumentet    -- the instrument : et instrument/instrumentet/instrumenter
+lyse            -- to light
+en plan/planen/planer/planene -- the plan
+et instrument/instrumentet/instrumenter -- the instrument
 videospill      -- videogame
-podkast         -- podcast : /podcaster/
-grillen         -- the grill : en grill/grillen/
-griller         -- to grill : å grille
+podkast/podcaster -- podcast
+en grill/grillen -- the grill
+griller/å grille -- to grill
 grillet         -- grilled
-grillfesten     -- the barbequeue : en grillfeste/grillfesten
-pianoen         -- the piano : en piano/pianoen
+en grillfeste/grillfesten -- the barbequeue
+en piano/pianoen -- the piano
 skitten         -- dirty
-babyen          -- the baby : en baby/babyen
-barnet          -- the child : et barn/barnet/barn/barna , det er barnets te -- that the child's tea.}}+
-barnebarnet     -- the grandchild : et barnebarn/barnebarnet/barnebarn/barnebarna
-historien       -- the history : en historie/historien/historier/
+en baby/babyen  -- the baby
+et barn/barnet/barn/barna -- the child : det er barnets te -- that the child's tea.}}+
+et barnebarn/barnebarnet/barnebarn/barnebarna -- the grandchild
+en historie/historien/historier/historiene -- the history
 fransk          -- french
-amerikansk      -- american : amerikanske (pl)
+amerikansk/amerikanske -- american : (-e pl)
 svensk          -- swedish
-studenten       -- the student : en student/studenten/studenter/studentene
-fiolinen        -- the violin : en fiolin/fiolinen
+en student/studenten/studenter/studentene -- the student
+en fiolin/fiolinen -- the violin
 hobbyen         -- the hobby  : en hobby/hobbyen/hobbyer
 tennis          -- tennis
 pariserhjulet   -- the ferris wheel : et pariserhjul/pariserhjulet
@@ -1065,7 +1072,6 @@ niesen          -- the niece : en niese/niesen
 nevøen          -- the nephew : en nevø/nevøen/ (easy search nevoen)
 utsolgt         -- sold out : utsolgt for brød -- sold out of bread
 teateret        -- the theater : et teater/teateret
-begynner        -- to begin, start : å begynne
 stadion         -- the stadium
 t_banen         -- the subway : en t-bane/t-banen
 slags           -- kind, type : hva slags -- what type
@@ -1338,7 +1344,7 @@ tjener          -- to earn
 et miljøe/miljøet -- the environment
 filmstjernen    -- the movie star
 slipsene        -- the ties
-velger          -- to choose
+velger/å velge  -- to choose
 et belte/beltet//beltene -- the belt
 et gull/gullet  -- the gold
 morsdagen       -- the mothersday
@@ -1399,7 +1405,7 @@ løste           -- solved
 puslespill      -- puzzles
 i fjor          -- last year : i hele fjor -- all of last year
 kunst           -- art
-et fag/faget    -- the subject : school subject
+et fag/faget/fag/fagene -- the subject : school subject
 innflyttingsfesten -- the housewarming party
 en ektefelle/ektefellen -- the spouse
 komfyren        -- the stove
@@ -1448,11 +1454,11 @@ overtid         -- overtime
 arbeidsklærne   -- workclothes
 arbeidsmiløet   -- the working environment
 india           -- india
-gresk/greske    -- greek : greske (en)
+gresk/greske    -- greek : (-e pl)
 en forrett/forretten -- the appetizer
 en hovedrette/hovedretten-- the main course
 leveringstjenesten -- the delivery service
-tilbyr          -- to offer : å tilby
+tilbyr/å tilby  -- to offer
 tilbød          -- offered
 en tallerken/tallerkenen/tallerkener/tallerkenene -- the plate
 en bønne/bønnen/bønner/bønnene -- the bean
@@ -1638,7 +1644,6 @@ passerer        -- to pass
 studien         -- the study: en studi/studien/studier/studiene
 opptatt         -- busy : jeg er opptat med studiene -- im busy with the studies
 stod            -- passed (the classes)
-fagene          -- school subject
 attpåtil        -- furthermore
 merkelig        -- strange
 slappe av       -- to relax : to chill
@@ -1730,6 +1735,7 @@ kunstig intelligens -- artificial intelligence
 reguleres       -- be regulated
 avtale          -- appointment
 seir            -- victory
+en seier/seieren -- victory
 lår             -- thigh
 skam            -- shame
 bøyd            -- past, bent
