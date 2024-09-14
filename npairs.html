@@ -289,7 +289,7 @@ function boxClickHandler(column, boxElement) {
 
     selectedLeftBox = null;
     selectedRightBox = null;
-    refreshLeftRightInvisLabels();
+    //refreshLeftRightInvisLabels();
 
     if (leftInactiveBoxes.length >= 2) {
         // Refresh delayed.
@@ -342,7 +342,7 @@ function pickNewPairAndDisplay() {
 
     leftInactiveBoxes.splice(leftBoxIndex, 1);
     rightInactiveBoxes.splice(rightBoxIndex, 1);
-    refreshLeftRightInvisLabels();
+    //refreshLeftRightInvisLabels();
 }
 
 // Function to display pairs in two columns with randomized order

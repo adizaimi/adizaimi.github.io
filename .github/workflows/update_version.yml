@@ -1,4 +1,4 @@
-name: Update Version of index.html
+name: Update version.js
 
 on: 
   push: 
@@ -15,7 +15,7 @@ jobs:
 
       - name: Update version file
         run: |
-          echo "const version = $(git rev-parse --short HEAD);" > version.js
+          echo "const version = '$(git rev-parse --short HEAD)';" > version.js
           echo "console.log('Version:', version);" >> version.js
 
       - name: List dir content
