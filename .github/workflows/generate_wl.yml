@@ -1,0 +1,19 @@
+name: Generate word list
+
+on: 
+  push: 
+    branches:
+      - main
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Generate word list
+        run: echo 'const pairs = [' > wl.js ; awk "/#/,/##/" ~/norsk.txt | grep "\-\-" | sed 's/^\([^\-\-]*\)\-\-\([^:]*\).*/{ key:"\1", value:"\2"},/g; s/   *//g; s/ the //g; s/ to //g' >> wl.js ; echo '];' >> wl.js
+
+
