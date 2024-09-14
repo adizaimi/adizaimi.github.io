@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Valid Pairs</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .column {
+        padding: 10px;
+        border: 1px solid #ccc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .box {
+        margin: 5px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 80px; /* Adjust width as needed */
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .on {
+        background-color: yellow; /* Change to desired 'on' color */
+    }
+    .correct {
+        background-color: lightgreen; /* Color for correct pair */
+        transition: background-color 0.5s ease; /* Smooth transition */
+    }
+    .incorrect {
+        background-color: red; /* Color for incorrect pair */
+        transition: background-color 0.5s ease; /* Smooth transition */
+    }
+    .invisible {
+        opacity: 0;
+        pointer-events: none;
+    }
+</style>
+</head>
+<body>
+    <h1>Select Valid Pairs</h1>
+    <div class="container">
+        <div class="column" id="leftColumn"></div>
+        <div class="column" id="rightColumn"></div>
+    </div>
+    <p>Points: <span id="points">0</span>
+       Errors: <span id="errors">0</span></p>
+    <p>LeftArr: <span id="leftArr">0</span>
+       RightArr: <span id="rightArr">0</span></p>
+
+    <script>
+        // Define your pairs of symbols
+	const pairs = [
+	    { key: 'a', value: 'A' },
+	    { key: 'b', value: 'B' },
+	    { key: 'c', value: 'C' },
+	    { key: 'd', value: 'D' },
+	    { key: 'e', value: 'E' },
+	    { key: 'f', value: 'F' },
+	    { key: 'g', value: 'G' },
+	    { key: 'h', value: 'H' },
+	    { key: 'i', value: 'I' },
+	    { key: 'j', value: 'J' },
+	    { key: 'k', value: 'K' },
+	    { key: 'l', value: 'L' },
+	    { key: 'm', value: 'M' },
+	    { key: 'n', value: 'N' },
+	    { key: 'o', value: 'O' },
+	    { key: 'p', value: 'P' },
+	    { key: 'q', value: 'Q' },
+	    { key: 'r', value: 'R' },
+	    { key: 's', value: 'S' },
+	    { key: 't', value: 'T' },
+	    { key: 'u', value: 'U' },
+	    { key: 'v', value: 'V' },
+	    { key: 'w', value: 'W' },
+	    { key: 'x', value: 'X' }
+	];
+
+
+	let selectedLeftBox = null; // Track currently selected box in the left column
+	let selectedRightBox = null; // Track currently selected box in the right column
+        let points = 0; // Track user points
+        let errors = 0; // Track user errors
+        let correctPairsCount = 0; // Track count of correctly guessed pairs
+
+        let leftInvisibleBoxes = []; // Array to store invisible left boxes
+        let rightInvisibleBoxes = []; // Array to store invisible right boxes
+
+        // Function to shuffle array randomly
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Function to handle click on a box
+        function boxClickHandler(column, boxElement, keyOrValue) {
+            const isSelected = boxElement.classList.contains('on');
+
+            // Reset previously selected box in the same column
+            if (column === 'left' && selectedLeftBox !== null) {
+                selectedLeftBox.classList.remove('on');
+            } else if (column === 'right' && selectedRightBox !== null) {
+                selectedRightBox.classList.remove('on');
+            }
+
+            // Toggle current box
+            if (isSelected) {
+                return;
+            }
+            boxElement.classList.add('on');
+            if (column === 'left') {
+                selectedLeftBox = boxElement;
+            } else if (column === 'right') {
+                selectedRightBox = boxElement;
+            }
+
+            // We need both boxes selected to do further processing
+            if (selectedLeftBox === null || selectedRightBox === null) {
+                return;
+            }
+
+            const selectedKey = selectedLeftBox.textContent;
+            const selectedValue = selectedRightBox.textContent;
+
+            // Check if selected pair is correct
+            const isCorrectPair = pairs.some(pair => pair.key === selectedKey && pair.value === selectedValue);
+            selectedLeftBox.classList.remove('on');
+            selectedRightBox.classList.remove('on');
+
+            if (!isCorrectPair) {
+                errors++;
+                document.getElementById('errors').textContent = errors;
+                selectedLeftBox.classList.add('incorrect');
+                selectedRightBox.classList.add('incorrect');
+
+                // Reset boxes if not correct
+                setTimeout(() => {
+                    selectedLeftBox.classList.remove('incorrect');
+                    selectedRightBox.classList.remove('incorrect');
+                    selectedLeftBox = null;
+                    selectedRightBox = null;
+                }, 200);
+                return;
+            }
+
+            // Increment points
+            points++;
+            document.getElementById('points').textContent = points;
+
+            // Mark boxes as correct
+            selectedLeftBox.classList.add('correct');
+            selectedRightBox.classList.add('correct');
+
+            // Make correct pairs invisible
+            setTimeout(() => {
+                selectedLeftBox.classList.add('invisible');
+                selectedRightBox.classList.add('invisible');
+                selectedLeftBox.classList.remove('correct');
+                selectedRightBox.classList.remove('correct');
+                selectedLeftBox = null;
+                selectedRightBox = null;
+            }, 200);
+
+            // Check if 3 correct pairs have been guessed
+            if (leftInvisibleBoxes.length >= 2) {
+                pickNewPairAndDisplay();
+                pickNewPairAndDisplay();
+            }
+
+            // Append to invisible boxes arrays
+            leftInvisibleBoxes.push(selectedLeftBox);
+            rightInvisibleBoxes.push(selectedRightBox);
+            document.getElementById('leftArr').textContent = leftInvisibleBoxes.length;
+            document.getElementById('rightArr').textContent = rightInvisibleBoxes.length;
+        }
+
+        function pickNewPairAndDisplay() {
+            // Pick a new pair randomly
+            const shuffledPairs = shuffleArray(pairs.slice());
+            const newPair = shuffledPairs[0];
+
+            // Randomly select boxes from invisible boxes arrays
+            const leftBoxIndex = Math.floor(Math.random() * leftInvisibleBoxes.length);
+            const rightBoxIndex = Math.floor(Math.random() * rightInvisibleBoxes.length);
+
+            // Set new pair in randomly selected boxes
+            leftInvisibleBoxes[leftBoxIndex].textContent = newPair.key;
+            rightInvisibleBoxes[rightBoxIndex].textContent = newPair.value;
+
+            // Make these boxes visible and remove from arrays
+            leftInvisibleBoxes[leftBoxIndex].classList.remove('invisible');
+            rightInvisibleBoxes[rightBoxIndex].classList.remove('invisible');
+
+            leftInvisibleBoxes.splice(leftBoxIndex, 1);
+            rightInvisibleBoxes.splice(rightBoxIndex, 1);
+        }
+
+        // Function to display pairs in two columns with randomized order
+        function displayPairs() {
+            // Shuffle pairs randomly
+            const shuffledPairs = shuffleArray(pairs.slice()); // Create a copy to avoid modifying the original array
+            // take 6 random pairs
+            const selectedPairs = shuffledPairs.slice(0, 6);
+
+            // Shuffle keys and values separately
+            const shuffledKeys = shuffleArray(selectedPairs.map(pair => pair.key));
+            const shuffledValues = shuffleArray(selectedPairs.map(pair => pair.value));
+            // Get left and right column elements
+            const leftColumn = document.getElementById('leftColumn');
+            const rightColumn = document.getElementById('rightColumn');
+
+            // Clear previous content
+            leftColumn.innerHTML = '';
+            rightColumn.innerHTML = '';
+
+            // Display pairs in two columns with randomized order
+            for (let i = 0; i < 6; i++) {
+                const boxLeft = document.createElement('div');
+                boxLeft.classList.add('box');
+                boxLeft.textContent = shuffledKeys[i];
+                boxLeft.addEventListener('click', () => boxClickHandler('left', boxLeft, 'Key'));
+                leftColumn.appendChild(boxLeft);
+
+                const boxRight = document.createElement('div');
+                boxRight.classList.add('box');
+                boxRight.textContent = shuffledValues[i];
+                boxRight.addEventListener('click', () => boxClickHandler('right', boxRight, 'Value'));
+                rightColumn.appendChild(boxRight);
+            }
+        }
+
+        // Call displayPairs function when the page loads
+        window.onload = () => {
+            displayPairs(); // Display initial pairs
+        };
+    </script>
+</body>
+</html>

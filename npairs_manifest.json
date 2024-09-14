@@ -1,0 +1,8 @@
+{
+    "short_name": "NPairs",
+    "name": "Match Valid Word Pairs",
+    "start_url": "/npairs.html",
+    "display": "standalone",
+    "background_color": "#050505",
+    "theme_color": "#007bff"
+}
