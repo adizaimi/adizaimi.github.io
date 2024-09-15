@@ -661,8 +661,8 @@ en størrelse/størrelsen/størrelser/størrelsene -- the (clothes) size
 leter           -- to look, looking
 etter           -- for, after : leter etter -- search/look for, leter du etter (i ettermiddag  -- in the afternoon)
 etterpå         -- afterwards : dagen etterpå -- the day after
-apen/apent/apne -- open :  (pl)
-åpner/å åpne    -- to open (v) : åpne doren! -- open the door!
+åpen/åpent/åpne -- open :  (-e pl) vinduet er åpnet
+åpner/å åpne    -- to open : åpne doren! -- open the door! 
 åpnet           -- opened
 trenger/å trenge -- to need
 trengte         -- needed
@@ -789,28 +789,28 @@ amerikansk/amerikanske -- american : (-e pl)
 svensk          -- swedish
 en student/studenten/studenter/studentene -- the student
 en fiolin/fiolinen -- the violin
-hobbyen         -- the hobby  : en hobby/hobbyen/hobbyer
+en hobby/hobbyen/hobbyer -- the hobby
 tennis          -- tennis
-pariserhjulet   -- the ferris wheel : et pariserhjul/pariserhjulet
+et pariserhjul/pariserhjulet -- the ferris wheel
 tidlig          -- early : (like timely? timely is betimelig)
 tidligere       -- earlier
 pommes fritesen -- the fried potatoes, french fries
 trener          -- to train, exercise : å trene
-koppen          -- the cup : en kopp/koppen/kopper/koppene
-yoghurten       -- the yogurt : en yoghurt/yoghurten
+en kopp/koppen/kopper/koppene -- the cup
+en yoghurt/yoghurten -- the yogurt
 frokostblanding -- cereal
-risen           -- the rice : en ris/risen
-isen            -- the icecream : en is/isen
-kyllingen       -- the chicken : en kylling/kyllingen/kyllinger/kyllingene
-hagen           -- the garden : en hage/hagen
+en ris/risen    -- the rice
+en is/isen      -- the icecream
+en kylling/kyllingen/kyllinger/kyllingene -- the chicken
+en hage/hagen   -- the garden
 alene           -- alone : gå aldri alene -- never go alone
 sammen          -- together : tilbringer tid sammen -- spend time together
-trappen         -- the staircase, stairs : en trapp/trappen
-kollektivet     -- the shared apartment : et kollektiv/kollektivet
-leilighetsbygget-- the apartment building : et leilighetsbygg/leilighetsbygget
+en trapp/trappen-- the staircase, stairs
+et kollektiv/kollektivet -- the shared apartment
+et leilighetsbygg/leilighetsbygget -- the apartment building
 hvit/hvitt/hvite -- white : et hvitt hus
-svart/svarte    -- black : svarte (pl) -- svarte sko - black shoes
-rød/rødt/røde   -- red :  (pl) : røde pærer -- red pears (easy search rod)
+svart/svarte    -- black : (-e pl) -- svarte sko - black shoes
+rød/rødt/røde   -- red :  (-e pl) : røde pærer -- red pears (easy search rod)
 grønn/grønt/grønne -- green :  huset er grønt
 lilla           -- purple
 oransje         -- orange color
@@ -820,47 +820,47 @@ blå/blått/blå   -- blue : et blått hus
 lyseblå         -- light blue
 rosa            -- pink
 brun/brunt/brune-- brown
-grønnsaken      -- the vegetable : en grønnsak/grønnsaken/grønnsaker/grønnsakene
-naboen          -- the neighbor : en nabo/naboen
-nabolaget       -- the neighborhood : et nabolag/nabolaget
+en grønnsak/grønnsaken/grønnsaker/grønnsakene -- the vegetable
+en nabo/naboen  -- the neighbor
+et nabolag/nabolaget -- the neighborhood
 skit/skitne     -- dirty : skitne (pl)
 stille          -- quiet
 stillere        -- quieter
 foretrekker     -- prefer
-vasen           -- the vase : en vase/vasen
-blomsten        -- the flower : en blomst/blomsten/blomster/blomstene
-boken           -- the book : en boke/boken/bøker/bøkene (easy search boken) (boka si -- her book)
-stuen           -- the living room : en stu/stuen/stuer/stuene
-spisestuen      -- the diningroom : en spisestue/spisestuen/spisestuer/spisestuene
-planten         -- the plant : en plante/planten/planter/plantene
-puten           -- the pillow : en pute/puten/puter/putene
-myk             -- soft
-dynen           -- the dyvet, batanije : en dyne/dynen/dyner/dynene
-mikrobølgeovner -- the microwave oven : en mikrobølgeovne/mikrobølgeovnen/mikrobølgeovner/mikrobølgeovnene
-ovnen           -- the oven : en ovne/ovnen
-enkeltrommet    -- the single room : et enkeltrom/enkeltrommet/enkeltrommer/enkeltromene
+en vase/vasen   -- the vase
+en blomst/blomsten/blomster/blomstene -- the flower
+en boke/boken/bøker/bøkene -- the book (easy search boken) (boka si -- her book)
+en stu/stuen/stuer/stuene -- the living room
+en spisestue/spisestuen/spisestuer/spisestuene -- the diningroom
+en plante/planten/planter/plantene -- the plant
+en pute/puten/puter/putene -- the pillow
+myk/mykt/myke    -- soft : myke putene
+en dyne/dynen/dyner/dynene -- the dyvet, batanije
+en mikrobølgeovne/mikrobølgeovnen/mikrobølgeovner/mikrobølgeovnene -- the microwave oven
+en ovne/ovnen   -- the oven
+et enkeltrom/enkeltrommet/enkeltrommer/enkeltromene -- the single room
 enkelt          -- single
-dobbletrommet   -- the double room : et dobbleromme/dobbletrommet
+et dobbleromme/dobbletrommet -- the double room
 dobbel          -- double
-nøkkel          -- the key : en nøkkel/nøkkelen/nøkler/nøklene
-rommet          -- the room : et rom/rommet/rommer/rommene
-baren           -- the bar : en bar/baren
-stranden        -- the beach : en strand/stranden/strender/strendene : pa stranden -- on the beach
-flyet           -- the airplane : et fly/flyet/flyer/flyene
-flyplassen      -- the airport : en flyplass/flyplassen/flyplaser/flyplassene
-flybilleten     -- the plane ticket : en flybillete/flybilleten
-bokhandelen     -- the bookstore : en bokhandel/bokhandelen/bokhandeler/bokhandelene
-utflukten       -- the excursion : en utflukt/utflukten/utflukter/utfluktene
-ettermiddagen   -- the afternoon : en ettermiddag/ettermiddagen/ettermiddager/ettermiddagene
-respsjonen      -- the reception desk : en respsjon/respsjonen/respsjoner/respsjonene
-balkong         -- the balcony : en balkong/balkongen/balkonger/balkongene
-treningssenteret-- the gym : et treningssenter/treningssenteret/treningssenterer/treningssenterene
-vinduet         -- the window : et vindu/vinduet/vinduer/vinduene
-døren           -- the door : en dør/døren/dører/dørene
+en nøkkel/nøkkelen/nøkler/nøklene -- the key
+et rom/rommet/rommer/rommene -- the room
+en bar/baren    -- the bar
+en strand/stranden/strender/strendene -- the beach : pa stranden -- on the beach
+et fly/flyet/flyer/flyene -- the airplane
+en flyplass/flyplassen/flyplaser/flyplassene -- the airport
+en flybillete/flybilleten -- the plane ticket
+en bokhandel/bokhandelen/bokhandeler/bokhandelene -- the bookstore
+en utflukt/utflukten/utflukter/utfluktene -- the excursion
+en ettermiddag/ettermiddagen/ettermiddager/ettermiddagene -- the afternoon
+en respsjon/respsjonen/respsjoner/respsjonene -- the reception desk
+en balkong/balkongen/balkonger/balkongene -- the balcony
+et treningssenter/treningssenteret/treningssenterer/treningssenterene -- the gym
+et vindu/vinduet/vinduer/vinduene -- the window
+en dør/døren/dører/dørene-- the door
 kjøkkendøren    -- the kitchen door
 fungerer        -- to work : (funktioniert) : fungerer det? -- does it work?
-dusjen          -- the dush : en dusj/dusjen/dusjer/dusjene
-dusjer          -- to shower
+en dusj/dusjen/dusjer/dusjene -- the shower
+dusjer/å dusje  -- to shower
 internett       -- the internet
 nett            -- online/internet : på nett
 ødelagt         -- broken

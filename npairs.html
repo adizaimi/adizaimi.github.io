@@ -205,16 +205,14 @@ function incInMap(str, correct, total) {
 function boxClickHandler(column, boxElement) {
     // Read isSelected state before we clear it.
     const isSelected = boxElement.classList.contains('on');
-    const deselectBox = (box) => {
-        box.classList.remove('on');
-        box = null;
-    }
         
     // Reset previously selected box in the same column.
     if (column === 'left' && selectedLeftBox !== null) {
-        deselectBox(selectedLeftBox);
+        selectedLeftBox.classList.remove('on');
+        selectedLeftBox = null;
     } else if (column === 'right' && selectedRightBox !== null) {
-        deselectBox(selectedRightBox);
+        selectedRightBox.classList.remove('on');
+        selectedRightBox = null;
     }
 
     if (isSelected) {
