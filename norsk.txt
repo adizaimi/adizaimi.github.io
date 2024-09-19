@@ -346,15 +346,14 @@ baker           -- a baker
 ung/ungt/unge   -- young : (t-et, e-pl)
 unge            -- the young : youth
 yngre           -- younger
-gammel          -- old : gammelt hus, gamle huset
-gamle           -- old
+gammel/gammelt/gamle -- old : gammelt hus, den gamle huset
 eldre           -- older
 ny/nye/nytt     -- new: : ny bil -- new car, nytt hus -- new house
 nyere           -- newer
-minibanken      -- the ATM : en minibank/minibanken
-banken          -- the bank: en bank/banken
+en minibank/minibanken -- the ATM
+en bank/banken  -- the bank 
 journalist      -- a journalist
-advokat         -- a lawyer : advokat//advokater/advokatene
+en advokat/advokaten/advokater/advokatene -- a lawyer
 et universitet/universetetet -- the university
 januar          -- January
 februar         -- February
@@ -530,8 +529,8 @@ finne           -- find
 fant            -- found : fant han huset -- did he find the house?
 funnet          -- found : har funnet -- have found
 en forelder/forelderen/foreldre/foreldrene -- the parent
-en besteforelder/besteforelderen//besteforelderene -- the grandparent
-en bursdag/bursdagen/bursdager -- the birthday
+en besteforelder/besteforelderen/besteforelderene -- the grandparent
+en bursdag/bursdagen/bursdager/bursdagene -- the birthday
 et burgsdagskort/bursdagskortet/bursdagskorter/bursdagskortene -- the birthday card
 en dag/dagen/dager/dagene -- the day : senere på dagen -- later in the day
 en natt/natten/netter/nettene -- the night : god natt -- good night
@@ -865,32 +864,32 @@ internett       -- the internet
 nett            -- online/internet : på nett
 ødelagt         -- broken
 pappaen         -- the dad, baba : en pappa/pappaen : pappas -- father's
-mammaen         -- the mama : en mamma/mammaen
-bilen           -- the car : en bil/bilen/biler/bilene
-reiser          -- to travel : å reise
+en mamma/mammaen-- the mama
+en bil/bilen/biler/bilene -- the car
+reiser/å reise  -- to travel
 reiste          -- travelled : har reist -- have travelled
-kontoret        -- the office : et kontor/kontoret/kontorer/kontorene
+et kontor/kontoret/kontorer/kontorene -- the office
 taco            -- taco
 tacofredag      -- taco friday
-runstykken      -- the rolls : en runstykk/runstykken/runstykker/runstykkene
-sjefen          -- the boss : en sjef/sjefen/sjefer/sjefene
-motorsykkelen   -- the motorcycle : en motorsykkel/motorsykkelen/motorsykkeler/motorsykkelene ??
-sykkelen        -- the bicycle : en sykkel/sykkelen/sykler/syklene
+en runstykk/runstykken/runstykker/runstykkene -- the rolls
+en sjef/sjefen/sjefer/sjefene -- the boss
+en motorsykkel/motorsykkelen/motorsykkeler/motorsykkelene -- the motorcycle
+en sykkel/sykkelen/sykler/syklene -- the bicycle
 gift            -- married
 førnoyd         -- content, pleased
 pepper          -- pepper
-saltet          -- the salt : et salt/saltet/salter/saltene
+et salt/saltet/salter/saltene -- the salt
 salt            -- salty : suppen er for salt -- the soup is too salty
 saltest         -- the saltiest
-tomaten         -- the tomato : en tomat/tomaten/tomater/tomatene
-frukten         -- the fruit : en frukt/frukten/frukter/fruktene
-favorittmaten   -- the favorite food: en favorittmat/favorittmaten
+en tomat/tomaten/tomater/tomatene -- the tomato
+en frukt/frukten/frukter/fruktene -- the fruit
+en favorittmat/favorittmaten -- the favorite food
 allergisk       -- the allergic: allergisk mot -- allergic to
-nøtten          -- the nut, arra : et nøt/nøtten/nøtter/nøttene
-sausen          -- the sauce : en saus/sausen/sauser/sausene
+et nøt/nøtten/nøtter/nøttene -- the nut: arra
+en saus/sausen/sauser/sausene -- the sauce
 senep           -- mustard
-grønsaken       -- the vegetable : en grønsak/grønsaken/grønsaker/grønsakene
-spinaten        -- the spinach : en spinat/spinaten
+en grønsak/grønsaken/grønsaker/grønsakene -- the vegetable
+en spinat/spinaten -- the spinach
 flasken         -- the bottle : en flaske/flasken/flasker/flaskene
 sjokoladen      -- the choccoloate bar : en sjokolade/sjokoladen
 fersk           -- fresh : ferske agurker -- fresh cucumbers
@@ -1059,19 +1058,19 @@ savner          -- to miss : jeg savner deg -- i miss you
 gir/å gi        -- to give : vi gir og tar -- we give and take
 ga              -- gave
 gitt            -- given: har gitt
-skolen          -- the school : en skole/skolen/skoler/skolene
-posten          -- the mail : en post/posten
-postkontoret    -- the postoffice : et postkontor/postkontoret
-bygningen       -- the building : en bygning/bygningen//bygningene
+en skole/skolen/skoler/skolene -- the school
+en post/posten  -- the mail
+et postkontor/postkontoret -- the postoffice
+en bygning/bygningen//bygningene -- the building
 bruker 	        -- to use: to spend : å bruke : ikke bruke bilen -- dont use the car : bruker penger på -- spend money on
 brukte          -- used, spent
 bruk            -- use : gjøre bruk -- make use
 favorittlaget   -- the favorite team
 favorittbandet  -- the favorite band
-niesen          -- the niece : en niese/niesen
-nevøen          -- the nephew : en nevø/nevøen/ (easy search nevoen)
+en niese/niesen -- the niece
+en nevø/nevøen  -- the nephew :  (easy search nevoen)
 utsolgt         -- sold out : utsolgt for brød -- sold out of bread
-teateret        -- the theater : et teater/teateret
+et teater/teateret -- the theater
 stadion         -- the stadium
 t_banen         -- the subway : en t-bane/t-banen
 slags           -- kind, type : hva slags -- what type
@@ -1079,56 +1078,56 @@ operaen         -- the opera : en opera/operaen
 klassisk        -- the classical : klassisk musikk
 inngangsbilleten - the admission ticket
 ekte            -- real : ekte problem -- real problem
-ektemannen      -- the husband : en ekteman/ektemannen
+en ekteman/ektemannen -- the husband
 ektepar         -- married couple
 plass           -- place, space : vi har ikke plass til alt -- do dont have room for everything
-personen        -- the person : en person/personen/personer/personene
-handler         -- to shop for, to act : å handle : vi handler øl -- we are shopping for beer
+en person/personen/personer/personene -- the person
+handler/å handle -- to shop for, to act : vi handler øl -- we are shopping for beer
 gratulerer      -- congratulations : gratulerer med dagen -- happy birthday!
-gratulerer      -- to congratulate : å gratulere
-overraskelsen   -- the surprise : en overraskelse/overraskelsen/overraskelser/overraskelsene
+gratulerer/å gratulere -- to congratulate
+en overraskelse/overraskelsen/overraskelser/overraskelsene -- the surprise
 overrasker      -- to surprise
-ringer          -- to ring : call by phone
+ringer/å ringe  -- to ring : call by phone
 ringte          -- called
-bryllupet       -- the wedding : et bryllup/bryllupet/bryllup/
+et bryllup/bryllupet/bryllup/bryllupene -- the wedding
 bryllupsdag     -- wedding anniversary
-rosen           -- the rose flower : en rose/rosen
-vinner          -- to win : å vinne : hvem vinner spillet -- who's winning the game?
+en rose/rosen   -- the rose flower
+vinner/å vinne  -- to win : hvem vinner spillet -- who's winning the game?
 vunnet          -- won : har vunnet -- has won
 vant            -- won : did win
-taper           -- to loose : å tape
-sporten         -- the sport : en sport/sporten/sport/sport?
-radioen         -- the radio : en radio/radioen
+taper/å tape    -- to loose
+en sport/sporten/sport/sportene -- the sport
+en radio/radioen-- the radio
 dokumentarer    -- the documentaries
-tegner          -- to draw : å tegne
-tegnefilm       -- cartoon : tegnefilm/tegnefilmer/
-hviler          -- to rest : å hvile
-partneren       -- the partner : en partner/partneren
-ambassaden      -- the embassy : en ambassade/ambassaden
+tegner/å tegne  -- to draw
+tegnefilm       -- cartoon :tegnefilm/tegnefilmer/
+hviler/å hvile  -- to rest
+en partner/partneren -- the partner
+en ambassade/ambassaden -- the embassy
 ærend           -- erand : (easy search arend)
-passfotoet      -- the passport foto : et passfoto/passfotoet/?/passfotøt
-fødestedet      -- the birthplace : et fødested/fødestedet (easy search fodestedet)
-fornyer         -- to renew : å fornye
-svarer          -- to answer : å svar , svar på -- answer to
+et passfoto/passfotoet -- the passport foto
+et fødested/fødestedet -- the birthplace
+fornyer/å fornye -- to renew
+svarer/å svar   -- to answer : svar på -- answer to
 svarte          -- answered : ingen svarte -- nobody answered
 svart           -- have answered : de har ikke svart på telefonen -- they havent answered the phone
-betyr           -- to mean : å bety : hva betyr det -- what does it mean?
+betyr/å bety    -- to mean : hva betyr det -- what does it mean?
 betydning       -- meaning
-hjelper         -- to help : å hjelpe
-kontoen         -- the account : en konto/kontoen/kontoer
-bankkontoen     -- the bank account: en bankkonto/bankkontoen/bankkontoer
-oppretter       -- to set up, start upp : å opprete
+hjelper/å hjelpe -- to help
+en konto/kontoen/kontoer -- the account
+en bankkonto/bankkontoen/bankkontoer -- the bank account
+oppretter/å opprete -- to set up, start upp
 årsak           -- worry, problem : ingen årsak -- no worries!
-vanlig          -- usual : vanlige : som vanlig -- as usual
+vanlig/vanlige  -- usual : : som vanlig -- as usual
 vanligvis       -- usually : hunden er vanligvis vennlig -- the dog is usually frendly
-trikken         -- the trams, tramvaj : en trikke/trikken/trikker
-overfører       -- to transfer, to transmit : å overføre
-parkeringsplass -- the parking place, lot : en parkeringsplass/parkeringsplassen/parkeringsplasser/parkeringsplassene
-viktig/vigtike  -- important : viktige (pl)
+en trikke/trikken/trikker -- the trams, tramvaj
+overfører/å overføre -- to transfer, to transmit
+en parkeringsplass/parkeringsplassen/parkeringsplasser/parkeringsplassene -- the parking place, parking lot
+viktig/vigtike  -- important : (-e pl)
 pen/pene/pent   -- pretty, nice, handsome
 definitivt      -- definitely
 difinitive      -- definite
-livet           -- the life : et liv/livet/liv/livene
+et liv/livet/liv/livene -- the life
 synes           -- to seem, think : de synes byen er pen -- they think the city is pretty
 syntes          -- seemed
 enig            -- agree, in agreement : mange er enige med meg -- many agree with me
@@ -1136,39 +1135,39 @@ uenige          -- disagree
 sannsynligvis   -- probably
 sliten          -- exhausted
 slitsom         -- exhausting
-hater           -- to hate : å hate
+hater/å hate    -- to hate
 hatet           -- hated
 rar/rare/rartt  -- strange
 forferdelig     -- terrible
-bestevennen     -- the best friend : en bestevennen/bestevennen
+en bestevennen/bestevennen -- the best friend
 forkjølet       -- sick, cold : ftohur, jeg er forkjølet -- i'm sick (easy search forkjolet)
 kunne           -- could : hvordan kunne du -- how could you?
-stemningen      -- the mood, atmosphere : en stemninge/stemningen
+en stemninge/stemningen -- the mood, atmosphere
 forrige         -- previous, last : përpara : forrige helg -- previous weekend
 hverandre       -- eachother, oneanother
-bærer           -- to carry : å bære : (easy search bare)
-flytter         -- to move : å flytte : flytt fotene -- move your feet
+bærer/å bære    -- to carry : (easy search bare)
+flytter/å flytte -- to move : flytt fotene -- move your feet
 flyttet         -- moved
-flyttingen      -- the move : en flytting/flyttingen/
-armen           -- the arm : en arm/armen/armer/armene
-ryggen          -- the back : en rygg/ryggen/
-hender          -- the hands : en hend/henden/hender/hendene : hendene i været! -- hands in the air!
-føtter          -- the feet : en fot/foten/føtter/føttene
+en flytting/flyttingen -- the move
+en arm/armen/armer/armene -- the arm
+en rygg/ryggen  -- the back
+en hend/henden/hender/hendene -- the hands : hendene i været! -- hands in the air!
+en fot/foten/føtter/føttene -- the feet
 begge/begge to  -- both
 ro              -- peace
 rolig           -- calm, calmly
 urolig          -- disturbed
-gavekorten      -- the giftcard : en gavekort/gavekorten
-smørbødet       -- the sandwitch : et smørbrød/smørbødet/
-sitronen        -- the lemon : en sitron/sitronen/sitroner/sitronene
-kokken          -- the cook : en kokk/kokken/kokker/kokkene
+en gavekort/gavekorten -- the giftcard
+et smørbrød/smørbødet -- the sandwitch
+en sitron/sitronen/sitroner/sitronene -- the lemon
+en kokk/kokken/kokker/kokkene -- the cook
 kokker          -- to cook
 kokte           -- cooked
-jordbæret       -- the strawberry : et jordbær/jordbæret/jordbær/jordbærene
+et jordbær/jordbæret/jordbær/jordbærene -- the strawberry
 jordbaerkaken   -- the strawberry cake
-vegetarianeren  -- the vegetarian : en vegetarianer/vegetarianeren
-bakevarer       -- the baked goods : bakevarer/bakevarene
-pizzaen         -- the pizza : en pizza/pizzaen/pizzaer/pizzaene
+en vegetarianer/vegetarianeren -- the vegetarian
+bakevarer/bakevarene -- the baked goods
+en pizza/pizzaen/pizzaer/pizzaene -- the pizza
 jul             -- Christmas
 ribbe           -- pork belly
 pinnekjøtt      -- lamb ribs
@@ -1177,45 +1176,45 @@ julaften        -- christmas eve
 julebord        -- christmas party
 på forhånd      -- behorehand, in advance : På forhånd, takk! -- thanks in advance!
 til og med      -- even, also
-leken           -- the toy : en leke/leken/leker/
-ønsker          -- to wish : å ønske
+en leke/leken/leker/lekene -- the toy
+ønsker/å ønske  -- to wish
 å gjøre noe med -- to do something about : (with)
 malingen        -- the paint
-maler           -- to paint : å male : mal det -- paint that!
+maler/å male    -- to paint : mal det -- paint that!
 malt            -- painted : har malt -- have painted
 maler           -- painter
-esken           -- the box : en eske/esken/esker/eskene
-peisen          -- the fireplace : en peis/pesen/peiser/peisene : peiser kan være farlige -- fireplaces can be dangerous
-gangen          -- the hallway : en gang/gangen/
-møbelen         -- the furniture: a piece of furniture: en møbel/møbelen/møbler/møblene
-kommoden        -- the dresser : en kommode/kommoden
-lås             -- to lock : å lås
+en eske/esken/esker/eskene -- the box
+en peis/pesen/peiser/peisene -- the fireplace : peiser kan være farlige -- fireplaces can be dangerous
+en gang/gangen  -- the hallway
+en møbel/møbelen/møbler/møblene -- the furniture : a piece of furniture
+en kommode/kommoden -- the dresser
+lås/å lås       -- to lock
 låste           -- locked
-hullet          -- the hole : et hull/hullet
-hjørnet         -- the corner : et hjørn/hjørnet/
+et hull/hullet  -- the hole
+et hjørn/hjørnet -- the corner
 rundt           -- around, approximately : rundt hjønet -- around the corner
-fryseren        -- the freezer : en fryser/fryseren
-taket           -- the roof, ceiling : et tak/taket
-loftet          -- the attic : et loft/loftet/
+en fryser/fryseren -- the freezer
+et tak/taket    -- the roof, ceiling
+et loft/loftet  -- the attic
 etasje          -- the floor : etasjer/
-duken           -- the tablecloth : en duk/duken//dukene
-setter          -- to put, to place : jeg setter eskene på loftet -- i'm putting the boxes in the attic
-legger          -- to put, lay : å legge : du må legge : jeg legger dem her -- i'm putting them here : legg dem her -- put them here
-putter          -- to put
-kjelleren       -- the basement : en kjeller/kjelleren/kjellere/
-speilet         -- the mirror : et speil/speilet/speil/
+en duk/duken/duker/dukene -- the tablecloth
+setter/å sette  -- to place : to put, jeg setter eskene på loftet -- i'm putting the boxes in the attic
+legger/å legge  -- to put down, lay : du må legge : jeg legger dem her -- i'm putting them here : legg dem her -- put them here
+putter/å putte  -- to put
+en kjeller/kjelleren/kjellere/kjellerne -- the basement
+et speil/speilet/speil/speilene -- the mirror
 støv            -- the dust
-blyanten        -- the pencil : en blyant/blyanten/blyanter/blyantene
-fjernkontroll   -- the remote control : en fjernkontroll/fjernkontrollen/
+en blyant/blyanten/blyanter/blyantene -- the pencil
+en fjernkontroll/fjernkontrollen -- the remote control
 dørmatte        -- the doormat : /dørmattene
 definitiv/definitivt -- definitely : definitivt (-et)
-stikke          -- run off : jeg må stikke -- i must runn off
+stikker/å stikke -- run off : jeg må stikke -- i must runn off
 før             -- before : dette har aldri skjedd før -- this has never happened before
-vanen           -- the habit : en vane/vanen/vaner/vanene
+en vane/vanen/vaner/vanene -- the habit
 uvane           -- the bad habbit : /uvaner/uvenene
 slem/slemt      -- mean, unkind : slemt (-et)
 daglig/daglige  -- daily : (e-pl) : vi har daglige møter pa jobb -- we have daily meetings at work
-stoppskiltet    -- the stop sign : et stoppskilt/stoppskiltet
+et stoppskilt/stoppskiltet -- the stop sign
 sparkesykler    -- the scooters
 sakte           -- slowly
 saktere         -- slower
@@ -1448,7 +1447,7 @@ bussjåføren     -- the bus driver
 sommerjobb      -- summer job
 telefonselger   -- telemarketer
 brannmennene    -- the firemen
-en rørlegger/rørleggeren//rørleggerne -- the plumber
+en rørlegger/rørleggeren/rørleggere /rørleggerne -- the plumber
 en elektriker/elektrikeren/elektrikere/elektrikerne -- the electrician
 overtid         -- overtime
 arbeidsklærne   -- workclothes
