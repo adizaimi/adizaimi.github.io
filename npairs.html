@@ -190,6 +190,7 @@ function intervalFunction () {
 }
 
 
+// Increase frequency of item and score in inMemory map.
 function incInMap(str, correct, total) {
     let vObj = accuracyMap.get(str);
     if (vObj == undefined) {
@@ -206,7 +207,7 @@ function boxClickHandler(column, boxElement) {
     // Read isSelected state before we clear it.
     const isSelected = boxElement.classList.contains('on');
         
-    // Reset previously selected box in the same column.
+    // If there was a previously selected box in the same column we need to reset it.
     if (column === 'left' && selectedLeftBox !== null) {
         selectedLeftBox.classList.remove('on');
         selectedLeftBox = null;
@@ -216,7 +217,7 @@ function boxClickHandler(column, boxElement) {
     }
 
     if (isSelected) {
-        return; // Nothing to do.
+        return; // This box was selected and this is turning it off.
     }
     boxElement.classList.add('on');
     if (column === 'left') {
@@ -230,22 +231,27 @@ function boxClickHandler(column, boxElement) {
         return;
     }
 
-    // Check if selected pair is correct by comparing hiddenValue aka idx
+    // Check if selected pair is correct by comparing hiddenValue aka idx.
     const isCorrectPair = selectedLeftBox.hiddenValue == selectedRightBox.hiddenValue;
     selectedLeftBox.classList.remove('on');
     selectedRightBox.classList.remove('on');
     total++;
 
     if (!isCorrectPair) {
+        // Update the result box.
         getEl("result").innerHTML = getEl("result").innerHTML.substring(0,1) + correctPairsCount + ":" + total;
         selectedLeftBox.classList.add('incorrect');
         selectedRightBox.classList.add('incorrect');
         incInMap(selectedLeftBox.textContent, 0, 1);
+        const lBox = selectedLeftBox;
+        const rBox = selectedRightBox;
+        selectedLeftBox = null; // Set to null immediately in case user is quic to select another one.
+        selectedRightBox = null;
+
+        // Clear the 'incorrect' color on the pair of boxes.
         const clearIncorrectPair = () => {
-            selectedLeftBox.classList.remove('incorrect');
-            selectedRightBox.classList.remove('incorrect');
-            selectedLeftBox = null;
-            selectedRightBox = null;
+            lBox.classList.remove('incorrect');
+            rBox.classList.remove('incorrect');
         }
         // Reset boxes if not correct, note that if you are too quick to select another item at this point,
         // the first clearIncorrectPair will get cancelled, so we may need to save it and call it manually
@@ -269,12 +275,12 @@ function boxClickHandler(column, boxElement) {
     selectedRightBox.classList.remove('correct');
 
     if (leftInactiveBoxes.length >= 2) {
+        clearTimeout(fiveSecDispl);
+        clearTimeout(threeSecDispl);
         // If 2 or more correct pairs have been guessed, refresh now.
         for (i = 0; i <= leftInactiveBoxes.length; i++) {
             pickNewPairAndDisplay();
         }
-	clearTimeout(fiveSecDispl);
-	clearTimeout(threeSecDispl);
     }
 
     // Append to inactive boxes arrays.
@@ -292,9 +298,9 @@ function boxClickHandler(column, boxElement) {
     if (leftInactiveBoxes.length >= 2) {
         // Refresh delayed.
         threeSecDispl = setTimeout(() => {
+            clearTimeout(fiveSecDispl);
             pickNewPairAndDisplay();
             pickNewPairAndDisplay();
-	    clearTimeout(fiveSecDispl);
         }, 3000);
     } else if (leftInactiveBoxes.length >= 1) {
         fiveSecDispl = setTimeout(() => {
@@ -432,7 +438,7 @@ function loadSession() {
 function saveSession() {
     // wordMap contains the map of words (by id) to the frequency of correct/total occurrences.
     let str = JSON.stringify([...accuracyMap]);
-    console.log("saving accuracyMap" + str); // debug print the pairs
+    //console.log("saving accuracyMap" + str); // debug print the pairs
     localStorage.setItem("accuracyMap", str);
 }
 
