@@ -1097,7 +1097,7 @@ en rose/rosen   -- the rose flower
 vinner/å vinne  -- to win : hvem vinner spillet -- who's winning the game?
 vunnet          -- won : har vunnet -- has won
 vant            -- won : did win
-taper/å tape    -- to loose
+taper/å tape    -- to loose : a game
 en sport/sporten/sport/sportene -- the sport
 en radio/radioen-- the radio
 dokumentarer    -- the documentaries
@@ -1260,120 +1260,120 @@ gjennom         -- through
 leiebilen       -- the rental car
 forlater/å forlate -- to leave : forlat nå -- leave now!
 forlot          -- left
-klokken         -- the watch : clock : en klokke/klokken
+en klokke/klokken/klokker/klokkene -- the watch : clock
 vekkerklokken   -- the alarm clock  : en vekkerklokke/vekkerklokken
-rutinen         -- the routine : en rutine/rutinen/rutiner
+en rutine/rutinen/rutiner/rutinene -- the routine
 dusjer          -- to shower
-tannen          -- the tooth : en tann/tannen/tenner/tennene
-tenner          -- teeth
+en tann/tannen/tenner/tennene -- the tooth
 syltetøyet      -- the jam
-pusser          -- to brush : pusser tennene -- brush the teeth
-gården          -- the farm : en gård/gården
-bladet          -- the magazine : et blad/bladet
-selskapet       -- the company : et selskape/selskapet/
-fuglen          -- the bird : en fugl/fuglen/fugler/fuglene
-elgen           -- the moose, elk : en elg/elgen/elger/elgene
-anden           -- the duck : en and/anden/ander/endene
-hesten          -- the horse : en hest/hesten/hester/hestene
-bjørnen         -- the bear : en bjørn/bjørnen/bjørner/bjørnene
-edderkoppen     -- the spider : en edderkopp/edderkoppen/edderkopper/edderkoppene
-lukter          -- to smell : bie ere
-musen           -- the mouse : en mus/musen/mus/musene
-ulven           -- the wolf : en ulv/ulven/ulver/ulvene
-veterinæren     -- the veterinary : en veterinær/veterinæren
-båndet          -- the leash : et bånd/bandet/
+pusser          -- to clean, polish : pusser tennene -- brush the teeth
+en gård/gården/gårder/gårdene -- the farm
+et blad/bladet/blader/bladene -- the magazine
+et selskap/selskapet/selskaper/selskapene -- the company
+en fugl/fuglen/fugler/fuglene -- the bird
+en elg/elgen/elger/elgene -- the moose, elk
+en and/anden/ander/endene -- the duck
+en hest/hesten/hester/hestene -- the horse
+en bjørn/bjørnen/bjørner/bjørnene -- the bear
+en edderkopp/edderkoppen/edderkopper/edderkoppene -- the spider
+lukter/å lukte  -- to smell : bie ere
+en mus/musen/mus/musene -- the mouse
+en ulv/ulven/ulver/ulvene -- the wolf
+en veterinær/veterinæren/veterinæren/veterinærene -- the veterinary : 
+et bånd/båndet/bånd/båndene -- the leash, ribbon
 måte            -- way, manner : i like måte -- likewise (same way)
 agurktid        -- slow news season : (cucumber time)
 folk            -- people
-sist            -- e fundit, last, last time : sist/siste : hvem kom sist -- who came last.
+sist/siste      -- e fundit, last, last time : sist/siste : hvem kom sist -- who came last.
+mister/å miste  -- to loose : jeg mister nøklene
 mistet          -- lost : har mistet
-ligger          -- to lie : hvor ligger spania -- where is (lies/located) spain
+ligger/å ligge  -- to lie : hvor ligger spania -- where is (lies/located) spain
 ligget          -- lay, was lying : ke qenë, katten har ligget på sofaen -- the katt has been lying on the sofa
 lå              -- qe, lay : han lå i sengen -- he was (was lying) in bed
-anelse          -- idea : jeg har ingen anelse -- i have no idea
+en anelse/anelsen/anelser/anelsene -- idea : jeg har ingen anelse -- i have no idea
 nede            -- downstairs : så du nede -- did you look domnstairs?
 oppe            -- upstairs : rommet mitt er oppe -- my room is upstairs
-luren           -- the nap : en lur/luren : jeg må ta en lur -- i have to take a nap
+en lur/luren/lurer/lurene -- the nap : jeg må ta en lur -- i have to take a nap
 overalt         -- everywhere
-skuffen         -- the drawer : en skuff/skuffen
-medisinen       -- the medicine : en medisin/medisinen
+en skuff/skuffen/skuffer/skuffene -- the drawer
+en medisin/medisinen/medisiner/medisinene -- the medicine
 heltid          -- full time : jeg jobber heltid -- i work fulltime
-mastergraden    -- the masters degree : en mastergrad/mastergraden
+en mastergrad/mastergraden/mastergrader/mastergradene -- the masters degree
 lingvistikk     -- linguistics
 informatikk     -- computer science
-kurset          -- the course : et kurs/kurset
-forelesningen   -- the lecture : en forelesning/forelesningen
-karakteren      -- the grade : en karakter/karakteren/karakterer/karakterene
-høyskolen       -- the university, shkolle e larte : /høyskoler/
-badekaret       -- the bathtub : et badekar/badekaret/
-håndkleet       -- the towel : et håndkle/håndkleet/
-studentbolingen -- the student dorm : en studentbolinge/studentbolingen
-semesteret      -- the semester : et semester/semesteret
-rockekonserten  -- the rock consert : en rockekonsert/rockekonserten
-fyren           -- the guy
-trommer         -- the drums
-musiker/musikerne -- the musicians
-en scene/scenen -- the stage : skena
+et kurs/kurset/kurs/kursene -- the course
+en forelesning/forelesningen/forelesninger/forelesningene -- the lecture
+en karakter/karakteren/karakterer/karakterene -- the grade
+en høyskole/høyskolen/høyskoler/høyskolene -- the university, college
+et badekar/badekaret/badekar/badekarene -- the bathtub
+et håndkle/håndkleet/håndklær/håndklærne -- the towel
+en studentbolinge/studentbolingen/studentbolinger/studentbolingene -- the student dorm
+et semester/semesteret/semestre/semesterne -- the semester
+en rockekonsert/rockekonserten/rockekonserter/rockekonsertene -- the rock consert
+en fyr/fyren/fyrer/fyrene -- the guy
+en trom/trommen/trommer/trommene -- the drums
+en musiker/musikeren/musikere/musikerne -- the musician
+en scene/scenen/scener/scenene -- the stage : skena
 en smarttelefone/smarttelefonen/smarttelefoner -- the smart phone
 hvem som        -- who : vet du hvem som ... -- do you know who..
 favorittseng    -- favorite song
-et album/albumet -- the album
+et album/albumet/album/albumene -- the album
 låner/å låne    -- to lend
-gråter          -- to cry : de grater -- they're crying
+gråter/å gråte  -- to cry : de grater -- they're crying
 hjemmefra       -- from home
-tvillinger      -- twins
+en tvilling/tvillingen/tvillinger/tvillingene -- twins
 tvillingbroren  -- the twin brother : hun har en tvillingbror
 hel             -- whole : har du en hel flaske -- do you have a whole bottle?
-forfatteren     -- the author : en forfatter/forfatteren/forfatterer/forfatterne
-bygger          -- to build : hva bygger vi -- what are we building?
+en forfatter/forfatteren/forfatterer/forfatterne      -- the author : 
+bygger/å bygge  -- to build : hva bygger vi -- what are we building?
 bygde           -- built : was building
 bygget          -- built : is built : dette er bygget på oss -- this is built for us
-et bygg/bygget -- the building
-en robot/roboten -- the robot
+et bygg/bygget/bygg/byggene -- the building
+en robot/roboten/roboter/robotene -- the robot
 matte           -- math: mathematics
-matte           -- rug
+en matte/matten/matter/mattene -- rug
 drømmejobb      -- dream job
-ingeniør        -- engineer : /ingeniører/ingeniørene
-pilot           -- pilot : pilot//piloter/
-et helikopter/helikopteret -- the helicopter
-komiker         -- comedians
-et landskape/landskapet -- the landscape
-fotografene     -- the photographers
-en premie/premien/premier -- the prize
-tjener          -- to earn
-et miljøe/miljøet -- the environment
-filmstjernen    -- the movie star
-slipsene        -- the ties
+en ingeniør/ingeniøren/ingeniører/ingeniørene -- engineer
+en pilot/piloten/piloter/pilotene -- pilot
+et helikopter/helikopteret/helikoptre/helikoptrene -- the helicopter
+en komiker/komikeren/komikere/komikerne -- comedian
+et landskap/landskapet/landskap/landskapene -- the landscape
+en fotograf/fotografen/fotografer/fotografene     -- the photographers
+en premie/premien/premier/premiene -- the prize
+tjener/å tjene -- to earn : also to serve
+et miljø/miljøet/miljøer/miljøene -- the environment
+en filmstjerne/filmstjernen/filmstjerner/filmstjernene -- the movie star
+et slips/slipset/slips/slipsene -- the tie
 velger/å velge  -- to choose
-et belte/beltet//beltene -- the belt
-et gull/gullet  -- the gold
+et belte/beltet/belter/beltene -- the belt
+et gull/gullet/gull/gullen -- the gold
 morsdagen       -- the mothersday
-skinn           -- leather
+et skinn/skinnet/skinn/skinnene -- the skin, the leather: the animal hide
 farsdagen       -- the fathersday
-et slips/slipset/slipsene -- the tie
-velger          -- to choose
-salg            -- sales : til salgs -- for sale
-prøverom        -- fitting rooms
-en plakate/plakaten -- the poster
+velger/å velge  -- to choose
+et salg/salget/salg/salgene -- sales 
+til salgs       -- for sale
+et prøverom/prøverommet/prøverom/prøverommene -- fitting rooms
+en plakate/plakaten/plakater/plakatene -- the poster
 khemmekontoret  -- the home office
-en kjøper/kjøperen -- the buyer
-shortsen        -- the shorts
+en kjøper/kjøperen/kjøpere/kjøperne -- the buyer
+en shorts/shortsen/shorts/shortsen -- the shorts
 lommepenger     -- pocket money
-en skjerm/skjermen -- the screen : blåskjerm -- blue screen
-bør             -- should
-en nakke/nakken -- the neck
+en skjerm/skjermen/skjermer/skjermene -- the screen : blåskjerm -- blue screen
+bør             -- should, ought to
+en nakke/nakken/nakker/nakkerne -- the neck
 stiv            -- stiff
-en nese/nesen   -- the nose 
+en nese/nesen/neser/nesene   -- the nose 
 et øre/øret/ører/ørene -- the ear
 blek/bleke      -- pale : (-e pl)
 regelmessig     -- regularly
 alkoholen       -- the alcohol
 svinekjøtt      -- pork
 storfekjøtt     -- beef
-en tunge/tungen/tunger -- the tounge
-en kropp/kroppen -- the body
+en tunge/tungen/tunger/tungene -- the tounge
+en kropp/kroppen/kropper/kroppene -- the body
 en helse/helsen -- the health
-en munn/munnen  -- the mouth
+en munn/munnen/munner/munnene  -- the mouth
 peker/å peke    -- to point : peker på -- point at
 pekte           -- pointed
 tærne           -- the toes : tær/tærne
