@@ -535,7 +535,7 @@ et burgsdagskort/bursdagskortet/bursdagskorter/bursdagskortene -- the birthday c
 en dag/dagen/dager/dagene -- the day : senere på dagen -- later in the day
 en natt/natten/netter/nettene -- the night : god natt -- good night
 midnatt         -- midnight : etter midnatt -- after midnight
-redd/redde      -- afraid : (pl) : redd for -- afraid of
+redd/redde      -- afraid : (-e pl), redd for -- afraid of
 egentlig        -- really, actually : for egentlig -- for real
 virkelig        -- really, truly
 siden           -- since, ago : beina mine har gjort vondt siden lørdag -- my legs have hurt since saturday, for en uke siden -- a week ago
@@ -575,9 +575,10 @@ stedet          -- instead : jeg spiser is i stedet for frukt -- i eat icecrem i
 skylle/å skylle -- to rinse, flush
 ned             -- down : (ned i do -- down the toilet)
 første          -- first
-gangen          -- the time : hera (første gang -- first time) : en gang/gangen/ganger : noen ganger -- sometimes, med en gang -- immediately (me një herë)
+en gang/gangen/ganger/gangene -- the time : hera (første gang -- first time) :  noen ganger -- sometimes, med en gang -- immediately (me një herë)
 noen gang       -- any time : ever, ndonjehere
 en time/timen/timer/timene -- the hour : en time -- an hour
+en gang/gangen/ganger/gangene  -- the hallway
 time            -- the appointment
 noe             -- something
 noen            -- some, any : (one/thing) : jeg ser noen kvinner -- i see some women, har du noen poser -- do you have any bags
@@ -742,7 +743,7 @@ danser/å danse  -- to dance : la oss donse -- let us dance
 danset          -- danced
 feirer/å feire  -- to celebrate : la oss feire -- let us celebrate
 en musik/musiken -- the music : jeg hører på musikk
-et navn/navnet/navn -- the name : vi har mange navn å velge fra -- we have many names to choose from
+et navn/navnet/navn/navnene -- the name : vi har mange navn å velge fra -- we have many names to choose from
 et fornavn/fornavnet -- the first name
 et etternavn/etternavnet -- the last name
 bedring         -- recovery : god bedring -- feel better
@@ -890,152 +891,153 @@ en saus/sausen/sauser/sausene -- the sauce
 senep           -- mustard
 en grønsak/grønsaken/grønsaker/grønsakene -- the vegetable
 en spinat/spinaten -- the spinach
-flasken         -- the bottle : en flaske/flasken/flasker/flaskene
-sjokoladen      -- the choccoloate bar : en sjokolade/sjokoladen
-fersk           -- fresh : ferske agurker -- fresh cucumbers
+en flaske/flasken/flasker/flaskene -- the bottle
+en sjokolade/sjokoladen -- the choccoloate bar
+fersk/ferske    -- fresh : ferske agurker -- fresh cucumbers
 ferskvann       -- fresh watter
 ferskest        -- the freshest
 sunn/sunt/sunne -- healthy : sunn mat -- healthy food
 igen            -- again : kom igen -- come on
-hjertet         -- the heart : et hjert/hjertet/hjerter/hjertene
-tanten          -- the aunt : en tante/tanten/tanter/tantene
-fjellen         -- the mountain : et fjell/fjellet/fjeller/fjellene
-bassenget       -- the pool : et basseng/bassenget/bassenger/bassengene (ei senga)
-konserten       -- the concert : en konsert/konserten/konserter/konsertene
-lampen          -- the lamp : en lampe/lampen/lamper/lampene
-pastaen         -- the pasta : en pasta/pastaen/pastaer/pastaene
+et hjert/hjertet/hjerter/hjertene -- the heart
+en tante/tanten/tanter/tantene -- the aunt
+et fjell/fjellet/fjeller/fjellene -- the mountain
+et basseng/bassenget/bassenger/bassengene -- the pool
+en konsert/konserten/konserter/konsertene -- the concert
+en lampe/lampen/lamper/lampene -- the lamp
+en pasta/pastaen/pastaer/pastaene -- the pasta
 mørk            -- dark
-datoen          -- the date : en dato/datoen/datoer/datoene
-daten           -- the date : en date/daten/dater/datene : ta med en date -- bring a date
-stenge          -- to close : å stenge
+en dato/datoen/datoer/datoene -- the date
+en date/daten/dater/datene -- the date : ta med en date -- bring a date
+stenge/å stenge -- to close
 stengte         -- closed: did close
 stengt          -- closed : have closed -- har stengt
 stengt          -- closed : butikkene er stengte, skoler er stengt
-lukk            -- to close : å lukker : lukk dor
+lukker/å lukke  -- to close : lukk dor!
 lukket          -- closed
-legitimasjonen  -- identification : en legitimasjonen/legitimasjonen/legitimasjoner/legitimasjonene
-varer           -- to last : å vare : hvor lenge varer det -- how long does it last, konserten varer i tre timer -- koncert lasts three hours
+en legitimasjon/legitimasjonen/legitimasjoner/legitimasjonene -- identification
+varer/å vare    -- to last : hvor lenge varer det -- how long does it last, konserten varer i tre timer -- koncert lasts three hours
 varte           -- lasted : det varte i tre dager -- that lastet three days
 være            -- to be : jeg vil være med deg -- i want to be with you (easy search vare)
 vært            -- been : har vært -- have been
-voksen          -- the adult : en voksen/voksen/?/voksne
+en voksen/voksen/voksne/voksne -- the adult
+vokser/å vokse  -- to grow up
 filmen          -- the film : en film/filmen
-skrekkfilmen    -- the horror film : enskrekkfilm/skrekkfilmen/skrekkfilmer/skrekkfilmene
+en skrekkfilm/skrekkfilmen/skrekkfilmer/skrekkfilmene -- the horror film
 skrekk          -- scary
-kalendaren      -- the calendar : en kalendar/kalendaren/kalendarer/kalendarene
+en kalendar/kalendaren/kalendarer/kalendarene -- the calendar
 kort/korte      -- short, quick : jakkene er korte -- the jackets are short (jakka)
-kameraet        -- the photo camera : et kamera/kameraet/kameraer/kameraene
-tilbringer      -- to spend : å tilbringe : tilbringe tid -- spend time
+et kamera/kameraet/kameraer/kameraene -- the photo camera
+tilbringer/å tilbringe -- to spend : tilbringe tid -- spend time
 tilbake         -- back : kom tilbake -- come back : må tilbake -- must return
 bak             -- behind : bak doren -- behind the door
-leksen          -- the homework : en lekse/leksen/lekser/leksene
-ferien          -- the vacation : en ferie/ferien/ferier/feriene : gud ferie! -- have a nice vacation! : pa ferie -- on vacation
+en lekse/leksen/lekser/leksene -- the homework
+en ferie/ferien/ferier/feriene -- the vacation : gud ferie! -- have a nice vacation! : pa ferie -- on vacation
 visum           -- the visa : visum/visumet
-tollen          -- the customs : en toll/tollen/toller/tollene
-pennen          -- the pen : en penn/pennen/penner/pennene : vi er tomme for blå penner -- we are out of blue pens
+en toll/tollen/toller/tollene -- the customs
+en penn/pennen/penner/pennene -- the pen : vi er tomme for blå penner -- we are out of blue pens
 riktig          -- correct
-øyeblikket      -- the moment (now?) : et øyeblikk/øyeblikket/?/øyeblikkene : ikke for øyeblikket -- not at the moment
-øyet            -- the eye : et øye/øyet/øyner/øynene (easy search oye)
-blikken         -- the gaze : en blikk/blikken/blikker/blikkene
-skjemaet        -- the form : (formular) : et skjema/skjemaet/skjemaer/skjemaene
-skinner         -- to shine : å skinne : solen skinner -- the sun is shining
-ryggsekken      -- the backpack : en ryggsekk/ryggsekken/ryggsekker/ryggsekkene
-flyr            -- to fly : å flyr
-hytten          -- the cabin : en hytte/hytten/hytter/hyttene
+et øyeblikk/øyeblikket/øyeblikk/øyeblikkene -- the moment : ikke for øyeblikket -- not at the moment
+et øye/øyet/øyner/øynene -- the eye :  (easy search oye)
+en blikk/blikken/blikker/blikkene -- the gaze
+et skjema/skjemaet/skjemaer/skjemaene -- the form : formular
+skinner/å skinne -- to shine : solen skinner -- the sun is shining
+en ryggsekk/ryggsekken/ryggsekker/ryggsekkene -- the backpack
+flyr/å fly      -- to fly
+en hytte/hytten/hytter/hyttene -- the cabin
 tung/tungt/tunge -- heavy : bordet er tungt -- the table is heavy
-problemet       -- the problem : et problem/problemet/problemer/problemene
-ordboken        -- the dictionary : en ordbok/ordboken/ordboker/ordbokene
-ordet           -- the word : et ord/orden/ord/ordene
+et problem/problemet/problemer/problemene -- the problem
+en ordbok/ordboken/ordboker/ordbokene -- the dictionary
+ordet           -- the word : et ord/ordet/ord/ordene
 briller         -- the glasses : /briller/brillene
-kofferten       -- the suitcase : en koffert/kofferten/kofferter/koffertene
-slottet         -- the castle : et slott/slottet/slotter/slottene
-turisten        -- the turist : en turist/turisten/turister/turistene
-pakker          -- to pack : å pakke
+en koffert/kofferten/kofferter/koffertene -- the suitcase
+et slott/slottet/slotter/slottene -- the castle
+en turist/turisten/turister/turistene -- the turist
+pakker/å pakke  -- to pack
 pakken          -- the package : en pakke/pakken
 full/fullt/fulle -- full : glasset er fullt, fulle glasser
 sennep          -- mustard
 mediterer       -- meditate
 fordi           -- because
-løper           -- to run : å lope, løp -- run!
-våte            -- wet : de er vått ute -- its wet outside
+løper/å lope    -- to run : løp -- run!
+våte/vatt       -- wet : de er vått ute -- its wet outside
 maraton         -- marathon
 meter           -- meter : meters : en meter//meter
 kilometer       -- kilometer
-sykler          -- to ride : (bicycle) : å sykle
+sykler/å sykle  -- to ride : (bicycle) 
 skedlig         -- bored : jeg hard de skedlig,
 snart           -- soon: shortly
 endelig         -- finally: at last
 slekt           -- kin, family
-slektningen     -- the relative : en slektninge/slektningen/slektninger/slektningene
+en slektninge/slektningen/slektninger/slektningene -- the relative
 telefonnummer   -- telephone number
 punktlig        -- punctual
 spørsmålet      -- the question : et spørsmål/spørsmålet : et spørsmal om tid -- a question of time (easy search sporsmalet)
-spør            -- to ask : å spør (spor easy search)
-spor            -- to track : å spore
-sporet          -- the track : et spor/sporet/spor/sporene : følg disse spor -- follow these tracks
+spør/å spørre   -- to ask :  (spor easy search)
 spørt           -- asked
+spor/å spore    -- to track, to trace
+et spor/sporet/spor/sporene -- the track : følg disse spor -- follow these tracks
 førerkort       -- drivers license : (easy search forerkort)
 e_postadressen  -- the email : en e-postadresse/e-postadressen/
 datamaskinen    -- the computer : en datamaskin/datamaskinen
 null            -- zero, none
 pausen          -- the pause, break : en pause/pausen, jeg trenger en pause -- i need a break
-kollegaen       -- the colleague: en kollegae/kollegaen/kollegaer/kollegaene
+en kollegae/kollegaen/kollegaer/kollegaene -- the colleague
 arbeidsledig    -- unemployed : (work available)
-henter          -- to pick up : å hente : jeg henter henne -- i'm picking her up
-posen           -- the bag : en pose/posen/poser/posene
-kurven          -- the basket : en kurv/kurven/kurver/kurvene
-appelsinen      -- the orange : en appelsin/appelsinen/appelsiner/appelsinene
+henter/å hente  -- to pick up : jeg henter henne -- i'm picking her up
+en pose/posen/poser/posene -- the bag
+en kurv/kurven/kurver/kurvene -- the basket
+en appelsin/appelsinen/appelsiner/appelsinene -- the orange
 gratis          -- gratis
-kunden          -- the customer : en kunde/kunden/kunder/kundene
-pæren           -- the pear : en pære/pæren/pærer/pærene
+en kunde/kunden/kunder/kundene -- the customer
+en pære/pæren/pærer/pærene -- the pear
 juicen          -- the juice : en juice/juicen
-kassen          -- the cash register : en kasse/kassen/kasser/kassene
-agurken         -- the cucumber : en agurke/agurken/agurker/agurkene
-kvitteringen    -- the recepit : en kvittering/kvitteringen/kvitteringer/kvitteringene
-selger          -- to sell : å serge
+en kasse/kassen/kasser/kassene -- the cash register
+en agurke/agurken/agurker/agurkene -- the cucumber
+en kvittering/kvitteringen/kvitteringer/kvitteringene -- the recepit
+selger/å serge  -- to sell
 igjen           -- again : leiligheten er ryddig igjen -- the apartment is tidy again
 igjen           -- left : jeg har ingenting igjen -- i have nothing left
-slakteren       -- the butcher : en slakter/slakteren/slakterer/slakterene
-konditoriet     -- the pastry shop : et konditorie/konditoriet/konditorier/konditoriene
+en slakter/slakteren/slakterer/slakterene -- the butcher
+et konditorie/konditoriet/konditorier/konditoriene -- the pastry shop
 blomsterbutikken - the flower shop
 sommerblomsten  -- the summer flowers
 nok             -- enough
-hatten          -- the hat : en hatt/hatten/hatter/hattene
+en hatt/hatten/hatter/hattene -- the hat
 kul             -- cool
-jakken          -- the jacket : en jakke/jakken/jakker/jakkene
-vesken          -- the purse : en veske/vesken/jesker/veskene
-buksen          -- the pants : en bukse/buksen/bukser/buksene
-sokk            -- the sock : en sokk/sokken/sokker/sokkene
+en jakke/jakken/jakker/jakkene -- the jacket
+en veske/vesken/jesker/veskene -- the purse
+en bukse/buksen/bukser/buksene -- the pants
+en sokk/sokken/sokker/sokkene -- the sock
 sandaler        -- the sandals : sandaler/sandalene
-karten          -- the map : en kart/karten/karter/kartene : kart over byen -- map of the city
+en kart/karten/karter/kartene -- the map : kart over byen -- map of the city
 fyller          -- to fill, turn : hvem fyller femty -- who is turning fifty
-inviterer       -- to invite: å invitere
-vasker          -- to wash : å vaske : jeg må vaske meg -- duhet të lahem, vask klærne dine -- wash your clothes
+inviterer/å invitere -- to invite
+vasker/å vaske  -- to wash : jeg må vaske meg -- duhet të lahem, vask klærne dine -- wash your clothes
 vasket          -- have washed : har du vasket deg -- have you washed yourself (u lave)?
 sint            -- mad : jeg er sint -- I'm mad
 leien           -- the rent : en leie/leien
 leier           -- to rent : de leier sykler -- they are renting bikes
 rotete          -- messy : rommet dit er rotete -- your room is messy
-venter          -- to wait : å vent
+venter/å vent   -- to wait
 ventende        -- waiting
-lat             -- lazy : lat/late : jeg elsker late søndager -- i love lazy sundays
+lat/lat/late    -- lazy : jeg elsker late søndager -- i love lazy sundays
 tilhører        -- to belong : bøkene tilhører oss -- the books belong to us
 dagligvarene    -- the groceries: daglivarer/dagligvarene
-sitter          -- to sit : å sitt
+sitter/å sitt   -- to sit
 satt            -- sat : sat oss ned -- we sat down
 tomme           -- empty : koppene er tomme -- the cups are empty, vi are tomme for brod -- we are out of bread
-ferdig          -- done : ferdige (pl), vi er ferdige -- we are done
+ferdig/ferdige  -- done : (-e pl), vi er ferdige -- we are done
 høflig          -- polite
 uhøflige        -- impolite : barna er så uhøflige -- the children are so impolite
-gulvet          -- the floor : et gulve/gulvet/gulver/gulvene : ikke på gulvet! -- not on the floor!
-eier            -- to own : hun eier hyttene -- she owns the cabins
+et gulve/gulvet/gulver/gulvene -- the floor : ikke på gulvet! -- not on the floor!
+eier/å eie      -- to own : hun eier hyttene -- she owns the cabins
 eierne          -- the owners
 hjelpsomt/hjelpsomme -- helpful
 ryddig          -- tidy
 ryddigst        -- tidyest
 rydder          -- to tidy
 ryddet          -- tidied
-hysarbeidet     -- the chore, housework : et hysarbeide/hysarbeidet/hysarbeider/hysarbeidene
+et hysarbeide/hysarbeidet/hysarbeider/hysarbeidene -- the chore, housework
 arbeidet        -- the work
 kua             -- the cow : en ku/kua  ( ei ku)
 spansk          -- spanish : spania -- spain
@@ -1050,11 +1052,11 @@ over            -- finished : festen er over -- party's over
 sjampanje       -- shampagne
 bra jobba       -- well done
 praktisk/praktiske -- practical
-treet           -- the tree: et tre/treet/trær/trærne : eplertrærne -- apple trees
-viser           -- to show : å vise : viser du meg -- show me
-farlig/farlige  -- dangerous : farlige (pl)
+et tre/treet/trær/trærne -- the tree : eplertrærne -- apple trees
+viser/å vise    -- to show : viser du meg -- show me
+farlig/farlige  -- dangerous : (-e pl)
 farligere       -- more dangerous
-savner          -- to miss : jeg savner deg -- i miss you
+savner/å savne  -- to miss : jeg savner deg -- i miss you
 gir/å gi        -- to give : vi gir og tar -- we give and take
 ga              -- gave
 gitt            -- given: har gitt
@@ -1179,24 +1181,23 @@ til og med      -- even, also
 en leke/leken/leker/lekene -- the toy
 ønsker/å ønske  -- to wish
 å gjøre noe med -- to do something about : (with)
-malingen        -- the paint
+en maling/malingen/malinger/malingene        -- the paint
 maler/å male    -- to paint : mal det -- paint that!
 malt            -- painted : har malt -- have painted
-maler           -- painter
+en maler/maleren/malere/malerne -- painter
 en eske/esken/esker/eskene -- the box
 en peis/pesen/peiser/peisene -- the fireplace : peiser kan være farlige -- fireplaces can be dangerous
-en gang/gangen  -- the hallway
 en møbel/møbelen/møbler/møblene -- the furniture : a piece of furniture
-en kommode/kommoden -- the dresser
+en kommode/kommoden/komoder/komodene -- the dresser
 lås/å lås       -- to lock
 låste           -- locked
-et hull/hullet  -- the hole
-et hjørn/hjørnet -- the corner
+et hull/hullet/hull/hullene  -- the hole
+et hjørne/hjørnet/hjørner/hjørnene -- the corner
 rundt           -- around, approximately : rundt hjønet -- around the corner
-en fryser/fryseren -- the freezer
-et tak/taket    -- the roof, ceiling
-et loft/loftet  -- the attic
-etasje          -- the floor : etasjer/
+en fryser/fryseren/frysere/frysere -- the freezer
+et tak/taket/tak/takene -- the roof, ceiling
+et loft/loftet/loft/loftene  -- the attic
+en etasje/etasjen/etasjer/etasjene -- the floor
 en duk/duken/duker/dukene -- the tablecloth
 setter/å sette  -- to place : to put, jeg setter eskene på loftet -- i'm putting the boxes in the attic
 legger/å legge  -- to put down, lay : du må legge : jeg legger dem her -- i'm putting them here : legg dem her -- put them here
@@ -1214,50 +1215,50 @@ en vane/vanen/vaner/vanene -- the habit
 uvane           -- the bad habbit : /uvaner/uvenene
 slem/slemt      -- mean, unkind : slemt (-et)
 daglig/daglige  -- daily : (e-pl) : vi har daglige møter pa jobb -- we have daily meetings at work
-et stoppskilt/stoppskiltet -- the stop sign
+et stoppskilt/stoppskiltet/stoppskilt/stoppskiltene -- the stop sign
 sparkesykler    -- the scooters
 sakte           -- slowly
 saktere         -- slower
-håret           -- the hair : et hår/håret
+et hår/håret/hår/hårene -- the hair
 lav/lavt/lave   -- low, short : lavt (-et)/lave (pl) : de er lave -- they are short
 lavere          -- lower
 laveste         -- lowest
-beinet          -- the leg, bone : et bein/beinet/bein/beina : jeg er sliten i beina -- my legs are tired
-dressen         -- the suit : en dress/dressen
-fraket          -- the coat : et frak/fraket/frakker/frakkene
-banen           -- the field : en bane/banen/
-fotballbannen   -- the football soccer field
-løken           -- the onion : en løk/løken/løker/  (easy search loken)
-soppen          -- the mushroom : en sopp/soppen/
+et bein/beinet/bein/beina -- the leg, bone : jeg er sliten i beina -- my legs are tired
+en dress/dressen/dresser/dressene -- the suit
+et frak/fraket/frakker/frakkene-- the coat
+en bane/banen/baner/banene -- the field
+fotballbannen   -- the soccer field
+en løk/løken/løker/løkene -- the onion : (easy search loken)
+en sopp/soppen/sopp/soppene -- the mushroom
 søndagsåpne     -- open on sunday
-hamburgeren     -- the hamburger : en hamburger/hamburgeren/hamburgere/hamburgerne
+en hamburger/hamburgeren/hamburgere/hamburgerne -- the hamburger
 rulleskøytene   -- the rollerskates : (pl)
 loppemarkedet   -- the flea market : et loppemarked/loppemarkedet
-heisen          -- the elevator : en heis/heisen/
+en heis/heisen/heiser/heisene -- the elevator
 under           -- under: underneath, below
-undertøyet      -- the underwear : et undertøy/undertøyet/undertøyer/undertøyene
-skjegget        -- the beard : et skjegg/skjegget
+et undertøy/undertøyet/undertøyer/undertøyene -- the underwear
+et skjegg/skjegget/skjegg/skjeggene -- the beard
 smykker         -- jewlery
-halskjedet      -- the necklace : et halskjede/halskjedet
+et halskjede/halskjedet/halskjeder/halskjedene -- the necklace
 blond           -- blond haired
-lommen          -- the pocket : en lomme/lommen
-lommeboken      -- the wallet : en lommebok/lommeboken
-passer          -- to fit : å passe : passer skoene -- do the shoes fit?
+en lomme/lommen/lommer/lommene -- the pocket
+en lommebok/lommeboken/lommebøker/lommebøkene      -- the wallet
+passer/å passe  -- to fit : passer skoene -- do the shoes fit?
 passer på       -- to look after : å passe på
 trang           -- tight, narrow : skoene er trang -- the shoes are tight
-knapp           -- the button : knappen/knappene
+en knapp/knappen/knapper/knappene -- the button
 perfekt         -- perfectly
 verktøykasse    -- worktoolbox
-bildet          -- the photo, picture : et bilde/bildet/bilder/bildene
-båten           -- the boat : en båt/båten/
-naturen         -- the nature : en natur/naturen
-innsjøen        -- the lake : en innsjøe/innsjøen/
-temperaturen    -- the temperature : en temperatur/temperaturen//temperaturene
-graden          -- the degree : en grad/graden/grader/
+et bilde/bildet/bilder/bildene -- the photo, picture
+en båt/båten/båter/båtene -- the boat
+en natur/naturen/naturer/naturene -- the nature
+en innsjøe/innsjøen/innsjøer/innsjøene        -- the lake
+en temperatur/temperaturen/temperaturer/temperaturene -- the temperature
+en grad/graden/grader/gradene -- the degree
 celsius         -- celcius
 gjennom         -- through
 leiebilen       -- the rental car
-forlater        -- to leave : å forlate , forlat nå -- leave now!
+forlater/å forlate -- to leave : forlat nå -- leave now!
 forlot          -- left
 klokken         -- the watch : clock : en klokke/klokken
 vekkerklokken   -- the alarm clock  : en vekkerklokke/vekkerklokken
@@ -1574,7 +1575,7 @@ sårer           -- to hurt, wound : å såre
 såra            -- hurt, wounded
 hemmlighet      -- secret
 hemmelig        -- secret
-følger          -- to follow : å følge (easy search folger)
+følger/å følge  -- to follow : følg! (easy search folger)
 sjok            -- shock
 sjokkert        -- shocked
 stemmer         -- votes : det stemmer -- that's right, stemmer det? -- is that true?
