@@ -18,7 +18,7 @@ velkommen       -- welcome : hallo og velkommen -- hello and welcome
 takk            -- thanks : tusen takk   -- thank you very much
 at              -- that, which : jeg vet at du vet
 å               -- to
-om              -- about, in : jeg kommer om ti minutter, om morgenen -- in the mornings, om sommeren -- in the summer
+om              -- about, in, if : jeg kommer om ti minutter, om morgenen -- in the mornings, om sommeren -- in the summer
 omtrent         -- around : toget kommer om omtrent fem minutter
 den/det         -- that : den døren, det huset , den tredje mann -- the third man, den er min -- it is mine
 denne/dette     -- this : dette huset, denne mannen
@@ -30,7 +30,7 @@ takk for sist   -- good to see you again
 går             -- to go, walk: iki, shkoj : å gå : jeg går -- une po iki , det er langt å gå -- its far to walk (easy search gar)
 gått            -- gone : (past tense går) : det har gått bra -- its gone well
 drå             -- go
-dro             -- went
+dro             -- went, left
 gikk            -- went
 da              -- then
 da              -- when : hadde du bil da du var ung -- did you have a car when you were young
@@ -194,11 +194,12 @@ visste          -- knew : did know
 skriver/å skrive -- to write
 skrev           -- wrote : did write, was writing
 skrevet         -- wrote : har skrevet -- has written
+skrivere        -- the printers
 leser/å lese    -- to read
 leste           -- read : did read
 lest            -- read : har lest -- have read
 lærer/å lære    -- to learn : går i lære som ... -- do an apprenticeship as a
-en lærer/læreren -- the teacher (easy search larer)
+en lærer/læreren -- the teacher : (easy search larer)
 snakker/å snakke -- to speak : snakker engelsk -- speak english : ikke snakk -- don't speak
 snakket         -- spoke : did speak, har snakket -- have spoken
 et språk/språket/språker/språkene -- the language
@@ -416,7 +417,7 @@ halv            -- half : halv ni -- 8:30
 halvparted      -- half of
 kvart           -- quarter
 prater/å prate  -- to talk, chat : å prate om -- to talk about
-pratet          -- talked : har pratet med -- has talked to
+pratet          -- talked : did talk, har pratet med -- has talked to
 en prate/praten -- the chat
 glemmer/å glem  -- to forget : glem henne -- forget her
 glemt           -- forgotten
@@ -517,11 +518,10 @@ ennå            -- yet : ikke ennå -- not yet
 fort            -- fast, quickly : hun kjører fort -- she drives fast
 rask/raskt/raske -- fast
 raskest         -- the fastest
-sann            -- true
-sant            -- true : (ikke sant? -- isn't it right?)
+sann/sant/sanne -- true : (ikke sant? -- isn't it right?)
 evige           -- eternal
- en ild/ilden/ildene -- fire : (evige ilden  -- eternal fire)
-bryter          -- to break, switch : (bryte inn -- break inn) ; bryte -- break up
+en ild/ilden/ilder/ildene -- fire : (evige ilden  -- eternal fire)
+bryter/å bryte  -- to break, switch : (bryte inn -- break inn) ; bryte -- break up
 brukket         -- broken
 mens            -- while
 makt            -- power : (makt til folket -- power to the people)
@@ -589,7 +589,7 @@ en ting/tingen/tinger/tingene -- the thing : ting tar tid -- things take time
 varet           -- the weather
 sol             -- me diell, sunny : det er sol (sola)
 en sol/solen    -- the sun
-regner          -- to rain, shi : det regner
+regner          -- to rain : det regner
 snør            -- to snow : det snør
 snøen           -- the snow : en snø/snøen
 overskyet       -- me re, cloudy : det er overskyet
@@ -964,7 +964,7 @@ maraton         -- marathon
 meter           -- meter : meters : en meter//meter
 kilometer       -- kilometer
 sykler/å sykle  -- to ride : (bicycle) 
-skedlig         -- bored : jeg hard de skedlig,
+kjedelig         -- bored : jeg hard de skedlig,
 snart           -- soon: shortly
 endelig         -- finally: at last
 slekt           -- kin, family
@@ -995,8 +995,7 @@ en kasse/kassen/kasser/kassene -- the cash register
 en agurke/agurken/agurker/agurkene -- the cucumber
 en kvittering/kvitteringen/kvitteringer/kvitteringene -- the recepit
 selger/å serge  -- to sell
-igjen           -- again : leiligheten er ryddig igjen -- the apartment is tidy again
-igjen           -- left : jeg har ingenting igjen -- i have nothing left
+igjen           -- again : leiligheten er ryddig igjen -- the apartment is tidy again, jeg har ingenting igjen -- i have nothing left
 en slakter/slakteren/slakterer/slakterene -- the butcher
 et konditorie/konditoriet/konditorier/konditoriene -- the pastry shop
 blomsterbutikken - the flower shop
@@ -1004,6 +1003,7 @@ sommerblomsten  -- the summer flowers
 nok             -- enough
 en hatt/hatten/hatter/hattene -- the hat
 kul             -- cool
+kulere          -- cooler
 en jakke/jakken/jakker/jakkene -- the jacket
 en veske/vesken/jesker/veskene -- the purse
 en bukse/buksen/bukser/buksene -- the pants
@@ -1064,7 +1064,7 @@ en skole/skolen/skoler/skolene -- the school
 en post/posten  -- the mail
 et postkontor/postkontoret -- the postoffice
 en bygning/bygningen//bygningene -- the building
-bruker 	        -- to use: to spend : å bruke : ikke bruke bilen -- dont use the car : bruker penger på -- spend money on
+bruker/å bruke  -- to use: to spend : ikke bruke bilen -- dont use the car : bruker penger på -- spend money on
 brukte          -- used, spent
 bruk            -- use : gjøre bruk -- make use
 favorittlaget   -- the favorite team
@@ -1404,7 +1404,7 @@ løser/å løse    -- to solve
 løste           -- solved
 puslespill      -- puzzles
 i fjor          -- last year : i hele fjor -- all of last year
-kunst           -- art
+en kunst/kunsten -- art
 et fag/faget/fag/fagene -- the subject : school subject
 innflyttingsfesten -- the housewarming party
 en ektefelle/ektefellen -- the spouse
@@ -1428,7 +1428,7 @@ et brev/brevet/brev/brevene -- the letter
 et konvolutt/konvolutten -- the envelope
 en frimerke/frimerken/frimerker -- the stamp
 skyld           -- sake : for jentas skyld -- for the girls sake
-en boks/boksen  -- the can
+en boks/boksen/bokser/boksene -- the can
 ølboksen        -- the beer can
 takker          -- to thank
 takket          -- thanked
@@ -1437,7 +1437,7 @@ setebelter      -- seatbelts
 en sektretær/sekretæren -- the secretary
 kopiere         -- to copy
 dokumenter      -- documents
-konferanse      -- conference : konferanse//konferanser/
+en konferanse/konferansen/konferanser/konferansene -- conference
 reparerer/å reparere -- to repair
 en maskine/maskinen -- the machine
 en prest/presten/prester -- the priest
@@ -1466,7 +1466,7 @@ kaffebønner     -- coffee beans
 et måltid/måltiden -- the meal
 serverer        -- to serve
 sur             -- sour
-laks            -- salmon
+en laks/laksen/laks/laksene -- the salmon
 husnummeret     -- the house number
 postnummeret    -- the zip code
 smør            -- butter
@@ -1478,7 +1478,7 @@ eddik           -- vinegar
 riseddik        -- rice vinegar
 en rykte/rykten/rykter/ryktene -- the rumor
 sladrer/å sladre-- to gossip
-lyver/å lyve    -- to lie
+lyver/å lyve    -- to lie, lying
 løy             -- lied : hun løy for meg -- she lied to me
 spøkelset       -- ghost : et spokelse/spokelset/spokelser/spokelsene
 hjemsøkt        -- haunted
@@ -1487,7 +1487,24 @@ nysgjerrig      -- curious : jeg er nysgjerrig
 en heks/heksen/hekser/heksene -- witch
 et uhyre/uhyret/uhyrer/uhyrene -- the monster
 føler/å føle    -- to feel
-følelsen        -- feeling : en følelse/følelsen
+en følelse/følelsen/følelser/følelsene -- feeling
+en fjord/fjorden/fjorder/fjordene -- fjord
+en forrett/forretten/forreter/forrettene -- the appetizer
+hjemsøkte       -- haunted
+studentbyen     -- student village
+kleshengere/kleshengerne -- clothes hangers
+oppholder/å oppholde -- to reside, occupy : oppholder oss
+campusen        -- the campus
+internasjonale  -- international
+et laken/lakenet/laken/lakene -- the sheet
+ved siden av    -- next to
+en vifte/viften/vifter/viftene -- the fan
+en vegg/veggen/vegger/veggene -- the wall
+en søppelbøtte/søppelbøtten/søppelbøtter/søppelbøttene -- the trash can : søppelbøtta
+en gardin/gardinen/gardiner/gardinene -- the curtain
+en lader/laderen/ladere/laderne -- the charger
+vannkoker       -- water boiler
+
 
 ##
 
@@ -1638,7 +1655,7 @@ ukomplisert     -- uncomplicated
 vet siden       -- next to
 havet           -- the sea : et hav/havet
 sjøen           -- the sea : en sjø/sjøen
-fordelen        -- the advantage : en fordele/fordelen/fordeler/fordelene
+en fordele/fordelen/fordeler/fordelene -- the advantage
 omringet        -- surrounded
 passerer        -- to pass
 studien         -- the study: en studi/studien/studier/studiene
@@ -1649,6 +1666,7 @@ merkelig        -- strange
 slappe av       -- to relax : to chill
 stå på ski      -- to go skiing
 henger          -- to hang: å henge : å henge opp klær -- hang clothes
+hengt           -- hung : har hengt
 dekker          -- to prepare : å dekke : å dekke bordet -- to prepare the table
 suger           -- to suck : å suge
 støvsuger       -- to vacuum : to dustsuck
@@ -1739,7 +1757,6 @@ en seier/seieren -- victory
 lår             -- thigh
 skam            -- shame
 bøyd            -- past, bent
-
 
 
 
