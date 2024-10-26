@@ -124,7 +124,7 @@ var today = getToday();
 var myInterval;
 var interval_delay = 1000;
 var is_interval_running = false; //Optional
-var maxval = 7;
+var maxval = 12;
 var minval = 2;
 var carryBorrowBias = 0.6;
 var op;
@@ -156,7 +156,11 @@ function getEl(elName) {
 
 function appendToRes (c) {
   var el = getEl("answerId");
-  el.innerHTML = '_' + c + el.innerHTML.substring(1,el.innerHTML.length);
+  if(el.innerHTML == "_") {
+	  el.innerHTML = c;
+	  return;
+  }
+  el.innerHTML += c;
 }
 
 document.onkeydown = function(e) { 
@@ -172,8 +176,11 @@ document.onkeydown = function(e) {
 function delLeftRes (c) {
   var el = getEl("answerId");
   var txtv = el.innerHTML;
-  if(txtv.length < 2) return;
-  el.innerHTML = '_' + el.innerHTML.substring(2,el.innerHTML.length);
+  if(txtv.length < 2) {
+	  el.innerHTML = "_";
+	  return;
+  }
+  el.innerHTML = el.innerHTML.substring(0, el.innerHTML.length-1);
 }
 
 
@@ -357,10 +364,7 @@ function checkAnsw() {
     var el = getEl("answerId");
     var txtansw = el.innerHTML 
     if(txtansw == "_") return; //no numbers entered
-    do { //chew away '_' in first pos and all the prepending zeros
-        txtansw = txtansw.substring(1,txtansw.length); 
-    } while(txtansw.length > 1 && txtansw[0] == '0');
-	var st = parseInt(txtansw);
+    var st = parseInt(txtansw);
     var st2 = parseInt(st);   //will be NaN for non integer values
     if(st != st2) return; //dont allow non int values
 
