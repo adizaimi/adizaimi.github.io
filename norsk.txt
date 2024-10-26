@@ -67,7 +67,7 @@ med             -- with : reiste med buss -- travelled by bus, med meg, med deg,
 men             -- but
 ikke            -- not : hører ikke -- do not hear
 også            -- also
-morsom/morsomme -- funny : (e-pl)
+morsom/morsomme -- funny : (-e pl)
 gøy             -- fun : (easy search goy)
 bare            -- only
 bare hyggelig   -- youre welcome : (lit. only pleasure)
@@ -426,13 +426,13 @@ husker/å huske  -- to remember
 husket          -- remembered : did remember
 prøv            -- to try
 prøvde          -- tried
-en kjekse/kjeksen/kjeks/kjeksene -- the cookie, biskote
+en kjekse/kjeksen/kjeks/kjeksene -- the cookie
 et kjæledyr/kjæledyret/kjæledyrer/kjæledyrene -- the pet : (easy search : kjaledyr)
 kjære           -- dear : kjære leser -- dear reader
 en kjæreste/kjæresten -- the sweetheart, boyfriend, girlfriend
 kjærlighet      -- the love
 kjekke          -- handsome
-kjedelige       -- boring : jeg har det kjedelig -- i'm bored
+kjedelig/kjedelige -- boring : jeg har det kjedelig -- i'm bored
 et kjøkken/kjøkkenet/kjøkkener/kjøkkenene -- the kitchen
 en kjole/kjolen/kjoler/kjolene -- the dress
 et kjøleskap/kjøleskapet/kjøleskaper/kjøleskapene -- the refrigerator
@@ -598,7 +598,7 @@ en sommer/sommeren -- the summer
 en høst/høsten -- the fall, autumn
 en vinter/vinteren -- the winter
 kald/kaldt/kaldene -- cold : det er kaldt : kaldere -- colder
-varm/vamrt/varme -- hot : det er varmt
+varm/varmt/varme -- hot : det er varmt
 synger/å synge  -- to sing
 en sang/sangen/sanger/sangene -- the song
 et kor/koret    -- the choir
@@ -618,7 +618,7 @@ et toalett/toalettet/toaletter/toalettene -- the restroom
 et bad/badet    -- the bath, bathroom : å ta et bad -- to take a bath
 bader/å bade    -- to bathe
 baderommet      -- the bathroom
-en badedrakte/badetrakten -- the swimsuit
+en badedrakte/badedrakten -- the swimsuit
 ren/rent/rene   -- clean : (-et, -e pl) : et rent hus, gatene er rene
 en restaurant/restauranten/restauranter -- the restaurant
 en romkamerat/romkameraten/romkamerater -- the roommate
@@ -715,7 +715,7 @@ nervøs          -- nervous
 et hode/hodet/hoder/hodene -- the head
 vond/vondt      -- hurt, pain : en vond fot -- a sore foot; vondt i hodet -- headache : det gjør vondt -- it hurts (easy search gjor vondt)
 trist/triste    -- sad
-glad/glade      -- happy : (-e pl)
+glad/glade      -- happy : (-e m, pl) : jeg er glad i deg -- I love you!
 mindre          -- less, smaller : mer eller mindre -- more or less
 minste          -- smallest, least : den miste leiligheten -- the smallest appartment
 minst           -- at least : du må vente minst en time -- you must wait at least an hour
@@ -1128,7 +1128,7 @@ en parkeringsplass/parkeringsplassen/parkeringsplasser/parkeringsplassene -- the
 viktig/vigtike  -- important : (-e pl)
 pen/pene/pent   -- pretty, nice, handsome
 definitivt      -- definitely
-difinitive      -- definite
+definitive      -- definite
 et liv/livet/liv/livene -- the life
 synes           -- to seem, think : de synes byen er pen -- they think the city is pretty
 syntes          -- seemed
@@ -1320,6 +1320,7 @@ favorittseng    -- favorite song
 et album/albumet/album/albumene -- the album
 låner/å låne    -- to lend
 gråter/å gråte  -- to cry : de grater -- they're crying
+gråt            -- cried
 hjemmefra       -- from home
 en tvilling/tvillingen/tvillinger/tvillingene -- twins
 tvillingbroren  -- the twin brother : hun har en tvillingbror
@@ -1355,7 +1356,7 @@ et salg/salget/salg/salgene -- sales
 til salgs       -- for sale
 et prøverom/prøverommet/prøverom/prøverommene -- fitting rooms
 en plakate/plakaten/plakater/plakatene -- the poster
-khemmekontoret  -- the home office
+kjemmekontoret  -- the home office
 en kjøper/kjøperen/kjøpere/kjøperne -- the buyer
 en shorts/shortsen/shorts/shortsen -- the shorts
 lommepenger     -- pocket money
@@ -1439,7 +1440,7 @@ kopiere         -- to copy
 dokumenter      -- documents
 en konferanse/konferansen/konferanser/konferansene -- conference
 reparerer/å reparere -- to repair
-en maskine/maskinen -- the machine
+en maskin/maskinen -- the machine
 en prest/presten/prester -- the priest
 håndverker      -- tranesperson
 fritiden        -- the free time : en fritid/fritiden
@@ -1504,7 +1505,19 @@ en søppelbøtte/søppelbøtten/søppelbøtter/søppelbøttene -- the trash can 
 en gardin/gardinen/gardiner/gardinene -- the curtain
 en lader/laderen/ladere/laderne -- the charger
 vannkoker       -- water boiler
-
+ler/å le        -- to laugh
+lo              -- laughed
+forelsket       -- in love : jeg er forelsket -- i'm in love
+himmelen        -- the heaven
+stakkars        -- poor : stakkars deg! -- poor you!
+mennesker       -- people
+ensomt/ensomme  -- lonely : (-me pl)
+deprimert       -- depressed
+et hjerte/hjertet -- the heart
+bitter/bitre    -- bitter : (-re pl)
+trikkesjåføren  -- the tram driver
+stolt/stolte    -- proud : (-e pl)
+normal          -- normal
 
 ##
 
