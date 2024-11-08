@@ -154,7 +154,7 @@ et øl/ølet      -- the beer
 stor/stort/store -- big : et stort hus, den store sengen -- the big bed
 større          -- bigger : større enn -- bigger than
 størst          -- the biggest : største rommet -- biggest room
-små             -- small
+små             -- small : små ting -- small things
 lite            -- small : en liten gutt
 litt            -- a little : litt nervos -- a little nervous : lite tid -- little time
 litten          -- little : det er litten a gjøre her -- there is little to do here
@@ -380,6 +380,7 @@ i en time       -- for an hour : vi danset sammen i flere timer -- we danced tog
 inn/inne        -- inside : han er inne -- he's inside : de kjorer inn i et tre -- they are driving into a tree
 ut/ute          -- outside : hun går ut -- she's going out
 utenfor         -- outside, outside of : utenfor huset -- outside the house
+utenlandske/utenlandsk -- foreign : utenlandske personer -- foreign people
 uten            -- without : uten deg, er jeg ingenting -- without you, i am nothing
 på              -- at, on : på jobb -- at work , på bordet -- on the table
 til             -- to, of : skrike til  -- yell to, kaken til moren min -- min morens kake -- keku i mamase time
@@ -589,7 +590,7 @@ en ting/tingen/tinger/tingene -- the thing : ting tar tid -- things take time
 varet           -- the weather
 sol             -- me diell, sunny : det er sol (sola)
 en sol/solen    -- the sun
-regner          -- to rain : det regner
+regner          -- to rain : det regner, regner jeg med -- I reckon
 snør            -- to snow : det snør
 snøen           -- the snow : en snø/snøen
 overskyet       -- me re, cloudy : det er overskyet
@@ -612,7 +613,7 @@ fotballkampen   -- the football match
 en ball/ballen  -- the ball
 liker/å like    -- to like, enjoy
 likte           -- liked : did like
-likt            -- liked : has liked
+likt            -- liked : har likt -- has liked
 en seng/sengen  -- the bed :   (ei seng)
 et toalett/toalettet/toaletter/toalettene -- the restroom
 et bad/badet    -- the bath, bathroom : å ta et bad -- to take a bath
@@ -669,6 +670,7 @@ trengte         -- needed
 finner/å finne  -- to find
 fant            -- found
 finner sted     -- to take place
+finner oss      -- to tolerate
 fant sted       -- took place
 en avgang/avgangen -- the departure
 en onkel/onkelen/onkeler/onkelene -- the uncle
@@ -708,7 +710,7 @@ en taxitur/taxituren -- the taxiride
 en adress/adressen/adresser/adressene -- the adress
 gjentar/å gjenta -- to repeat : historien gjentar seg -- history repeats itself
 deler/å dele    -- to split, divide, share : deler reiginingen -- split the bill, deler tiden med -- share time with
-en del/delen/deler/delene -- the piece
+en del/delen/deler/delene -- the piece, part
 en familie/familien/familier/familiene -- the family
 en supp/suppen/supper/suppene -- the soup
 nervøs          -- nervous
@@ -800,7 +802,7 @@ en kopp/koppen/kopper/koppene -- the cup
 en yoghurt/yoghurten -- the yogurt
 frokostblanding -- cereal
 en ris/risen    -- the rice
-en is/isen      -- the icecream
+en is/isen      -- the ice, icecream
 en kylling/kyllingen/kyllinger/kyllingene -- the chicken
 en hage/hagen   -- the garden
 alene           -- alone : gå aldri alene -- never go alone
@@ -1156,6 +1158,7 @@ en rygg/ryggen  -- the back
 en hend/henden/hender/hendene -- the hands : hendene i været! -- hands in the air!
 en fot/foten/føtter/føttene -- the feet
 begge/begge to  -- both
+både            -- both
 ro              -- peace
 rolig           -- calm, calmly
 urolig          -- disturbed
@@ -1346,6 +1349,7 @@ et miljø/miljøet/miljøer/miljøene -- the environment
 en filmstjerne/filmstjernen/filmstjerner/filmstjernene -- the movie star
 et slips/slipset/slips/slipsene -- the tie
 velger/å velge  -- to choose
+valgte          -- chose
 et belte/beltet/belter/beltene -- the belt
 et gull/gullet/gull/gullen -- the gold
 morsdagen       -- the mothersday
@@ -1391,6 +1395,7 @@ et kart/kartet  -- the map
 innflyttingsfest-- house warming party
 overfor         -- accross
 spesielt        -- especially
+typisk          -- typical
 kvadratmeter    -- square meters
 en pølse/pølsen/pølser/pølsene -- the sausage
 et ektepar/ekteparet -- the married couple
@@ -1488,6 +1493,7 @@ nysgjerrig      -- curious : jeg er nysgjerrig
 en heks/heksen/hekser/heksene -- witch
 et uhyre/uhyret/uhyrer/uhyrene -- the monster
 føler/å føle    -- to feel
+følt            -- felt
 en følelse/følelsen/følelser/følelsene -- feeling
 en fjord/fjorden/fjorder/fjordene -- fjord
 en forrett/forretten/forreter/forrettene -- the appetizer
@@ -1518,6 +1524,8 @@ bitter/bitre    -- bitter : (-re pl)
 trikkesjåføren  -- the tram driver
 stolt/stolte    -- proud : (-e pl)
 normal          -- normal
+klager/å klage  -- to complain
+akkurat         -- exactly
 
 ##
 
@@ -1551,7 +1559,7 @@ kjapt           -- quickly
 laderen         -- charger
 skjønner        -- to see, to understand : å skjønne
 mener           -- to mean : å mene
-fyller          -- to fill : å fylle
+fyller          -- to fill : å fylle, fylla -- drinking/drunk
 påfyller        -- to refill
 påfyllet        -- refill : et påfyll/påfyllet
 annet           -- other : noe annet sted -- anywhere else
@@ -1668,6 +1676,7 @@ ukomplisert     -- uncomplicated
 vet siden       -- next to
 havet           -- the sea : et hav/havet
 sjøen           -- the sea : en sjø/sjøen
+sjømenn         -- sailors
 en fordele/fordelen/fordeler/fordelene -- the advantage
 omringet        -- surrounded
 passerer        -- to pass
@@ -1716,7 +1725,7 @@ skyndte         -- hurried
 hundrevis       -- hundreds
 tusenvis        -- thousands
 rad             -- row : tredje på rad -- third in a row
-stdunden        -- the moment
+stunden         -- the moment
 en stund        -- for a while
 aksenten        -- the accent : en aksent/aksenten
 synd            -- pitty : så synd -- such a pitty!
@@ -1770,6 +1779,16 @@ en seier/seieren -- victory
 lår             -- thigh
 skam            -- shame
 bøyd            -- past, bent
+skyer           -- clouds
+kjipe           -- crappy
+geiten          -- the goat : en geit/geiten
+grøt            -- porrige
+ustabilt        -- unstable
+avstand         -- distant
+koselig         -- nice
+koser           -- to enjoy : koser seg -- have fun
+annen           -- another, different
+samfunnet       -- the society
 
 
 
