@@ -558,7 +558,7 @@ ville           -- wanted
 skal            -- shall, will, going to : hvor skal du i dag -- where are you going today, hva skal du gjøre? -- what are you going to do?
 skulle          -- would : skulle til -- would go to
 burde           -- should : du burde visst det -- you should have known that
-en skjorte/skjorten/skjorter -- the shirt :  (skjorta)
+en skjorte/skjorten/skjorter -- the shirt : skjorta, T-skjorta
 et skjørt/skjørtet -- the skirt
 en sko/skoen/sko/skoene -- the shoe
 joggerskoen     -- the sneakers
@@ -702,7 +702,8 @@ tørst/tørste    -- thirsty : (easy torst)
 en buss/bussen/busser/bussene -- the bus
 bussholdeplassen -- the bus stop
 bussbilleten    -- the bus ticket
-busstasjonnen   -- the bus station
+busstasjonen    -- the bus station
+togstasjonen    -- the train station
 penger/pengene  -- the money : pengene mine -- my money : trenger penger -- need money
 et nummer/nummeret/numre/numrene -- the number
 en taxi/taxien -- the taxi
@@ -780,7 +781,6 @@ en grill/grillen -- the grill
 griller/å grille -- to grill
 grillet         -- grilled
 en grillfeste/grillfesten -- the barbequeue
-en piano/pianoen -- the piano
 skitten         -- dirty
 en baby/babyen  -- the baby
 et barn/barnet/barn/barna -- the child : det er barnets te -- that the child's tea.}}+
@@ -815,6 +815,7 @@ svart/svarte    -- black : (-e pl) -- svarte sko - black shoes
 rød/rødt/røde   -- red :  (-e pl) : røde pærer -- red pears (easy search rod)
 grønn/grønt/grønne -- green :  huset er grønt
 lilla           -- purple
+lyselilla       -- light purple
 oransje         -- orange color
 gul/gult/gule   -- yellow : huset er gult
 grå/grått/grå   -- gray : det er grått -- its gray, byen er ful av grå hus -- the city is full of gray houses
@@ -847,7 +848,7 @@ dobbel          -- double
 en nøkkel/nøkkelen/nøkler/nøklene -- the key
 et rom/rommet/rommer/rommene -- the room
 en bar/baren    -- the bar
-en strand/stranden/strender/strendene -- the beach : pa stranden -- on the beach
+en strand/stranden/strender/strendene -- the beach : pa stranden -- on the beach, vakre strender -- nice beaches
 et fly/flyet/flyer/flyene -- the airplane
 en flyplass/flyplassen/flyplaser/flyplassene -- the airport
 en flybillete/flybilleten -- the plane ticket
@@ -1012,7 +1013,8 @@ en bukse/buksen/bukser/buksene -- the pants
 en sokk/sokken/sokker/sokkene -- the sock
 sandaler        -- the sandals : sandaler/sandalene
 en kart/karten/karter/kartene -- the map : kart over byen -- map of the city
-fyller          -- to fill, turn : hvem fyller femty -- who is turning fifty
+fyller/å fylle  -- to fill, turn : hvem fyller femty -- who is turning fifty
+fylt            -- filled
 inviterer/å invitere -- to invite
 vasker/å vaske  -- to wash : jeg må vaske meg -- duhet të lahem, vask klærne dine -- wash your clothes
 vasket          -- have washed : har du vasket deg -- have you washed yourself (u lave)?
@@ -1127,7 +1129,7 @@ vanligvis       -- usually : hunden er vanligvis vennlig -- the dog is usually f
 en trikke/trikken/trikker -- the trams, tramvaj
 overfører/å overføre -- to transfer, to transmit
 en parkeringsplass/parkeringsplassen/parkeringsplasser/parkeringsplassene -- the parking place, parking lot
-viktig/vigtike  -- important : (-e pl)
+viktig/viktige  -- important : (-e pl)
 pen/pene/pent   -- pretty, nice, handsome
 definitivt      -- definitely
 definitive      -- definite
@@ -1196,7 +1198,7 @@ lås/å lås       -- to lock
 låste           -- locked
 et hull/hullet/hull/hullene  -- the hole
 et hjørne/hjørnet/hjørner/hjørnene -- the corner
-rundt           -- around, approximately : rundt hjønet -- around the corner
+rundt           -- around, approximately : rundt hjønet -- around the corner, verden rundt --  the world around
 en fryser/fryseren/frysere/frysere -- the freezer
 et tak/taket/tak/takene -- the roof, ceiling
 et loft/loftet/loft/loftene  -- the attic
@@ -1288,7 +1290,7 @@ måte            -- way, manner : i like måte -- likewise (same way)
 agurktid        -- slow news season : (cucumber time)
 folk            -- people
 sist/siste      -- e fundit, last, last time : sist/siste : hvem kom sist -- who came last.
-mister/å miste  -- to loose : jeg mister nøklene
+mister/å miste  -- to loose, miss : jeg mister nøklene
 mistet          -- lost : har mistet
 ligger/å ligge  -- to lie : hvor ligger spania -- where is (lies/located) spain
 ligget          -- lay, was lying : ke qenë, katten har ligget på sofaen -- the katt has been lying on the sofa
@@ -1348,8 +1350,8 @@ tjener/å tjene -- to earn : also to serve
 et miljø/miljøet/miljøer/miljøene -- the environment
 en filmstjerne/filmstjernen/filmstjerner/filmstjernene -- the movie star
 et slips/slipset/slips/slipsene -- the tie
-velger/å velge  -- to choose
-valgte          -- chose
+velger/å velge  -- to choose, select
+valgte          -- chose, selected
 et belte/beltet/belter/beltene -- the belt
 et gull/gullet/gull/gullen -- the gold
 morsdagen       -- the mothersday
@@ -1454,7 +1456,7 @@ bussjåføren     -- the bus driver
 sommerjobb      -- summer job
 telefonselger   -- telemarketer
 brannmennene    -- the firemen
-en rørlegger/rørleggeren/rørleggere /rørleggerne -- the plumber
+en rørlegger/rørleggeren/rørleggere /rørleggerne -- the plumber : (lit tube doctor)
 en elektriker/elektrikeren/elektrikere/elektrikerne -- the electrician
 overtid         -- overtime
 arbeidsklærne   -- workclothes
@@ -1514,7 +1516,7 @@ vannkoker       -- water boiler
 ler/å le        -- to laugh
 lo              -- laughed
 forelsket       -- in love : jeg er forelsket -- i'm in love
-himmelen        -- the heaven
+himmelen/en himmel -- the heaven : åpen himmel -- open sky
 stakkars        -- poor : stakkars deg! -- poor you!
 mennesker       -- people
 ensomt/ensomme  -- lonely : (-me pl)
@@ -1526,6 +1528,26 @@ stolt/stolte    -- proud : (-e pl)
 normal          -- normal
 klager/å klage  -- to complain
 akkurat         -- exactly
+nianoet/et piano -- the piano
+broen/en bro    -- the bridge
+skjellet/et skjell -- the shell
+en vei/veien    -- the way : hvor er jeg på vei -- where am i headed?
+kø              -- the queue
+bakken/en bakke/bakker -- the hill
+vinker          -- to wave
+bikinien/en bikini -- the bikini
+hoved           -- main : hovedgaten-- main street, hovedskilde -- main source
+staden          -- a city
+hovedstaden     -- the capital city
+krysser/å krysse -- to cross :
+ikke kryss!     -- don't cross
+krysset         -- crossed
+kultur          -- the culture
+damen/en dame/damer/damene -- the lady
+herren/en herr/herrer/herrene -- the gentleman
+lander/å lande  -- to land
+timeglasset/et timeglass -- the hourglass
+normalt         -- normal
 
 ##
 
@@ -1559,7 +1581,6 @@ kjapt           -- quickly
 laderen         -- charger
 skjønner        -- to see, to understand : å skjønne
 mener           -- to mean : å mene
-fyller          -- to fill : å fylle, fylla -- drinking/drunk
 påfyller        -- to refill
 påfyllet        -- refill : et påfyll/påfyllet
 annet           -- other : noe annet sted -- anywhere else
@@ -1583,9 +1604,6 @@ mistenkt        -- suspected
 opplever        -- to experience : får opleve -- to enjoy the experience
 utestengt selv  -- be banned
 utdanning       -- education : hoyere utdanning -- higher education
-hoved           -- main
-stad            -- a city
-hovedstad       -- the capital city
 hovn            -- revenge
 klarer          -- to manage : to handle, to clear : å klare : jeg klarer ikke -- i can't do it
 forestiller     -- to represent : å forestille
@@ -1645,7 +1663,6 @@ nå              -- to reach : å nå
 poteter         -- potatoes
 gulrøtter       -- carrots
 kaninen         -- the rabbit : en kanin/kaninen/kaniner/
-veien           -- the way : en vei/veien : hvor er jeg på vei -- where am i headed?
 skuffet         -- dissapointed
 plutselig       -- suddenly
 lappen          -- the note : en lapp/lappen
