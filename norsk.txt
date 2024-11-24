@@ -188,7 +188,7 @@ svømt           -- swam : har svømt -- has swam
 bor/å bo        -- to live, stay : vi bor på hotell -- ne po rrime ne hotel
 bodd            -- lived : har bodd
 bodde           -- lived : did live
-vet/å vite      -- to know
+vet/å vite      -- to know : du må bare vite -- you must only know
 visst           -- known : hadde du visst -- had you known
 visste          -- knew : did know
 skriver/å skrive -- to write
@@ -419,7 +419,7 @@ halvparted      -- half of
 kvart           -- quarter
 prater/å prate  -- to talk, chat : å prate om -- to talk about
 pratet          -- talked : did talk, har pratet med -- has talked to
-en prate/praten -- the chat
+en prat/praten  -- the chat
 glemmer/å glem  -- to forget : glem henne -- forget her
 glemt           -- forgotten
 glemte          -- forgot
@@ -482,8 +482,10 @@ måtte           -- had to
 jo              -- on the contrary : yes ????? go (jo til legen  -- go to the doctor)
 faen            -- f*ck : sh!t
 dårlig/darlige  -- bad : darlig tid -- poor time
-verste          -- worst : den verste -- the worst
+verre           -- worse : verre ting -- worse things
+verst/verste    -- worst : den verste -- the worst
 fattig          -- poor
+stakkars        -- poor : stakkars deg! -- poor you!
 rik             -- rich
 titte           -- peek, check out
 tur             -- turn, walk : gå på tur -- go on walks
@@ -553,8 +555,8 @@ ifra            -- from
 tenker/å tenke  -- to think: tenker på meg -- think about me
 tenkte          -- thought
 gjerne          -- like, gladly : deutsch gern : jeg vil ha det gjerne
-vil             -- to want : vil du -- do you want to?
-ville           -- wanted
+vil             -- to want, will : vil du -- do you want to?
+ville           -- wanted, would: wille visst -- would know
 skal            -- shall, will, going to : hvor skal du i dag -- where are you going today, hva skal du gjøre? -- what are you going to do?
 skulle          -- would : skulle til -- would go to
 burde           -- should : du burde visst det -- you should have known that
@@ -567,10 +569,13 @@ et intervju/intervjuet -- the interview : jeg trenger nye kler til intervjuet --
 tar/å ta        -- to take, catch : ta med -- (take with) bring ;
 tar med         -- to bring
 tar på          -- touch
-tatt            -- taken, cought : bli tatt -- be caught, De har tatt henne -- they have taken her
+tatt            -- taken, cought : har tatt, bli tatt -- be caught, De har tatt henne -- they have taken her
 i det hele tatt -- at all
-tok             -- took : de tok t-banen -- they took the subway, tok telefonen -- pick up the phone, tok du med tingene -- did you bring the things?
+tok             -- took : did take, de tok t-banen -- they took the subway, tok telefonen -- pick up the phone, tok du med tingene -- did you bring the things?
 tok med         -- brought
+mottar/å motta  -- to receive
+mottatt         -- received : har mottat
+mottok          -- received : did receive
 stede           -- place : (i steded for -- in place of/instead)
 stedet          -- instead : jeg spiser is i stedet for frukt -- i eat icecrem instead of fruit
 skylle/å skylle -- to rinse, flush
@@ -742,6 +747,7 @@ en klov/klovnen -- the clown
 en gjest/gjesten/gjester/gjestene -- the guest
 en gave/gaven   -- the gift
 lar/å la        -- to let : la oss -- let us
+lott            -- let : did let
 danser/å danse  -- to dance : la oss donse -- let us dance
 danset          -- danced
 feirer/å feire  -- to celebrate : la oss feire -- let us celebrate
@@ -914,14 +920,15 @@ en date/daten/dater/datene -- the date : ta med en date -- bring a date
 stenge/å stenge -- to close
 stengte         -- closed: did close
 stengt          -- closed : have closed -- har stengt
-stengt          -- closed : butikkene er stengte, skoler er stengt
+stengt/stengte  -- closed : butikkene er stengte, skoler er stengt
 lukker/å lukke  -- to close : lukk dor!
 lukket          -- closed
 en legitimasjon/legitimasjonen/legitimasjoner/legitimasjonene -- identification
 varer/å vare    -- to last : hvor lenge varer det -- how long does it last, konserten varer i tre timer -- koncert lasts three hours
 varte           -- lasted : det varte i tre dager -- that lastet three days
 være            -- to be : jeg vil være med deg -- i want to be with you (easy search vare)
-vært            -- been : har vært -- have been
+vært            -- been : har vært -- have been,
+kunne vært      -- could have been
 en voksen/voksen/voksne/voksne -- the adult
 vokser/å vokse  -- to grow up
 filmen          -- the film : en film/filmen
@@ -1036,6 +1043,7 @@ uhøflige        -- impolite : barna er så uhøflige -- the children are so imp
 et gulve/gulvet/gulver/gulvene -- the floor : ikke på gulvet! -- not on the floor!
 eier/å eie      -- to own : hun eier hyttene -- she owns the cabins
 eierne          -- the owners
+huseier         -- the landlord
 hjelpsomt/hjelpsomme -- helpful
 ryddig          -- tidy
 ryddigst        -- tidyest
@@ -1347,6 +1355,7 @@ et landskap/landskapet/landskap/landskapene -- the landscape
 en fotograf/fotografen/fotografer/fotografene     -- the photographers
 en premie/premien/premier/premiene -- the prize
 tjener/å tjene -- to earn : also to serve
+tjente         -- earned
 et miljø/miljøet/miljøer/miljøene -- the environment
 en filmstjerne/filmstjernen/filmstjerner/filmstjernene -- the movie star
 et slips/slipset/slips/slipsene -- the tie
@@ -1517,7 +1526,6 @@ ler/å le        -- to laugh
 lo              -- laughed
 forelsket       -- in love : jeg er forelsket -- i'm in love
 himmelen/en himmel -- the heaven : åpen himmel -- open sky
-stakkars        -- poor : stakkars deg! -- poor you!
 mennesker       -- people
 ensomt/ensomme  -- lonely : (-me pl)
 deprimert       -- depressed
@@ -1548,6 +1556,12 @@ herren/en herr/herrer/herrene -- the gentleman
 lander/å lande  -- to land
 timeglasset/et timeglass -- the hourglass
 normalt         -- normal
+betydelig       -- significant : (meaninful)
+anser           -- to consider
+sjenerøs        -- generous
+rimelig         -- reasonable, fair
+andel           -- the share : andel av markedet -- share of the market
+trusselen/en trussel -- the threat : trusselbrev -- threat letter
 
 ##
 
@@ -1571,7 +1585,6 @@ svartedauden    -- the black death (plague)
 befolkningen    -- population
 herjer          -- reign
 lovløshet       -- lawlessness
-trussel         -- threat : trusselbrev -- threat letter
 øde             -- desolate
 kar             -- fellow
 avhenger        -- depends
@@ -1616,7 +1629,7 @@ vest            -- west
 nord            -- north : nordøst -- northeast
 sør             -- south
 nyter           -- enjoy
-selvom          -- even though, although
+selvom/selv om  -- even though, although
 høljer          -- heels (?), høljer ned -- pile down (accumulate)
 dør             -- to die : å dø : til vi dør -- until we die
 slår            -- to turn back: kthehu : å slå -- to turn , slår av -- turn off : å slå av lyset -- to turn off the light
@@ -1790,7 +1803,7 @@ gissel          -- hostage
 livsfarlig      -- deadly
 kunstig intelligens -- artificial intelligence
 reguleres       -- be regulated
-avtale          -- appointment
+avtale          -- the agreement, deal, appointment
 seir            -- victory
 en seier/seieren -- victory
 lår             -- thigh
@@ -1806,6 +1819,30 @@ koselig         -- nice
 koser           -- to enjoy : koser seg -- have fun
 annen           -- another, different
 samfunnet       -- the society
+hertug          -- duke : title of duke
+antar           -- to guess, assume
+forhandle       -- to negotiate : forhandle på nytt -- renegotiate
+utfordrende     -- challenging
+aner            -- to sense
+aldeles ikke    -- absolutely not
+ta innover      -- to take in : to understand
+en skyss        -- a ride : skyss hjem -- a ride home
+spaserer        -- to walk : jeg spaserer -- i'm walking
+nåde            -- grace : deres nåde -- your grace
+flink           -- proficient, clever : jeg er ikke flink -- i'm not good with
+sak             -- business : det er ikke min sak -- it's not my business
+en rev/reven    -- the fox
+lurer/å lure    -- to wonder, deceive : å lure på -- to wonder
+lurte           -- wondered, deceived : did wonder
+lurt            -- deceived : bli lurt -- e deceived : har lurt -- have deceived
+kjeft           -- shut up
+knipen/en knipe -- the predicament
+forretning      -- business
+roten/en rot/røtter/røttene -- the root
+slått           -- struck : har slått røtter -- have taken roots
+en rekke grunner -- a number of reasons
+en jævel/jævelen/jævler/jævlene -- the bastard
+med farta       -- with speed
 
 
 
