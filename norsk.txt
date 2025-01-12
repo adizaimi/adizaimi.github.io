@@ -46,7 +46,8 @@ hva             -- what : wha har du -- what do you have
 hva enn         -- whatever, that which
 hvilke/hvilket/hvilken  -- which
 hvem            -- who : hvem har vann -- who has water
-hvem sin/hvem sitt/hvem sine        -- whoose : e kujt: hvem sin barn er han -- whoose child is he?
+hvem sin/hvem sitt/hvem sine -- whose : e kujt: hvem sin barn er han -- whoose child is he?
+hvem som        -- who : vet du hvem som ... -- do you know who..
 hvor mye        -- how much
 hvor mange      -- how many
 hvor gammel     -- how old
@@ -134,14 +135,14 @@ jobbet          -- worked
 varm/varmt      -- warm
 varmere         -- warmer, hotter
 kalt            -- cold
-høy/høyt/høye   -- tall : det høye slottet -- the high castle
+høy/høyt/høye   -- tall, high, loud : det høye slottet -- the high castle
 høyt            -- highly, loudly
 høyere          -- higher, taller
 høyest          -- highest, loudest
 høyre           -- right : (til hoyre -- to the right)
 venstre         -- left : til venstre
 drikker/å drikke -- to drink, drinking : ikke drikk -- dont drink
-drikken         -- the drink : en drikk/drikken/drikker/drikkene
+en drikk/drikken/drikker/drikkene -- the drink :
 drakk           -- drank
 vannen          -- water : vann/vannen
 et vann/vannet  -- the water : jenta drikker vannet -- the girl is drining the water
@@ -199,7 +200,8 @@ leser/å lese    -- to read
 leste           -- read : did read
 lest            -- read : har lest -- have read
 lærer/å lære    -- to learn : går i lære som ... -- do an apprenticeship as a
-en lærer/læreren -- the teacher : (easy search larer)
+lært            -- learned : har lært
+en lærer/læreren/lærerer/lærerne -- the teacher : (easy search larer)
 snakker/å snakke -- to speak : snakker engelsk -- speak english : ikke snakk -- don't speak
 snakket         -- spoke : did speak, har snakket -- have spoken
 et språk/språket/språker/språkene -- the language
@@ -212,13 +214,17 @@ en te/teen      -- the tea
 en katt/katten/katter/kattene -- the cat
 en hund/hunden/hunder/hundene -- the dog
 et brød/brødet  -- the bread
-en bror/broren/brødre/brødrene -- the brother
-en mor/moren/mødre/mødre -- the mother : also mora mi
-en far/faren/fedre/fedrene -- the father : 
+en bror/broren  -- the brother
+brødre/brødrene -- the brothers
+en mor/moren    -- the mother : also mora mi
+mødre/mødre     -- the mothers
+en far/faren    -- the father
+fedre/fedrene   -- the fathers
 en sønn/sønnen/sønner/sønnene -- the son :  (easy find sonnen)
 en søster/søsteren/søstre/søstrene -- the sister :  (easy search : sosteren) (søstera)
 et søsken/søskenet/søskner/søsknene -- the sibling : (easy search : sosken)
-en datter/datteren/døtre/døtrene -- the daughter : (dattera mi)
+en datter/datteren -- the daughter : (dattera mi)
+døtre/døtrene   -- the daughters
 en gutt/gutten/gutter/guttene -- the boy
 en kvinne/kvinnen/kvinner/kvinnene -- the woman
 kvinneklær      -- woman clothing
@@ -292,7 +298,7 @@ tjueen          -- twentyone
 tjueto          -- twentytwo
 tjuetre         -- twentythree
 tjuefire        -- twentyfour
-fjuefem         -- twentyfive
+tjuefem         -- twentyfive
 tjueseks        -- twentysix
 tjuesju         -- twentyseven
 tjueåtte        -- twentyeight
@@ -328,7 +334,7 @@ lørdagen        -- the Saturday : (denne lørdagen -- this saturday)
 på mandager     -- mondays
 et morsmål/morsmålet -- the mothertongue: native language : (easy search morsmalet)
 en stasjon/stajonen -- the station
-et bibliotek/biblioteket -- the biblioteke
+et bibliotek/biblioteket -- the library
 en park/parken/parker/parkene -- the park
 en kirk/kirken/kirker/kirkene -- the church
 et hotell/hotellet/hoteller/hotellene -- the hotel
@@ -355,7 +361,7 @@ en minibank/minibanken -- the ATM
 en bank/banken  -- the bank 
 journalist      -- a journalist
 en advokat/advokaten/advokater/advokatene -- a lawyer
-et universitet/universetetet -- the university
+et universitet/universitetet -- the university
 januar          -- January
 februar         -- February
 mars            -- Mars
@@ -369,7 +375,7 @@ oktober         -- Oktober
 november        -- November
 desember        -- December
 et år/året/år/årene -- the year : åtte år gammel -- eight years old (easy search aret)
-årets           -- of the year
+årets           -- year`s: of the year
 en uke/uken/uker -- the week
 en måned/måneden/måneder/månedene -- the month : (easy search: maned)
 en banan/bananen/bananer/bananene -- the bannana
@@ -386,12 +392,13 @@ på              -- at, on : på jobb -- at work , på bordet -- on the table
 til             -- to, of : skrike til  -- yell to, kaken til moren min -- min morens kake -- keku i mamase time
 i Norge         -- in Norway
 i dag           -- today
-i går           -- dje, yesterday : var det sol i gar? -- was it sunny yesterday?
-i forgårs       -- pardje, day before yesterday
+i går           -- yesterday : dje, var det sol i gar? -- was it sunny yesterday?
+i forgårs       -- day before yesterday: pardje
 i morges        -- this morning
-i morgen        -- nesër, tomorrow
+i morgen        -- tomorrow: nesër
 i overmorgen    -- day after tomorrow
 i år            -- this year
+i fjor          -- last year : i hele fjor -- all of last year
 i nærheten      -- nearby : (easy search nerheten narheten)
 nær/nærme       -- near : (pl)
 nærmest         -- nearest
@@ -408,6 +415,7 @@ mot             -- to, towards, against : hun gjøre det mot meg -- she did that
 kan             -- can : kan ikke  -- can not
 står/å stå      -- to stand, stay : bordet står her -- the table is here, de står -- they are standing (easy search: star)
 stod            -- stood
+står opp/å stå opp -- to get up, stand, wake
 bli             -- to stay, to become : bli i sengen (stay in bed), jeg vil bli lærer -- I want to become a teacher
 ble             -- was
 blitt           -- been : har blitt -- has become
@@ -421,12 +429,13 @@ prater/å prate  -- to talk, chat : å prate om -- to talk about
 pratet          -- talked : did talk, har pratet med -- has talked to
 en prat/praten  -- the chat
 glemmer/å glem  -- to forget : glem henne -- forget her
-glemt           -- forgotten
+glemt           -- forgotten : har glemt
 glemte          -- forgot
 husker/å huske  -- to remember
 husket          -- remembered : did remember
 prøv            -- to try
 prøvde          -- tried
+en prøv/prøven/prøver/prøvene -- the test, exam
 en kjekse/kjeksen/kjeks/kjeksene -- the cookie
 et kjæledyr/kjæledyret/kjæledyrer/kjæledyrene -- the pet : (easy search : kjaledyr)
 kjære           -- dear : kjære leser -- dear reader
@@ -454,6 +463,7 @@ kjempefint      -- terrific
 kjempetungt     -- really heavy : very heavy
 kjempestor      -- really big
 kjempevarmt     -- really warm
+kjempelangt     -- really long
 kjenner/å kjenne -- to know : njoh : jeg kjenner du
 kjent/kjente    -- known : -e pl
 ukjent          -- unknown
@@ -479,6 +489,7 @@ spist           -- eaten : har spist, har du spist -- have you eaten?
 så              -- so, therefore : så mye -- so much
 må              -- must, have to : (easy search: ma), må til -- must go to
 måtte           -- had to
+måte            -- way, manner : i like måte -- likewise (same way)
 jo              -- on the contrary : yes ????? go (jo til legen  -- go to the doctor)
 faen            -- f*ck : sh!t
 dårlig/darlige  -- bad : darlig tid -- poor time
@@ -510,6 +521,7 @@ en avis/avisen/aviser/avisene -- newspaper :  (avisa)
 nå              -- now
 sen/sent        -- late : sent (-et) : du er sen -- you are late, det er sent -- it's late, det er for sent -- it's too late
 senere          -- later
+senest          -- latest
 av              -- of : (en av dem -- one of them)
 tror            -- believe : tror du -- do you think?
 en drit/dritten -- shit
@@ -576,16 +588,16 @@ tok med         -- brought
 mottar/å motta  -- to receive
 mottatt         -- received : har mottat
 mottok          -- received : did receive
-stede           -- place : (i steded for -- in place of/instead)
 stedet          -- instead : jeg spiser is i stedet for frukt -- i eat icecrem instead of fruit
+et sted         -- place, somewhere : (i steded for -- in place of/instead), et annet sted -- somewhere else
 skylle/å skylle -- to rinse, flush
 ned             -- down : (ned i do -- down the toilet)
 første          -- first
 en gang/gangen/ganger/gangene -- the time : hera (første gang -- first time) :  noen ganger -- sometimes, med en gang -- immediately (me një herë)
 noen gang       -- any time : ever, ndonjehere
-en time/timen/timer/timene -- the hour : en time -- an hour
+en time/timen/timer/timene -- the hour, class, appointment: en time -- an hour
+sangtimer       -- singing classes
 en gang/gangen/ganger/gangene  -- the hallway
-time            -- the appointment
 noe             -- something
 noen            -- some, any : (one/thing) : jeg ser noen kvinner -- i see some women, har du noen poser -- do you have any bags
 noens           -- somebody's
@@ -597,6 +609,7 @@ sol             -- me diell, sunny : det er sol (sola)
 en sol/solen    -- the sun
 regner          -- to rain : det regner, regner jeg med -- I reckon
 snør            -- to snow : det snør
+snødde          -- snowed : did snow
 snøen           -- the snow : en snø/snøen
 overskyet       -- me re, cloudy : det er overskyet
 en vår/våren    -- the spring : det or snart vår -- it is spring soon (easy search: varen), en vår med sol -- a spring with sunshine
@@ -770,6 +783,7 @@ en slutt/slutten -- the end
 avslutter/å avslutte -- to finish
 til slutt       -- finally
 studerer/å studere -- to study
+studerte        -- studied
 drar/å dra      -- to go, leave : drar på telttur -- go camping
 en skog/skogen  -- the forest
 en skogkatt/skogkatten -- the forest cat
@@ -838,13 +852,13 @@ stillere        -- quieter
 foretrekker     -- prefer
 en vase/vasen   -- the vase
 en blomst/blomsten/blomster/blomstene -- the flower
-en boke/boken/bøker/bøkene -- the book (easy search boken) (boka si -- her book)
+en boke/boken/bøker/bøkene -- the book: (easy search boken) (boka si -- her book)
 en stu/stuen/stuer/stuene -- the living room
 en spisestue/spisestuen/spisestuer/spisestuene -- the diningroom
 en plante/planten/planter/plantene -- the plant
 en pute/puten/puter/putene -- the pillow
 myk/mykt/myke    -- soft : myke putene
-en dyne/dynen/dyner/dynene -- the dyvet, batanije
+en dyne/dynen/dyner/dynene -- the dyvet: batanije
 en mikrobølgeovne/mikrobølgeovnen/mikrobølgeovner/mikrobølgeovnene -- the microwave oven
 en ovne/ovnen   -- the oven
 et enkeltrom/enkeltrommet/enkeltrommer/enkeltromene -- the single room
@@ -871,9 +885,9 @@ fungerer        -- to work : (funktioniert) : fungerer det? -- does it work?
 en dusj/dusjen/dusjer/dusjene -- the shower
 dusjer/å dusje  -- to shower
 internett       -- the internet
-nett            -- online/internet : på nett
+nett            -- online, internet : på nett
 ødelagt         -- broken
-pappaen         -- the dad, baba : en pappa/pappaen : pappas -- father's
+en pappa/pappaen-- the dad : baba,  : pappas -- father's
 en mamma/mammaen-- the mama
 en bil/bilen/biler/bilene -- the car
 reiser/å reise  -- to travel
@@ -1004,7 +1018,7 @@ juicen          -- the juice : en juice/juicen
 en kasse/kassen/kasser/kassene -- the cash register
 en agurke/agurken/agurker/agurkene -- the cucumber
 en kvittering/kvitteringen/kvitteringer/kvitteringene -- the recepit
-selger/å serge  -- to sell
+selger/å selge  -- to sell
 igjen           -- again : leiligheten er ryddig igjen -- the apartment is tidy again, jeg har ingenting igjen -- i have nothing left
 en slakter/slakteren/slakterer/slakterene -- the butcher
 et konditorie/konditoriet/konditorier/konditoriene -- the pastry shop
@@ -1076,7 +1090,7 @@ en skole/skolen/skoler/skolene -- the school
 en post/posten  -- the mail
 et postkontor/postkontoret -- the postoffice
 en bygning/bygningen//bygningene -- the building
-bruker/å bruke  -- to use: to spend : ikke bruke bilen -- dont use the car : bruker penger på -- spend money on
+bruker/å bruke  -- to use: to spend, to wear : ikke bruke bilen -- dont use the car : bruker penger på -- spend money on
 brukte          -- used, spent
 bruk            -- use : gjøre bruk -- make use
 favorittlaget   -- the favorite team
@@ -1109,7 +1123,7 @@ en rose/rosen   -- the rose flower
 vinner/å vinne  -- to win : hvem vinner spillet -- who's winning the game?
 vunnet          -- won : har vunnet -- has won
 vant            -- won : did win
-taper/å tape    -- to loose : a game
+taper/å tape    -- to lose : a game
 en sport/sporten/sport/sportene -- the sport
 en radio/radioen-- the radio
 dokumentarer    -- the documentaries
@@ -1125,6 +1139,7 @@ fornyer/å fornye -- to renew
 svarer/å svar   -- to answer : svar på -- answer to
 svarte          -- answered : ingen svarte -- nobody answered
 svart           -- have answered : de har ikke svart på telefonen -- they havent answered the phone
+et svar/svaret  -- the answer
 betyr/å bety    -- to mean : hva betyr det -- what does it mean?
 betydning       -- meaning
 hjelper/å hjelpe -- to help
@@ -1144,6 +1159,7 @@ definitive      -- definite
 et liv/livet/liv/livene -- the life
 synes           -- to seem, think : de synes byen er pen -- they think the city is pretty
 syntes          -- seemed
+et syn          -- the view : i mitt syn -- in my view
 enig            -- agree, in agreement : mange er enige med meg -- many agree with me
 uenige          -- disagree
 sannsynligvis   -- probably
@@ -1277,7 +1293,8 @@ en klokke/klokken/klokker/klokkene -- the watch : clock
 vekkerklokken   -- the alarm clock  : en vekkerklokke/vekkerklokken
 en rutine/rutinen/rutiner/rutinene -- the routine
 dusjer          -- to shower
-en tann/tannen/tenner/tennene -- the tooth
+en tann/tannen  -- the tooth
+tenner/tennene  -- the teeth
 syltetøyet      -- the jam
 pusser          -- to clean, polish : pusser tennene -- brush the teeth
 en gård/gården/gårder/gårdene -- the farm
@@ -1294,15 +1311,14 @@ en mus/musen/mus/musene -- the mouse
 en ulv/ulven/ulver/ulvene -- the wolf
 en veterinær/veterinæren/veterinæren/veterinærene -- the veterinary : 
 et bånd/båndet/bånd/båndene -- the leash, ribbon
-måte            -- way, manner : i like måte -- likewise (same way)
 agurktid        -- slow news season : (cucumber time)
 folk            -- people
-sist/siste      -- e fundit, last, last time : sist/siste : hvem kom sist -- who came last.
+sist/siste      -- last, last : hvem kom sist -- who came last, siste gang -- last time 
 mister/å miste  -- to loose, miss : jeg mister nøklene
-mistet          -- lost : har mistet
+mistet          -- lost : har mistet, jeg mistet bussen -- I missed the bus
 ligger/å ligge  -- to lie : hvor ligger spania -- where is (lies/located) spain
 ligget          -- lay, was lying : ke qenë, katten har ligget på sofaen -- the katt has been lying on the sofa
-lå              -- qe, lay : han lå i sengen -- he was (was lying) in bed
+lå              -- lay : qe, han lå i sengen -- he was (was lying) in bed
 en anelse/anelsen/anelser/anelsene -- idea : jeg har ingen anelse -- i have no idea
 nede            -- downstairs : så du nede -- did you look domnstairs?
 oppe            -- upstairs : rommet mitt er oppe -- my room is upstairs
@@ -1328,7 +1344,6 @@ en trom/trommen/trommer/trommene -- the drums
 en musiker/musikeren/musikere/musikerne -- the musician
 en scene/scenen/scener/scenene -- the stage : skena
 en smarttelefone/smarttelefonen/smarttelefoner -- the smart phone
-hvem som        -- who : vet du hvem som ... -- do you know who..
 favorittseng    -- favorite song
 et album/albumet/album/albumene -- the album
 låner/å låne    -- to lend
@@ -1345,6 +1360,7 @@ bygget          -- built : is built : dette er bygget på oss -- this is built f
 et bygg/bygget/bygg/byggene -- the building
 en robot/roboten/roboter/robotene -- the robot
 matte           -- math: mathematics
+matematikk      -- the mathematics
 en matte/matten/matter/mattene -- rug
 drømmejobb      -- dream job
 en ingeniør/ingeniøren/ingeniører/ingeniørene -- engineer
@@ -1354,8 +1370,10 @@ en komiker/komikeren/komikere/komikerne -- comedian
 et landskap/landskapet/landskap/landskapene -- the landscape
 en fotograf/fotografen/fotografer/fotografene     -- the photographers
 en premie/premien/premier/premiene -- the prize
-tjener/å tjene -- to earn : also to serve
-tjente         -- earned
+tjener/å tjene  -- to earn : also to serve
+tjente          -- earned
+fortjener       -- to deserve
+fortjente       -- deserved
 et miljø/miljøet/miljøer/miljøene -- the environment
 en filmstjerne/filmstjernen/filmstjerner/filmstjernene -- the movie star
 et slips/slipset/slips/slipsene -- the tie
@@ -1395,7 +1413,7 @@ pekte           -- pointed
 tærne           -- the toes : tær/tærne
 et ansikt/ansiktet/ansikter/ansiktene -- the face
 planer          -- plans
-frekk/frekke    -- rude : (-e pl)
+frekk/frekt/frekke -- rude : (-e pl), et frekt svar -- a rude answer
 i det hele tatt -- at all
 løser/å løse    -- to solve
 biologi         -- biology
@@ -1420,7 +1438,6 @@ en dagbok/dagboken  -- the diary
 løser/å løse    -- to solve
 løste           -- solved
 puslespill      -- puzzles
-i fjor          -- last year : i hele fjor -- all of last year
 en kunst/kunsten -- art
 et fag/faget/fag/fagene -- the subject : school subject
 innflyttingsfesten -- the housewarming party
@@ -1462,6 +1479,7 @@ håndverker      -- tranesperson
 fritiden        -- the free time : en fritid/fritiden
 sjelden         -- seldom, rarely
 bussjåføren     -- the bus driver
+trikkesjåføren  -- the tram driver
 sommerjobb      -- summer job
 telefonselger   -- telemarketer
 brannmennene    -- the firemen
@@ -1488,6 +1506,7 @@ husnummeret     -- the house number
 postnummeret    -- the zip code
 smør            -- butter
 hvitløk         -- garlik
+rødløk          -- red onion
 oljen           -- the oil : en olje/oljen
 et tips/tips    -- the tip : a tip
 småpenger       -- change
@@ -1531,17 +1550,16 @@ ensomt/ensomme  -- lonely : (-me pl)
 deprimert       -- depressed
 et hjerte/hjertet -- the heart
 bitter/bitre    -- bitter : (-re pl)
-trikkesjåføren  -- the tram driver
 stolt/stolte    -- proud : (-e pl)
 normal          -- normal
 klager/å klage  -- to complain
 akkurat         -- exactly
-nianoet/et piano -- the piano
+pianoet/et piano -- the piano
 broen/en bro    -- the bridge
 skjellet/et skjell -- the shell
 en vei/veien    -- the way : hvor er jeg på vei -- where am i headed?
 kø              -- the queue
-bakken/en bakke/bakker -- the hill
+bakken/en bakke/bakker/bakkene -- the hill: bakene er store -- the hills are big
 vinker          -- to wave
 bikinien/en bikini -- the bikini
 hoved           -- main : hovedgaten-- main street, hovedskilde -- main source
@@ -1562,6 +1580,35 @@ sjenerøs        -- generous
 rimelig         -- reasonable, fair
 andel           -- the share : andel av markedet -- share of the market
 trusselen/en trussel -- the threat : trusselbrev -- threat letter
+iskald          -- freezing
+strikker/å strikke -- to knit
+videoen/en video/videoer/videoene -- the video
+skjerfet/et skjerf/skjerfer/skjerfene -- the scarf
+omelett/omeletter -- the omelet
+telefonselgeren -- telemarketer
+tekstmeldingen/en tekstmelding/tekstmeldinger/tekstmeldingene  -- the text message
+spaet/et spa    -- spa
+kjorer snowboard -- to snowboard: drive a snowboard
+iskaldt         -- freezing: ice cold
+et alfabet/alfabetet -- the alphabet
+bokstaver/bokstavene -- the letter: shkronja
+staver/å stav   -- to spell : me shkrue, me shkronjoj
+en hanske/hansken/hansker/kanskene -- the glove
+toast           -- toast
+ski/skiene      -- the skis
+går på ski      -- go skiing
+snømann         -- the snowman
+skøyter         -- skate : går på skøyter -- to skate, to go on skates
+vinterstøvler/vinterstøvlene -- the winterboots
+en elev/eleven/elever  -- the student
+studentkort     -- student card
+skoleuniform    -- school uniform
+en setninger/setningeren/setninger/setnivgene -- statement, sentence :
+et klasserom/klasserommet -- the classroom
+skjønner/å skjønne -- to see, to understand : jeg skjønner -- I understand
+unntatt         -- except, but
+en tavle/tavlen/tavler -- the board : blackboard, tavla
+
 
 ##
 
@@ -1591,17 +1638,14 @@ avhenger        -- depends
 anbefales       -- reccomended
 kjappa          -- quick : kjappa på --
 kjapt           -- quickly
-laderen         -- charger
-skjønner        -- to see, to understand : å skjønne
 mener           -- to mean : å mene
 påfyller        -- to refill
 påfyllet        -- refill : et påfyll/påfyllet
-annet           -- other : noe annet sted -- anywhere else
+annet           -- other : noe annet sted -- anywhere else, kan vi dra et annet sted -- can we go somewhere else
 tall            -- number, shifér
 jævlig          -- damn
 oppgaven        -- task : en oppgave/oppgaven
 masteroppgaven  -- the master thesis
-setningen       -- statement, sentence : en setninger/setningeren/setninger/setnivgene
 statsminister   -- prime minister
 forholdet       -- relationship : et forholde/forholdet/
 tausheten       -- the silence : en taushete/tausheten
@@ -1636,6 +1680,7 @@ slår            -- to turn back: kthehu : å slå -- to turn , slår av -- turn
 slår            -- to beat: rreh
 foreslår        -- to propose
 slår av         -- turn off
+slår opp/slå opp -- look up : slå det opp -- look it up
 troen           -- the faith : en tro/troen (also troa)
 tviler          -- to doubt : å tvile
 tvilte          -- doubted
@@ -1654,7 +1699,6 @@ bortført        -- abducted
 hørbar          -- audible
 uhørbar         -- inaudible
 dialog          -- dialog
-fortsetter      -- to continue
 krever          -- to request
 utlevert        -- released, out delivered
 levere          -- to deliver : å levere
@@ -1741,10 +1785,10 @@ steder          -- places
 informasjon     -- information
 glipp           -- miss : gå glipp av det -- go and miss it
 spektakulær     -- spectacular
-syn             -- view : i mitt syn -- in my view
 ligner          -- to resemble : to look like
 lignet          -- resembled : looked like
 slik            -- such
+klarte          -- was able to do
 forklarer       -- to explain : å forklare
 forklarte       -- explained : did explain
 forklart        -- explained : har forklart
