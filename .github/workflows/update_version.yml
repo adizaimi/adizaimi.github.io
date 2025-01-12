@@ -19,7 +19,8 @@ jobs:
 
       - name: Update version file
         run: |
-          echo "const version = '$(git rev-parse --short HEAD)';" > version.js
+          echo "const gitsha = '$(git rev-parse --short HEAD)';" > version.js
+          echo "const version = '$(git log -1 --format='%cd' --date=iso)';" >> version.js
           echo "console.log('Version:', version);" >> version.js
 
       - name: List dir content
