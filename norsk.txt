@@ -23,7 +23,6 @@ omtrent         -- around : toget kommer om omtrent fem minutter
 den/det         -- that : den døren, det huset , den tredje mann -- the third man, den er min -- it is mine
 denne/dette     -- this : dette huset, denne mannen
 disse           -- these : disse mennene
-de              -- those : de barna
 har             -- to have : å ha : ha det -- bye : ha det bra -- goodbye, ha det gøy -- have fun!
 hadde           -- had
 takk for sist   -- good to see you again
@@ -32,8 +31,7 @@ gått            -- gone : (past tense går) : det har gått bra -- its gone wel
 drå             -- go
 dro             -- went, left
 gikk            -- went
-da              -- then
-da              -- when : hadde du bil da du var ung -- did you have a car when you were young
+da              -- then, when : hadde du bil da du var ung -- did you have a car when you were young
 beklager        -- sorry : beklager det -- appolagise for that
 unnskyld        -- excuse me, sorry
 en unnskyldning/unnskyldningen  -- the excuse, apology
@@ -199,8 +197,9 @@ skrivere        -- the printers
 leser/å lese    -- to read
 leste           -- read : did read
 lest            -- read : har lest -- have read
-lærer/å lære    -- to learn : går i lære som ... -- do an apprenticeship as a
+lærer/å lære    -- to learn, teach : går i lære som ... -- do an apprenticeship as a
 lært            -- learned : har lært
+laerte          -- learned : did learn
 en lærer/læreren/lærerer/lærerne -- the teacher : (easy search larer)
 snakker/å snakke -- to speak : snakker engelsk -- speak english : ikke snakk -- don't speak
 snakket         -- spoke : did speak, har snakket -- have spoken
@@ -249,7 +248,7 @@ han             -- he
 hun             -- she
 vi              -- we
 dere            -- you
-de              -- they
+de              -- they, those : de barna
 meg             -- me : (mua)
 har på seg      -- is wearing : (har pa meg) : vi har pa oss, dere har pa dere
 deg             -- you : (ty)
@@ -472,7 +471,7 @@ en krefte/kreften/kreftene -- the force, craft, power
 et uhell/uhellet -- the accident : misshap
 en ulykke/ulykken -- the accident
 kødder du       -- are you f*cking
-hele/helt       -- whole, totally, completely : hele tida -- all the time , hele dagen -- the whole day
+hele/helt       -- whole, totally, completely, all the way : hele tida -- all the time , hele dagen -- the whole day
 sikker/sikkert/sikre -- surely: me siguri : helt sikkert -- definitely
 forsiktig/forsiktige -- careful
 neste           -- next : (adj)
@@ -540,9 +539,6 @@ bryter/å bryte  -- to break, switch : (bryte inn -- break inn) ; bryte -- break
 brukket         -- broken
 mens            -- while
 makt            -- power : (makt til folket -- power to the people)
-finne           -- find
-fant            -- found : fant han huset -- did he find the house?
-funnet          -- found : har funnet -- have found
 en forelder/forelderen/foreldre/foreldrene -- the parent
 en besteforelder/besteforelderen/besteforelderene -- the grandparent
 en bursdag/bursdagen/bursdager/bursdagene -- the birthday
@@ -686,7 +682,8 @@ etterpå         -- afterwards : dagen etterpå -- the day after
 trenger/å trenge -- to need
 trengte         -- needed
 finner/å finne  -- to find
-fant            -- found
+fant            -- found : did find, fant han huset -- did he find the house?
+funnet          -- found : har funnet -- have found
 finner sted     -- to take place
 finner oss      -- to tolerate
 fant sted       -- took place
@@ -694,8 +691,7 @@ en avgang/avgangen -- the departure
 en onkel/onkelen/onkeler/onkelene -- the uncle
 fantastisk      -- fantastic
 en hylle/hyllen -- the shelf
-et teppe/teppet -- the carpet
-et teppe/teppet -- the blanket
+et teppe/teppet -- the carpet, blanket
 blir/å bli      -- to become : come up to, costs, make : det blir -- that makes, jeg blir maler -- i'll be a painter, jenta blir en kvinne -- the girl is becomming a woman.
 blir du med     -- are you comming along, will you become
 ledig           -- free, available
@@ -752,7 +748,6 @@ festet          -- partied
 en brus/brusen  -- the soda
 en invitasjon/invitasjonen/invitasjoner/invitasjonene -- the invitation
 rodvinen        -- the read wine
-hjemme          -- home : jeg er hjemme
 hurra           -- urra, horay, hooray
 et band/bandet  -- the band
 en ballong/ballongen -- the balloon
@@ -1073,7 +1068,7 @@ Asia            -- asia
 ganske          -- quite : fairly : vi er ganske trøtte -- we are quite tired
 sanden          -- the sand : en sand/sanden
 verden          -- the world : en verden/verdenen
-over            -- of, covering : kart over byen -- map of the city
+over            -- covering : kart over byen -- map of/covering the city
 over            -- finished : festen er over -- party's over
 sjampanje       -- shampagne
 bra jobba       -- well done
@@ -1384,7 +1379,6 @@ et gull/gullet/gull/gullen -- the gold
 morsdagen       -- the mothersday
 et skinn/skinnet/skinn/skinnene -- the skin, the leather: the animal hide
 farsdagen       -- the fathersday
-velger/å velge  -- to choose
 et salg/salget/salg/salgene -- sales 
 til salgs       -- for sale
 et prøverom/prøverommet/prøverom/prøverommene -- fitting rooms
@@ -1414,8 +1408,6 @@ tærne           -- the toes : tær/tærne
 et ansikt/ansiktet/ansikter/ansiktene -- the face
 planer          -- plans
 frekk/frekt/frekke -- rude : (-e pl), et frekt svar -- a rude answer
-i det hele tatt -- at all
-løser/å løse    -- to solve
 biologi         -- biology
 geografi        -- geography
 en minne/minnen/minner/minnene -- the memory
@@ -1598,17 +1590,24 @@ toast           -- toast
 ski/skiene      -- the skis
 går på ski      -- go skiing
 snømann         -- the snowman
-skøyter         -- skate : går på skøyter -- to skate, to go on skates
+skøyter         -- to skate : går på skøyter -- to skate, to go on skates
 vinterstøvler/vinterstøvlene -- the winterboots
 en elev/eleven/elever  -- the student
-studentkort     -- student card
-skoleuniform    -- school uniform
+studentkort     -- the student card
+skoleuniform    -- the school uniform
+uniform         -- the uniform
 en setninger/setningeren/setninger/setnivgene -- statement, sentence :
 et klasserom/klasserommet -- the classroom
 skjønner/å skjønne -- to see, to understand : jeg skjønner -- I understand
 unntatt         -- except, but
 en tavle/tavlen/tavler -- the board : blackboard, tavla
-
+klassen         -- the class
+et spørsmålstegn/spørsmålstegnet -- the questionmark
+mobbet          -- bullied : did bully
+konsentrere     -- to consentrate : konsentrerer seg -- to consentrate self
+skolegården/skolegårder     -- the schoolyard
+geografitimen   -- the geography class
+klarer/å klare  -- to manage, be able : to handle, to clear :  jeg klarer ikke -- i can't do it
 
 ##
 
@@ -1662,7 +1661,6 @@ opplever        -- to experience : får opleve -- to enjoy the experience
 utestengt selv  -- be banned
 utdanning       -- education : hoyere utdanning -- higher education
 hovn            -- revenge
-klarer          -- to manage : to handle, to clear : å klare : jeg klarer ikke -- i can't do it
 forestiller     -- to represent : å forestille
 forestiller deg -- to imagine
 drøm            -- to dream
