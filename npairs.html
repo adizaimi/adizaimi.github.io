@@ -200,7 +200,7 @@ function incInMap(str, correct, total) {
         vObj.correct += correct;
         vObj.total += total;
     }
-    accuracyMap.set(selectedLeftBox.textContent, vObj);
+    accuracyMap.set(str, vObj);
 }
 
 // Function to handle click on a box
@@ -322,12 +322,43 @@ function pickRandomSplitEntry (str, splitChar) {
     return trimmedEntries[randomIndex];
 }
 
+//test getNewPair function
+function testGetNewPair() {
+    let m = new Map();
+    for(let i=0;i < 500000; i++) {
+        const newPair = getNewPair();
+	let str = newPair.key;
+        let obj = m.get(str);
+        if (obj == undefined) {
+            obj = 0;
+        } else {
+            obj++;
+        }
+        m.set(str, obj);
+    }
+    
+    console.log('testGetNewPair size=', m.size);
+    // Convert Map to an array and sort by the values in descending order
+    let sortedEntries = Array.from(m.entries()).sort((a, b) => b[1] - a[1]);
+    
+    // Log the sorted distribution
+    console.log('Sorted distribution by value:');
+    sortedEntries.forEach(([key, value]) => {
+        console.log(key, value);
+    });
+}
+
+// Pick a new pair randomly
+function getNewPair() {
+    const idx = Math.floor(Math.random() * pairs.length);
+    return pairs[idx];
+}
+
 function pickNewPairAndDisplay() {
     if(leftInactiveBoxes.length < 1)
         return;
-    // Pick a new pair randomly
     const idx = Math.floor(Math.random() * pairs.length);
-    const newPair = pairs[idx];
+    const newPair = getNewPair();
 
     // Randomly select boxes from inactive boxes arrays
     const leftBoxIndex = Math.floor(Math.random() * leftInactiveBoxes.length);
