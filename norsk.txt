@@ -95,7 +95,7 @@ et spill/spillet -- the game : hvem vinner spillet -- who is winning the game
 hører/å hore    -- to hear, listen : hører på musik (easy search horer)
 høres           -- sounds : (høres bra ut  -- sounds good)
 hørt            -- heard : har hørt
-hørte           -- heard : did hear
+hørte           -- heard : did hear , hørte godt etter -- listened carefully
 lytter/å lytte  -- to listen : lytter du -- are you listening? lytter til musikk -- listen to music
 en lyd/lyden/lyder/lydene -- sound
 en regning/regningen/regninger/regningene -- the bill, account
@@ -106,7 +106,7 @@ ser frem        -- look forwards
 så              -- saw : did see : så du det -- did you see that?
 så frem         -- was looking forwards
 sett            -- seen : har sett -- have seen, jeg har sett lyset -- i have seen the light
-en lege/legen/leger/legene -- the doctor : er det noen leger her -- are there any doctors here?
+en lege/legen/leger/legene -- the doctor : er det noen leger her -- are there any doctors here?, fastlegene -- GP/family doctor
 en tannlege/tannlegen/tannleger/tannlegene -- the dentist
 et marked/markedet -- the market
 en professor/professoren -- the professor
@@ -130,6 +130,7 @@ interessant     -- interesting
 en jobb/jobben  -- the job
 jobber/å jobbe  -- to work : jobber med -- working on
 jobbet          -- worked
+virket          -- worked : det virket som -- it seemed like
 varm/varmt      -- warm
 varmere         -- warmer, hotter
 kalt            -- cold
@@ -190,7 +191,8 @@ bodde           -- lived : did live
 vet/å vite      -- to know : du må bare vite -- you must only know
 visst           -- known : hadde du visst -- had you known
 visste          -- knew : did know
-skriver/å skrive -- to write
+skriver/å skrive -- to write :
+skriver ut      -- to print
 skrev           -- wrote : did write, was writing
 skrevet         -- wrote : har skrevet -- has written
 skrivere        -- the printers
@@ -356,6 +358,7 @@ gammel/gammelt/gamle -- old : gammelt hus, den gamle huset
 eldre           -- older
 ny/nye/nytt     -- new: : ny bil -- new car, nytt hus -- new house
 nyere           -- newer
+nyeste          -- newest
 en minibank/minibanken -- the ATM
 en bank/banken  -- the bank 
 journalist      -- a journalist
@@ -535,7 +538,7 @@ raskest         -- the fastest
 sann/sant/sanne -- true : (ikke sant? -- isn't it right?)
 evige           -- eternal
 en ild/ilden/ilder/ildene -- fire : (evige ilden  -- eternal fire)
-bryter/å bryte  -- to break, switch : (bryte inn -- break inn) ; bryte -- break up
+bryter/å bryte  -- to break, switch : (bryte inn -- break inn) , bryte -- break up
 brukket         -- broken
 mens            -- while
 makt            -- power : (makt til folket -- power to the people)
@@ -574,7 +577,7 @@ en sko/skoen/sko/skoene -- the shoe
 joggerskoen     -- the sneakers
 en genser/genseren/genserne -- the sweater
 et intervju/intervjuet -- the interview : jeg trenger nye kler til intervjuet -- i need new clothes for the interview
-tar/å ta        -- to take, catch : ta med -- (take with) bring ;
+tar/å ta        -- to take, catch : ta med -- (take with) bring
 tar med         -- to bring
 tar på          -- touch
 tatt            -- taken, cought : har tatt, bli tatt -- be caught, De har tatt henne -- they have taken her
@@ -589,7 +592,8 @@ et sted         -- place, somewhere : (i steded for -- in place of/instead), et 
 skylle/å skylle -- to rinse, flush
 ned             -- down : (ned i do -- down the toilet)
 første          -- first
-en gang/gangen/ganger/gangene -- the time : hera (første gang -- first time) :  noen ganger -- sometimes, med en gang -- immediately (me një herë)
+en gang/gangen/ganger/gangene -- the time : hera (første gang -- first time) :  noen ganger -- sometimes, 
+med en gang     -- immediately : (me një herë)
 noen gang       -- any time : ever, ndonjehere
 en time/timen/timer/timene -- the hour, class, appointment: en time -- an hour
 sangtimer       -- singing classes
@@ -730,7 +734,7 @@ en familie/familien/familier/familiene -- the family
 en supp/suppen/supper/suppene -- the soup
 nervøs          -- nervous
 et hode/hodet/hoder/hodene -- the head
-vond/vondt      -- hurt, pain : en vond fot -- a sore foot; vondt i hodet -- headache : det gjør vondt -- it hurts (easy search gjor vondt)
+vond/vondt      -- hurt, pain : en vond fot -- a sore foot, vondt i hodet -- headache : det gjør vondt -- it hurts (easy search gjor vondt)
 trist/triste    -- sad
 glad/glade      -- happy : (-e m, pl) : jeg er glad i deg -- I love you!
 mindre          -- less, smaller : mer eller mindre -- more or less
@@ -747,7 +751,7 @@ fester/å feste  -- to party
 festet          -- partied
 en brus/brusen  -- the soda
 en invitasjon/invitasjonen/invitasjoner/invitasjonene -- the invitation
-rodvinen        -- the read wine
+rodvinen        -- the red wine
 hurra           -- urra, horay, hooray
 et band/bandet  -- the band
 en ballong/ballongen -- the balloon
@@ -772,7 +776,8 @@ en festival/festivalen -- the festival
 starter/å starte/start -- to start, initiate, launch : start bilen!
 startet         -- started
 begynner/å begynne -- to begin
-begynte         -- began
+begynt          -- has began: har begynt
+begynte         -- began, did begin
 slutter/å slutte -- to end, stop, quit
 en slutt/slutten -- the end
 avslutter/å avslutte -- to finish
@@ -915,6 +920,7 @@ fersk/ferske    -- fresh : ferske agurker -- fresh cucumbers
 ferskvann       -- fresh watter
 ferskest        -- the freshest
 sunn/sunt/sunne -- healthy : sunn mat -- healthy food
+usunt           -- unhealthy
 igen            -- again : kom igen -- come on
 et hjert/hjertet/hjerter/hjertene -- the heart
 en tante/tanten/tanter/tantene -- the aunt
@@ -945,6 +951,7 @@ en skrekkfilm/skrekkfilmen/skrekkfilmer/skrekkfilmene -- the horror film
 skrekk          -- scary
 en kalendar/kalendaren/kalendarer/kalendarene -- the calendar
 kort/korte      -- short, quick : jakkene er korte -- the jackets are short (jakka)
+kortere         -- shorter
 et kamera/kameraet/kameraer/kameraene -- the photo camera
 tilbringer/å tilbringe -- to spend : tilbringe tid -- spend time
 tilbake         -- back : kom tilbake -- come back : må tilbake -- must return
@@ -991,11 +998,14 @@ en slektninge/slektningen/slektninger/slektningene -- the relative
 telefonnummer   -- telephone number
 punktlig        -- punctual
 spørsmålet      -- the question : et spørsmål/spørsmålet : et spørsmal om tid -- a question of time (easy search sporsmalet)
+spørsmålstegn   -- question mark
 spør/å spørre   -- to ask :  (spor easy search)
 spørt           -- asked
+spurt           -- asked
 spor/å spore    -- to track, to trace
 et spor/sporet/spor/sporene -- the track : følg disse spor -- follow these tracks
 førerkort       -- drivers license : (easy search forerkort)
+lokomotivforeren -- the locomotive driver
 e_postadressen  -- the email : en e-postadresse/e-postadressen/
 datamaskinen    -- the computer : en datamaskin/datamaskinen
 null            -- zero, none
@@ -1046,9 +1056,9 @@ dagligvarene    -- the groceries: daglivarer/dagligvarene
 sitter/å sitt   -- to sit
 satt            -- sat : sat oss ned -- we sat down
 tomme           -- empty : koppene er tomme -- the cups are empty, vi are tomme for brod -- we are out of bread
-ferdig/ferdige  -- done : (-e pl), vi er ferdige -- we are done
-høflig          -- polite
-uhøflige        -- impolite : barna er så uhøflige -- the children are so impolite
+ferdig/ferdige  -- done : (-e pl), ready -- vi er ferdige -- we are done
+høflig/hoflige  -- polite
+uhøflig/uhøflige-- impolite : barna er så uhøflige -- the children are so impolite
 et gulve/gulvet/gulver/gulvene -- the floor : ikke på gulvet! -- not on the floor!
 eier/å eie      -- to own : hun eier hyttene -- she owns the cabins
 eierne          -- the owners
@@ -1100,6 +1110,7 @@ slags           -- kind, type : hva slags -- what type
 operaen         -- the opera : en opera/operaen
 klassisk        -- the classical : klassisk musikk
 inngangsbilleten - the admission ticket
+innganger       -- entrances
 ekte            -- real : ekte problem -- real problem
 en ekteman/ektemannen -- the husband
 ektepar         -- married couple
@@ -1111,7 +1122,8 @@ gratulerer/å gratulere -- to congratulate
 en overraskelse/overraskelsen/overraskelser/overraskelsene -- the surprise
 overrasker      -- to surprise
 ringer/å ringe  -- to ring : call by phone
-ringte          -- called
+ringte          -- called, did call
+ringt           -- has called : har ringt
 et bryllup/bryllupet/bryllup/bryllupene -- the wedding
 bryllupsdag     -- wedding anniversary
 en rose/rosen   -- the rose flower
@@ -1119,6 +1131,7 @@ vinner/å vinne  -- to win : hvem vinner spillet -- who's winning the game?
 vunnet          -- won : har vunnet -- has won
 vant            -- won : did win
 taper/å tape    -- to lose : a game
+taperen         -- the loser
 en sport/sporten/sport/sportene -- the sport
 en radio/radioen-- the radio
 dokumentarer    -- the documentaries
@@ -1134,6 +1147,7 @@ fornyer/å fornye -- to renew
 svarer/å svar   -- to answer : svar på -- answer to
 svarte          -- answered : ingen svarte -- nobody answered
 svart           -- have answered : de har ikke svart på telefonen -- they havent answered the phone
+svarene         -- the answers
 et svar/svaret  -- the answer
 betyr/å bety    -- to mean : hva betyr det -- what does it mean?
 betydning       -- meaning
@@ -1163,7 +1177,7 @@ slitsom         -- exhausting
 hater/å hate    -- to hate
 hatet           -- hated
 rar/rare/rartt  -- strange
-forferdelig     -- terrible
+forferdelig     -- terrible : forferdelig lei meg -- i'm terribly sorry
 en bestevennen/bestevennen -- the best friend
 forkjølet       -- sick, cold : ftohur, jeg er forkjølet -- i'm sick (easy search forkjolet)
 kunne           -- could : hvordan kunne du -- how could you?
@@ -1173,7 +1187,7 @@ hverandre       -- eachother, oneanother
 bærer/å bære    -- to carry : (easy search bare)
 flytter/å flytte -- to move : flytt fotene -- move your feet
 flyttet         -- moved
-en flytting/flyttingen -- the move
+en flytting/flyttingen -- the move : flytting av -- postponement
 en arm/armen/armer/armene -- the arm
 en rygg/ryggen  -- the back
 en hend/henden/hender/hendene -- the hands : hendene i været! -- hands in the air!
@@ -1224,6 +1238,7 @@ et loft/loftet/loft/loftene  -- the attic
 en etasje/etasjen/etasjer/etasjene -- the floor
 en duk/duken/duker/dukene -- the tablecloth
 setter/å sette  -- to place : to put, jeg setter eskene på loftet -- i'm putting the boxes in the attic
+satte           -- placed, put : past tense 
 legger/å legge  -- to put down, lay : du må legge : jeg legger dem her -- i'm putting them here : legg dem her -- put them here
 putter/å putte  -- to put
 en kjeller/kjelleren/kjellere/kjellerne -- the basement
@@ -1422,7 +1437,7 @@ en pølse/pølsen/pølser/pølsene -- the sausage
 et ektepar/ekteparet -- the married couple
 et potetgulle/potetgullet -- the chips
 sprøtt          -- crispy
-sprø            -- crispy
+sprø            -- crispy, crazy
 sprøest         -- crispiest
 en slange/slangen -- the snake
 slangeskinn     -- snakeskin
@@ -1474,7 +1489,8 @@ bussjåføren     -- the bus driver
 trikkesjåføren  -- the tram driver
 sommerjobb      -- summer job
 telefonselger   -- telemarketer
-brannmennene    -- the firemen
+brann           -- fire
+brannmenn/brannmennene -- the firemen
 en rørlegger/rørleggeren/rørleggere /rørleggerne -- the plumber : (lit tube doctor)
 en elektriker/elektrikeren/elektrikere/elektrikerne -- the electrician
 overtid         -- overtime
@@ -1608,6 +1624,28 @@ konsentrere     -- to consentrate : konsentrerer seg -- to consentrate self
 skolegården/skolegårder     -- the schoolyard
 geografitimen   -- the geography class
 klarer/å klare  -- to manage, be able : to handle, to clear :  jeg klarer ikke -- i can't do it
+kom til ro      -- calmed down
+rabatt          -- discound
+spennende       -- exciting
+pensjonist      -- rediree
+foruten         -- besides
+torg            -- squares, plazzas
+en klassiker    -- a classic
+undertekster    -- subtitles
+skynd           -- hurry
+utgangen        -- the exit
+hysj            -- hush!, shush!
+glipp av        -- to miss
+rad             -- row : radhe, første rad -- first row
+følger/å følge  -- to follow : følg! (easy search folger)
+sjok            -- shock
+sjokkert        -- shocked
+sjokkerende     -- shockingly
+eksamen         -- the exam
+snur/ø snu      -- to turn : snur seg -- turn around
+snudde          -- turned : snudde seg -- turned around
+ulik/ulike      -- different, dissimilar
+magen           -- the stomach
 
 ##
 
@@ -1637,7 +1675,7 @@ avhenger        -- depends
 anbefales       -- reccomended
 kjappa          -- quick : kjappa på --
 kjapt           -- quickly
-mener           -- to mean : å mene
+mener           -- to mean, think : å mene
 påfyller        -- to refill
 påfyllet        -- refill : et påfyll/påfyllet
 annet           -- other : noe annet sted -- anywhere else, kan vi dra et annet sted -- can we go somewhere else
@@ -1674,8 +1712,10 @@ nyter           -- enjoy
 selvom/selv om  -- even though, although
 høljer          -- heels (?), høljer ned -- pile down (accumulate)
 dør             -- to die : å dø : til vi dør -- until we die
-slår            -- to turn back: kthehu : å slå -- to turn , slår av -- turn off : å slå av lyset -- to turn off the light
+slår/å slå      -- to turn, to turn back: kthehu 
+slår av         -- to turn off : å slå av lyset -- to turn off the light
 slår            -- to beat: rreh
+slår opp        -- to look up : in a book, research
 foreslår        -- to propose
 slår av         -- turn off
 slår opp/slå opp -- look up : slå det opp -- look it up
@@ -1687,9 +1727,6 @@ sårer           -- to hurt, wound : å såre
 såra            -- hurt, wounded
 hemmlighet      -- secret
 hemmelig        -- secret
-følger/å følge  -- to follow : følg! (easy search folger)
-sjok            -- shock
-sjokkert        -- shocked
 stemmer         -- votes : det stemmer -- that's right, stemmer det? -- is that true?
 patruljen       -- patrol, police : en patrulje/patruljen
 usannsynlig     -- unlikely
@@ -1705,7 +1742,7 @@ fnyser          -- to snort, gërrhij
 undersøker      -- to investigate
 friheten        -- the freedom : en frihet/friheten
 velger          -- to choose
-foran           -- before, over: velger foran penger -- freedom over money
+foran           -- before, over: velger foran penger -- freedom over money, foran i toget -- at the front of the train
 ansvaret        -- responsability
 risiko          -- risk
 reelt           -- real
@@ -1767,6 +1804,7 @@ støvsuger       -- to vacuum : to dustsuck
 oppvasken       -- dishes : å ta oppvasken -- to wash the dirty dishes
 tørker          -- remove : å tørke : å tørke støv -- to remove dust
 kniv            -- knife
+knivstukken     -- knifestabbed
 preposisjonen   -- preposition : preposisjoner/preposisjonene
 sommerfesten    -- the summer fest
 mysteriøse      -- mysterious
@@ -1790,6 +1828,7 @@ klarte          -- was able to do
 forklarer       -- to explain : å forklare
 forklarte       -- explained : did explain
 forklart        -- explained : har forklart
+forkjente       -- did deserve
 handlet om      -- was about
 rotet           -- the mess : et rot/rotet : for et rot -- what a mess!
 tidspunktet     -- the moment : point in time : et ditspunkt/tidspunktet
@@ -1803,7 +1842,7 @@ aksenten        -- the accent : en aksent/aksenten
 synd            -- pitty : så synd -- such a pitty!
 unngå           -- avoid : å unngå
 heten           -- the heat : en het/heten
-berømte         -- famous
+beromt/berømte  -- famous
 svømmebriller   -- swimming goggles
 vanntette       -- waterproof
 sjanse          -- chance : siste sjanse -- last chance
@@ -1817,7 +1856,6 @@ oppdager        -- to discover
 oppdaget        -- discovered
 eget            -- own
 fengsel         -- prison
-saken           -- the case
 henlagt         -- was closed
 turgåer         -- hikers
 omkom           -- perished, died
@@ -1884,7 +1922,66 @@ roten/en rot/røtter/røttene -- the root
 slått           -- struck : har slått røtter -- have taken roots
 en rekke grunner -- a number of reasons
 en jævel/jævelen/jævler/jævlene -- the bastard
+fart            -- quickly
 med farta       -- with speed
-
+farten          -- the speed : saktnet farten -- slow the speed
+bekymrer        -- to worry
+økonomien       -- the economy
+leiker/å leike  -- to play
+mesterverk      -- masterpiece : masterwork
+krig            -- war
+våpen           -- weapon
+våpenhvilen     -- the cease fire : armpushimi
+realiteten      -- the reality
+å oppnå         -- to achieve
+fryktar         -- fear
+angrep          -- attack
+straffer        -- sentence, penalty : judiciary
+motbør          -- opposition
+vitne           -- witness
+strøm           -- electricity, power
+heim            -- home
+mellom          -- between
+forsyner        -- to supply
+tjuven          -- thief
+utvikling       -- development
+regjeringen/en regjering -- the government
+rasar           -- to rage
+vindkraften     -- the wind power
+rettssaken      -- the trial : (lit. right case -- ceshtje drejtsie)
+samboeren       -- the roommate : (lit. live together)
+halsen          -- the neck
+siktet          -- charged : with crime
+melding         -- release
+held fram       -- continues
+grensen         -- border
+slaget/et slag  -- the blow : slår et slag -- strike a blow
+forbudt         -- forbidden, banned
+staten          -- the state
+knusande        -- crushing
+lastebil        -- truck
+beslagla        -- seized
+stjålet         -- stolen : har stjålet
+evnen           -- the ability
+fokuserer/å fokusere -- to focus
+rusavhengig     -- addicted
+smerterier      -- cramps
+forslag         -- proposal
+snøskred        -- avalanche
+sperrer         -- to block
+helligdagen/holligdager -- the holiday
+bortføring      -- abduction
+barnebolig      -- childrens home : befotrof
+frelst          -- saved
+rådet           -- advice
+funker          -- to work : punon
+skynder         -- to hasten
+har slåss       -- have fought
+havne i vansker -- get into trouble
+vansker         -- difficulties
+glante          -- glared
+kikket          -- looked : kikket ut -- looket out
+trakk           -- pulled
+fregnene        -- the freckles
 
 
