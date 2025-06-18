@@ -135,6 +135,7 @@ let correctPairsCount = 0; // Track count of correctly guessed pairs
 let leftInactiveBoxes = []; // Array to store inactive left boxes
 let rightInactiveBoxes = []; // Array to store inactive right boxes
 let histShown = false;
+let wordsDisplayed = new Map(); // Global Map to track currently displayed word indices
 
 let myInterval;
 const interval_delay = 1000; // In ms.
@@ -192,13 +193,13 @@ function intervalFunction () {
 
 
 // Increase frequency of item and score in inMemory map.
-function incInMap(str, correct, total) {
+function increaseScoreInMap(str, correct, points) {
     let vObj = accuracyMap.get(str);
     if (vObj == undefined) {
-        vObj = {correct: correct, total: total};
+        vObj = {correct: correct, total: points};
     } else {
         vObj.correct += correct;
-        vObj.total += total;
+        vObj.total += points;
     }
     accuracyMap.set(str, vObj);
 }
@@ -207,7 +208,7 @@ function incInMap(str, correct, total) {
 function boxClickHandler(column, boxElement) {
     // Read isSelected state before we clear it.
     const isSelected = boxElement.classList.contains('on');
-        
+
     // If there was a previously selected box in the same column we need to reset it.
     if (column === 'left' && selectedLeftBox !== null) {
         selectedLeftBox.classList.remove('on');
@@ -243,7 +244,7 @@ function boxClickHandler(column, boxElement) {
         getEl("result").innerHTML = getEl("result").innerHTML.substring(0,1) + correctPairsCount + ":" + total;
         selectedLeftBox.classList.add('incorrect');
         selectedRightBox.classList.add('incorrect');
-        incInMap(selectedLeftBox.textContent, 0, 1);
+        increaseScoreInMap(selectedLeftBox.textContent, 0 /*not correct*/, 1);
         const lBox = selectedLeftBox;
         const rBox = selectedRightBox;
         selectedLeftBox = null; // Set to null immediately in case user is quic to select another one.
@@ -275,10 +276,18 @@ function boxClickHandler(column, boxElement) {
     selectedLeftBox.classList.remove('correct');
     selectedRightBox.classList.remove('correct');
 
+    // Remove the pair index from wordsDisplayed since it's no longer displayed
+    const pairIndex = selectedLeftBox.hiddenValue;
+    wordsDisplayed.delete(pairIndex);
+
+    // If this is the current pair is the third or more (ie previous was >=2)
+    // we want to refresh immediately, but we do not want to include the current
+    // pair, but rather only the previous ones. That's why we do this check here
+    // before we add current pair to the innactive boxes.
     if (leftInactiveBoxes.length >= 2) {
         clearTimeout(fiveSecDispl);
         clearTimeout(threeSecDispl);
-        // If 2 or more correct pairs have been guessed, refresh now.
+        // If 2 or more correct pairs had previously been guessed, refresh immediately.
         for (i = 0; i <= leftInactiveBoxes.length; i++) {
             pickNewPairAndDisplay();
         }
@@ -287,7 +296,7 @@ function boxClickHandler(column, boxElement) {
     // Append to inactive boxes arrays.
     leftInactiveBoxes.push(selectedLeftBox);
     rightInactiveBoxes.push(selectedRightBox);
-    incInMap(selectedLeftBox.textContent, 1, 1);
+    increaseScoreInMap(selectedLeftBox.textContent, 1, /*correct*/ 1);
     if (total % 5 == 1) {
         saveSession();
     }
@@ -327,7 +336,7 @@ function testGetNewPair() {
     let m = new Map();
     for(let i=0;i < 500000; i++) {
         const newPair = getNewPair();
-	let str = newPair.key;
+        let str = newPair.key;
         let obj = m.get(str);
         if (obj == undefined) {
             obj = 0;
@@ -336,11 +345,11 @@ function testGetNewPair() {
         }
         m.set(str, obj);
     }
-    
+
     console.log('testGetNewPair size=', m.size);
     // Convert Map to an array and sort by the values in descending order
     let sortedEntries = Array.from(m.entries()).sort((a, b) => b[1] - a[1]);
-    
+
     // Log the sorted distribution
     console.log('Sorted distribution by value:');
     sortedEntries.forEach(([key, value]) => {
@@ -348,17 +357,63 @@ function testGetNewPair() {
     });
 }
 
-// Pick a new pair randomly
+// Function to check if a pair's key and value are the same (after processing)
+function isSameKeyValue(pair) {
+    // Get the processed key and value (after splitting and trimming)
+    const processedKey = pickRandomSplitEntry(pair.key, '/').trim();
+    const processedValue = pickRandomSplitEntry(pair.value, ',').trim();
+
+    // Compare the processed key and value
+    return processedKey.toLowerCase() === processedValue.toLowerCase();
+}
+
+// Pick a new pair randomly, skipping pairs where key equals value
+// and skipping pairs already being displayed.
 function getNewPair() {
-    const idx = Math.floor(Math.random() * pairs.length);
-    return pairs[idx];
+    let attempts = 0;
+    const maxAttempts = 100; // Prevent infinite loops
+
+    while (attempts < maxAttempts) {
+        const idx = Math.floor(Math.random() * pairs.length);
+
+        // Skip if this index is already displayed
+        if (wordsDisplayed.has(idx)) {
+            attempts++;
+            continue;
+        }
+
+        const pair = pairs[idx];
+
+        // Skip pairs where key equals value
+        if (!isSameKeyValue(pair)) {
+            return { pair, idx };
+        }
+
+        attempts++;
+    }
+
+    // If we can't find a suitable pair after max attempts, return the first non-matching pair
+    for (let i = 0; i < pairs.length; i++) {
+        if (!wordsDisplayed.has(i) && !isSameKeyValue(pairs[i])) {
+            return { pair: pairs[i], idx: i };
+        }
+    }
+
+    // Fallback: return the first available pair if all pairs have same key/value
+    for (let i = 0; i < pairs.length; i++) {
+        if (!wordsDisplayed.has(i)) {
+            return { pair: pairs[i], idx: i };
+        }
+    }
+
+    // Last resort: return the first pair
+    return { pair: pairs[0], idx: 0 };
 }
 
 function pickNewPairAndDisplay() {
     if(leftInactiveBoxes.length < 1)
         return;
-    const idx = Math.floor(Math.random() * pairs.length);
-    const newPair = getNewPair();
+    const { pair: newPair, idx: newIdx } = getNewPair();
 
     // Randomly select boxes from inactive boxes arrays
     const leftBoxIndex = Math.floor(Math.random() * leftInactiveBoxes.length);
@@ -368,9 +423,12 @@ function pickNewPairAndDisplay() {
     // Split key by '/' and pick either entry randomly.
 
     leftInactiveBoxes[leftBoxIndex].textContent = pickRandomSplitEntry(newPair.key, '/');
-    leftInactiveBoxes[leftBoxIndex].hiddenValue = idx;
+    leftInactiveBoxes[leftBoxIndex].hiddenValue = newIdx;
     rightInactiveBoxes[rightBoxIndex].textContent = pickRandomSplitEntry(newPair.value,',');
-    rightInactiveBoxes[rightBoxIndex].hiddenValue = idx;
+    rightInactiveBoxes[rightBoxIndex].hiddenValue = newIdx;
+
+    // Add the new pair index to wordsDisplayed
+    wordsDisplayed.set(newIdx, newPair);
 
     // Make these boxes visible and remove from arrays
     leftInactiveBoxes[leftBoxIndex].classList.remove('inactive');
@@ -382,35 +440,36 @@ function pickNewPairAndDisplay() {
 }
 
 // Function to display pairs in two columns with randomized order
-function displayAllPairs() {
+// This is the initial loading of the page.
+function displayAllPairsOnLoad() {
     // take wordRows random pairs
-    let selectedPairs = new Map();
     let shuffledLeft = [];
     let shuffledRight = [];
-    let i = 0;
-    while(i < wordRows){
-        // Pick a new pair randomly.
-        const idx = Math.floor(Math.random() * pairs.length);
-        if (selectedPairs.has(idx))
-            continue; // Dont add same idx.
-        selectedPairs.set(idx, pairs[idx]);
+
+    // Clear the global wordsDisplayed array
+    wordsDisplayed.clear();
+
+    // Get wordRows unique pairs using getNewPair
+    for (let i = 0; i < wordRows; i++) {
+        const { pair, idx } = getNewPair();
+        wordsDisplayed.set(idx, pair);
         shuffledLeft.push(idx);
         shuffledRight.push(idx);
-        i++;
     }
-    if (selectedPairs.size != wordRows) {
-        console.log(selectedPairs);
+
+    if (shuffledLeft.length != wordRows) {
+        console.log(shuffledLeft);
         throw("incorrect map size");
     }
 
     // Shuffle keys and values separately
-    shuffledLeft = shuffleArray(shuffledLeft);
+    shuffleArray(shuffledLeft);
     if (shuffledLeft == undefined || shuffledLeft.length != wordRows) {
         console.log(shuffledLeft.length);
         console.log(shuffledLeft);
         throw('undefined');
     }
-    shuffledRight = shuffleArray(shuffledRight);
+    shuffleArray(shuffledRight);
     if (shuffledRight == undefined || shuffledRight.length != wordRows) {
         console.log(shuffledRight.length);
         console.log(shuffledRight);
@@ -428,14 +487,13 @@ function displayAllPairs() {
     for (let i = 0; i < wordRows; i++) {
         const boxLeft = document.createElement('div');
         boxLeft.classList.add('box');
-        pair = selectedPairs.get(shuffledLeft[i]);
+        const pair = pairs[shuffledLeft[i]];
         if (pair == undefined) {
             console.log("Pair is undefined");
             console.log(pair);
             console.log(i);
             console.log(shuffledLeft[i]);
             console.log(shuffledLeft);
-            console.log(selectedPairs);
             throw("Pair is undefined");
         }
         boxLeft.textContent = pickRandomSplitEntry(pair.key, '/');
@@ -443,13 +501,13 @@ function displayAllPairs() {
         boxLeft.hiddenValue = shuffledLeft[i];
         leftColumn.appendChild(boxLeft);
 
-        pair = selectedPairs.get(shuffledRight[i]);
-        if (pair == undefined) {
+        const pairRight = pairs[shuffledRight[i]];
+        if (pairRight == undefined) {
             throw("Pair is undefined");
         }
         const boxRight = document.createElement('div');
         boxRight.classList.add('box');
-        boxRight.textContent = pickRandomSplitEntry(pair.value, ',');
+        boxRight.textContent = pickRandomSplitEntry(pairRight.value, ',');
         boxRight.addEventListener('click', () => boxClickHandler('right', boxRight));
         boxRight.hiddenValue = shuffledRight[i];
         rightColumn.appendChild(boxRight);
@@ -499,8 +557,8 @@ function showHideHist() {
 
 
 loadSession();
-// Call displayAllPairs function when the page loads
-window.onload = displayAllPairs();
+// Call displayAllPairsOnLoad function when the page loads
+window.onload = displayAllPairsOnLoad();
 window.onfocus = onFocus;
 window.onblur = onBlur;
 getEl('gitsha').innerText = `SHA: ${gitsha}`;

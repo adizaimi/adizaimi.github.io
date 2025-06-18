@@ -1,3 +1,3 @@
-const gitsha = 'edfd4f2';
-const version = '2025-03-20 20:23:20 -0400';
+const gitsha = 'e77d899';
+const version = '2025-06-17 20:58:15 -0400';
 console.log('Version:', version);
