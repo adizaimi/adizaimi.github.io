@@ -455,6 +455,7 @@ et kjøpesenter/kjøpesenteret -- the shopping center, mall
 kjøpte          -- bought : vi har kjøpt et hus -- we have bought a house
 kjører/å kjøre  -- to drive : kjøre oss ned -- drive us down (easy search kjorer) : kjør sakte -- drive slowly
 kjørte          -- drove
+krøring         -- driving : farlig kjøring -- dangerous driving
 et kjøtt/kjøttet -- the meat : (easy search: kjottet) jeg spiser kjottet
 klær/klæren/klærne -- clothes :  (easy search: klaer)
 en klesbutikk/klesbutikken/klesbutikker/klesbutikkene -- the clothing store
@@ -526,6 +527,7 @@ senere          -- later
 senest          -- latest
 av              -- of : (en av dem -- one of them)
 tror            -- believe : tror du -- do you think?
+trodde          -- believed
 en drit/dritten -- shit
 selvfølgelig    -- surely : of course
 fortsatt        -- still
@@ -1004,7 +1006,7 @@ spørt           -- asked
 spurt           -- asked
 spor/å spore    -- to track, to trace
 et spor/sporet/spor/sporene -- the track : følg disse spor -- follow these tracks
-førerkort       -- drivers license : (easy search forerkort)
+et førerkort/førerkortet -- the drivers license : (easy search forerkort)
 lokomotivforeren -- the locomotive driver
 e_postadressen  -- the email : en e-postadresse/e-postadressen/
 datamaskinen    -- the computer : en datamaskin/datamaskinen
@@ -1085,6 +1087,7 @@ bra jobba       -- well done
 praktisk/praktiske -- practical
 et tre/treet/trær/trærne -- the tree : eplertrærne -- apple trees
 viser/å vise    -- to show : viser du meg -- show me
+viste           -- showed
 farlig/farlige  -- dangerous : (-e pl)
 farligere       -- more dangerous
 savner/å savne  -- to miss : jeg savner deg -- i miss you
@@ -1320,7 +1323,7 @@ lukter/å lukte  -- to smell : bie ere
 en mus/musen/mus/musene -- the mouse
 en ulv/ulven/ulver/ulvene -- the wolf
 en veterinær/veterinæren/veterinæren/veterinærene -- the veterinary : 
-et bånd/båndet/bånd/båndene -- the leash, ribbon
+et bånd/båndet/bånd/båndene -- the leash, ribbon, tie, bond
 agurktid        -- slow news season : (cucumber time)
 folk            -- people
 sist/siste      -- last, last : hvem kom sist -- who came last, siste gang -- last time 
@@ -1646,6 +1649,20 @@ snur/ø snu      -- to turn : snur seg -- turn around
 snudde          -- turned : snudde seg -- turned around
 ulik/ulike      -- different, dissimilar
 magen           -- the stomach
+avslører/å avsøre -- to expose, reveal
+avslørte        -- exposed
+resten          -- the rest
+ifølge          -- according to
+leker/å lekke   -- to leak
+lekket          -- leaked
+en regjering/regjeringen -- the government
+et budsjett/budsjettet -- budget
+strammer/å stramme -- to tighten : strammer in budsjettet -- tighten the budget
+gjelder/å gjelde -- to apply
+erkjenner       -- to admit
+overgrepen/overgrepene -- abuse
+et offer/offeret/ofrene -- the victim
+et råd/rådet    -- the advice
 
 ##
 
@@ -1741,14 +1758,13 @@ levert          -- delivered
 fnyser          -- to snort, gërrhij
 undersøker      -- to investigate
 friheten        -- the freedom : en frihet/friheten
-velger          -- to choose
 foran           -- before, over: velger foran penger -- freedom over money, foran i toget -- at the front of the train
 ansvaret        -- responsability
 risiko          -- risk
 reelt           -- real
 beskytte        -- to protect
 beskytter       -- guardian
-våkner          -- to wake up
+våkner          -- to wake up : (easy search vakner)
 våknet          -- woke
 målene          -- goals
 nå              -- to reach : å nå
@@ -1945,13 +1961,11 @@ mellom          -- between
 forsyner        -- to supply
 tjuven          -- thief
 utvikling       -- development
-regjeringen/en regjering -- the government
 rasar           -- to rage
 vindkraften     -- the wind power
 rettssaken      -- the trial : (lit. right case -- ceshtje drejtsie)
 samboeren       -- the roommate : (lit. live together)
 halsen          -- the neck
-siktet          -- charged : with crime
 melding         -- release
 held fram       -- continues
 grensen         -- border
@@ -1973,7 +1987,6 @@ helligdagen/holligdager -- the holiday
 bortføring      -- abduction
 barnebolig      -- childrens home : befotrof
 frelst          -- saved
-rådet           -- advice
 funker          -- to work : punon
 skynder         -- to hasten
 har slåss       -- have fought
@@ -1983,5 +1996,46 @@ glante          -- glared
 kikket          -- looked : kikket ut -- looket out
 trakk           -- pulled
 fregnene        -- the freckles
+kutter/å kutte  -- to cut
+dømmer/å dømme  -- to sentence, convict
+dømt            -- sentenced, convicted
+fengsel         -- prison
+likestillingslov -- gender equality law
+skutt           -- shot: ble skutt -- was shot
+idrettshallen   -- the sports center
+idrett          -- physical activity
+gjeng           -- gang, criminal group
+siktet          -- charged : with crime
+tilltalt        -- charged
+kriminell       -- criminal
+forsvareren     -- defense attorney
+et antall/antallet -- the number, quantity
+saksøker        -- to sue
+etterforsker    -- to investigate
+mistenkte       -- suspect
+leven           -- stir, fuss, commotion
+opprør          -- uproar
+endrer          -- to change, modify
+nedgang         -- decline
+vekst           -- growth
+samtaler        -- conversations
+vold            -- violence
+å nekte         -- deny
+adgang          -- entry, access
+løslates        -- is released
+forakt          -- contempt
+hettejakke      -- hoodie
+utløse          -- trigger
+skadd           -- injured
+eksplosjon      -- explosion
+advart          -- warned
+herjet          -- devastated
+fødte           -- borne
+avbrutt         -- interrupted
+et mareritt/marerittet -- the nightmare
+en straffe/straffen        -- the penalty
+tenåring        -- teenager
+mindreåring     -- minor child
+et nederlage/nederlaget -- the defeat
 
 
