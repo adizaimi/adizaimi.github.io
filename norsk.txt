@@ -83,6 +83,7 @@ best            -- best : beste pappa -- the best dad
 enn             -- than : mindre enn -- less than
 en ost/osten    -- the cheese
 en fisk/fisken/fisker/fiskene -- the fish
+en fisker/fiskeren -- the fishermen
 en mat/maten    -- the food
 lager/å lage    -- to make
 lager mat       -- to make food, cook
@@ -101,7 +102,7 @@ en lyd/lyden/lyder/lydene -- sound
 en regning/regningen/regninger/regningene -- the bill, account
 en servitør/servitøren/servitører/servitørene -- the waiter : servitøren har regningen -- the waiter has the bill
 ser/å se        -- to see : jeg ser etter -- i'm looking for
-ser ut          -- looks, dukem : hun ser trist ut -- she looks sad
+ser ut          -- looks, appears : hun ser trist ut -- she looks sad
 ser frem        -- look forwards
 så              -- saw : did see : så du det -- did you see that?
 så frem         -- was looking forwards
@@ -195,7 +196,7 @@ skriver/å skrive -- to write :
 skriver ut      -- to print
 skrev           -- wrote : did write, was writing
 skrevet         -- wrote : har skrevet -- has written
-skrivere        -- the printers
+en skiriver/skriveren/skrivere -- the printers
 leser/å lese    -- to read
 leste           -- read : did read
 lest            -- read : har lest -- have read
@@ -361,7 +362,7 @@ nyere           -- newer
 nyeste          -- newest
 en minibank/minibanken -- the ATM
 en bank/banken  -- the bank 
-journalist      -- a journalist
+en journalist/journalisten -- the journalist
 en advokat/advokaten/advokater/advokatene -- a lawyer
 et universitet/universitetet -- the university
 januar          -- January
@@ -475,7 +476,7 @@ en krefte/kreften/kreftene -- the force, craft, power
 et uhell/uhellet -- the accident : misshap
 en ulykke/ulykken -- the accident
 kødder du       -- are you f*cking
-hele/helt       -- whole, totally, completely, all the way : hele tida -- all the time , hele dagen -- the whole day
+hele/helt       -- whole, totally, completely : hele tida -- all the time , hele dagen -- the whole day
 sikker/sikkert/sikre -- surely: me siguri : helt sikkert -- definitely
 forsiktig/forsiktige -- careful
 neste           -- next : (adj)
@@ -607,7 +608,7 @@ ingenting       -- nothing : takk for ingenting -- thanks for nothing
 ingen           -- noone : jeg er ingen mann -- i'm no man
 en ting/tingen/tinger/tingene -- the thing : ting tar tid -- things take time
 varet           -- the weather
-sol             -- me diell, sunny : det er sol (sola)
+sol             -- sunny : det er sol (sola)
 en sol/solen    -- the sun
 regner          -- to rain : det regner, regner jeg med -- I reckon
 snør            -- to snow : det snør
@@ -732,6 +733,7 @@ en adress/adressen/adresser/adressene -- the adress
 gjentar/å gjenta -- to repeat : historien gjentar seg -- history repeats itself
 deler/å dele    -- to split, divide, share : deler reiginingen -- split the bill, deler tiden med -- share time with
 en del/delen/deler/delene -- the piece, part
+deler ut        -- distribute
 en familie/familien/familier/familiene -- the family
 en supp/suppen/supper/suppene -- the soup
 nervøs          -- nervous
@@ -805,7 +807,7 @@ grillet         -- grilled
 en grillfeste/grillfesten -- the barbequeue
 skitten         -- dirty
 en baby/babyen  -- the baby
-et barn/barnet/barn/barna -- the child : det er barnets te -- that the child's tea.}}+
+et barn/barnet/barn/barna -- the child : det er barnets te -- that the child's tea.
 et barnebarn/barnebarnet/barnebarn/barnebarna -- the grandchild
 en historie/historien/historier/historiene -- the history
 fransk          -- french
@@ -989,7 +991,7 @@ fordi           -- because
 løper/å lope    -- to run : løp -- run!
 våte/vatt       -- wet : de er vått ute -- its wet outside
 maraton         -- marathon
-meter           -- meter : meters : en meter//meter
+meter           -- meter : meters : en meter/meter
 kilometer       -- kilometer
 sykler/å sykle  -- to ride : (bicycle) 
 kjedelig         -- bored : jeg hard de skedlig,
@@ -1072,6 +1074,8 @@ rydder          -- to tidy
 ryddet          -- tidied
 et hysarbeide/hysarbeidet/hysarbeider/hysarbeidene -- the chore, housework
 arbeidet        -- the work
+arbeider/å arbeide -- to work
+arbeidet        -- worked : har arbeidet
 kua             -- the cow : en ku/kua  ( ei ku)
 spansk          -- spanish : spania -- spain
 bagasjen        -- the luggage : en bagajse/bagajsen
@@ -1087,6 +1091,7 @@ bra jobba       -- well done
 praktisk/praktiske -- practical
 et tre/treet/trær/trærne -- the tree : eplertrærne -- apple trees
 viser/å vise    -- to show : viser du meg -- show me
+vis             -- show
 viste           -- showed
 farlig/farlige  -- dangerous : (-e pl)
 farligere       -- more dangerous
@@ -1097,7 +1102,7 @@ gitt            -- given: har gitt
 en skole/skolen/skoler/skolene -- the school
 en post/posten  -- the mail
 et postkontor/postkontoret -- the postoffice
-en bygning/bygningen//bygningene -- the building
+en bygning/bygningen/bygningene -- the building
 bruker/å bruke  -- to use: to spend, to wear : ikke bruke bilen -- dont use the car : bruker penger på -- spend money on
 brukte          -- used, spent
 bruk            -- use : gjøre bruk -- make use
@@ -1355,7 +1360,7 @@ en rockekonsert/rockekonserten/rockekonserter/rockekonsertene -- the rock conser
 en fyr/fyren/fyrer/fyrene -- the guy
 en trom/trommen/trommer/trommene -- the drums
 en musiker/musikeren/musikere/musikerne -- the musician
-en scene/scenen/scener/scenene -- the stage : skena
+en scene/scenen/scener/scenene -- the stage, scene : skena
 en smarttelefone/smarttelefonen/smarttelefoner -- the smart phone
 favorittseng    -- favorite song
 et album/albumet/album/albumene -- the album
@@ -1467,6 +1472,7 @@ et dekk/dekket/dekkene -- the tire
 flat/flatt      -- flat : et flatt dekk -- a flat tire
 skifter/å skifte -- to change : to shift
 skiftet         -- changed
+et skift/skiftet -- the shift
 en mekaniker/mekanikeren/mekanikerne -- the mechanic
 et brev/brevet/brev/brevene -- the letter
 et konvolutt/konvolutten -- the envelope
@@ -1544,7 +1550,7 @@ kleshengere/kleshengerne -- clothes hangers
 oppholder/å oppholde -- to reside, occupy : oppholder oss
 campusen        -- the campus
 internasjonale  -- international
-et laken/lakenet/laken/lakene -- the sheet
+et laken/lakenet/laken/lakenene -- the sheet
 ved siden av    -- next to
 en vifte/viften/vifter/viftene -- the fan
 en vegg/veggen/vegger/veggene -- the wall
@@ -1630,10 +1636,10 @@ klarer/å klare  -- to manage, be able : to handle, to clear :  jeg klarer ikke 
 kom til ro      -- calmed down
 rabatt          -- discound
 spennende       -- exciting
-pensjonist      -- rediree
+pensjonist/pensonister      -- retiree
 foruten         -- besides
 torg            -- squares, plazzas
-en klassiker    -- a classic
+en klassiker/klassikeren/klassikerne -- the classic
 undertekster    -- subtitles
 skynd           -- hurry
 utgangen        -- the exit
@@ -1656,13 +1662,56 @@ ifølge          -- according to
 leker/å lekke   -- to leak
 lekket          -- leaked
 en regjering/regjeringen -- the government
-et budsjett/budsjettet -- budget
+et budsjett/budsjettet -- the budget
 strammer/å stramme -- to tighten : strammer in budsjettet -- tighten the budget
 gjelder/å gjelde -- to apply
 erkjenner       -- to admit
 overgrepen/overgrepene -- abuse
 et offer/offeret/ofrene -- the victim
 et råd/rådet    -- the advice
+råd             -- afford : har du råd til leien din -- can you afford your rent?
+slipper/å slippe -- to not have to
+feier/å feie    -- to sweep
+feide           -- sweeped
+pipa            -- the pipe
+bretter/å brette -- to fold
+brettet         -- folded : did fold
+gjesterommet    -- the guestroom
+blaskeåpnere    -- the bottle opener
+en støvsuger/støvsugeren -- the vacuum cleaner
+et strykebrett/strykebrettet -- the ironing board
+stryker/å stryke -- to iron
+rekker          -- have time : rekker vi å lage mat -- do we have time to prepare food?
+forsikring      -- insurance
+bilenforsikringen -- the car insurance
+toalettpapiret  -- the toiletpaper
+en handleliste/handlelisten -- the shopping list
+et vaskemiddele/vaskemiddelet -- the detergent
+vasker opp      -- to wash the dishes
+orker           -- to be up for : orker du -- are you up for it?
+en terapeut/terapeuten/terapeuter -- the therapist
+et yrke/yrket/yrker -- the profession
+utdanning       -- education : hoyere utdanning -- higher education
+uttdannelse     -- education : hoyere utdannelse
+yrkesutdannelse -- vocational education
+en hoyskole/hoyskolen -- the university
+morkenskiftet   -- the morning shift
+nattskiftet     -- the night shift
+en rapport/rapporten/rapportene -- the report
+en handling/handlingen -- the plot : movie or book
+profesjonell    -- professional
+en politibetjent/politibetjenten -- the policeman
+sjefete         -- bossy
+et produkt/produktet -- the product
+kopier  -- the copies
+et prosjekt/prosjektet -- the project
+en soldat/soldaten -- the soldier
+ferdigheter -- skills
+en arkitekt/arkitekten -- the architect
+internasjonalt -- internationally
+gleder         -- to look forward
+en oppfølger/oppfølgeren -- the sequel
+begynnelser -- the beginning
 
 ##
 
@@ -1714,7 +1763,6 @@ juks            -- cheating
 mistenkt        -- suspected
 opplever        -- to experience : får opleve -- to enjoy the experience
 utestengt selv  -- be banned
-utdanning       -- education : hoyere utdanning -- higher education
 hovn            -- revenge
 forestiller     -- to represent : å forestille
 forestiller deg -- to imagine
@@ -1846,7 +1894,7 @@ forklarte       -- explained : did explain
 forklart        -- explained : har forklart
 forkjente       -- did deserve
 handlet om      -- was about
-rotet           -- the mess : et rot/rotet : for et rot -- what a mess!
+et rot/rotet    -- the mess, clutter : et rot/rotet : for et rot -- what a mess!
 tidspunktet     -- the moment : point in time : et ditspunkt/tidspunktet
 skyndte         -- hurried
 hundrevis       -- hundreds
