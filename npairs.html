@@ -8,9 +8,18 @@
 <style>
     body {
         font-family: Arial, sans-serif;
-        color: cyan;
+        color: #FFA000;
         text-align: center;
         background-color: black;
+        /* iOS home screen app fixes */
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+        /* Prevent zoom on iOS */
+        -webkit-text-size-adjust: 100%;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
     }
     .container {
         margin: auto;
@@ -70,6 +79,35 @@
         justify-content: center;
         text-align: left;
     }
+
+
+    /* iOS home screen app specific styles */
+    @media screen and (display-mode: standalone) {
+        body {
+            /* Larger fonts for home screen app */
+            font-size: 16px;
+        }
+
+        .word {
+            font-size: 24px !important;
+            padding: 15px !important;
+        }
+
+        .toggle-label {
+            font-size: 14px !important;
+        }
+
+        .autospeak-toggle {
+            width: 50px !important;
+            height: 25px !important;
+        }
+
+        .autospeak-toggle::before {
+            width: 21px !important;
+            height: 21px !important;
+        }
+    }
+
 </style>
 </head>
 <body>
