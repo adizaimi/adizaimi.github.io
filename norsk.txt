@@ -62,6 +62,7 @@ her             -- here
 hitt            -- here
 der             -- there : (der er det -- there it is)
 mer             -- more
+flest           -- most
 med             -- with : reiste med buss -- travelled by bus, med meg, med deg, med ham/med henne, med oss, med dere, med dem
 men             -- but
 ikke            -- not : hører ikke -- do not hear
@@ -120,6 +121,7 @@ snill/snillt/snille -- kind, nice : en snilt hus : er du snill -- if you please
 snillere        -- kinder
 snillest        -- the kindest
 smart           -- smart
+smartere        -- smarter
 stressende      -- stressful
 stress          -- the stress : det er mye stress -- that is a lot of stress
 stress          -- to stress
@@ -128,6 +130,7 @@ vanskelig/vanskelige -- difficult: (-e pl)
 lett            -- easy, light : Norsk er lett å lære -- norwegian is easy to learn , denne er ganske lett -- this is fairly light
 lettere         -- easier
 interessant     -- interesting
+en interess/interesseren/interesser -- the intereset
 en jobb/jobben  -- the job
 jobber/å jobbe  -- to work : jobber med -- working on
 jobbet          -- worked
@@ -143,6 +146,7 @@ høyre           -- right : (til hoyre -- to the right)
 venstre         -- left : til venstre
 drikker/å drikke -- to drink, drinking : ikke drikk -- dont drink
 en drikk/drikken/drikker/drikkene -- the drink :
+drinken                         -- the drink
 drakk           -- drank
 vannen          -- water : vann/vannen
 et vann/vannet  -- the water : jenta drikker vannet -- the girl is drining the water
@@ -211,7 +215,7 @@ forstår/å forstå -- to understand : forstår norsk
 forstod         -- understood
 et land/landet/land -- the country
 en landsby/landsbyen -- the village
-en by/byen      -- the city
+en by/byen/byene      -- the city
 en te/teen      -- the tea
 en katt/katten/katter/kattene -- the cat
 en hund/hunden/hunder/hundene -- the dog
@@ -403,7 +407,7 @@ i overmorgen    -- day after tomorrow
 i år            -- this year
 i fjor          -- last year : i hele fjor -- all of last year
 i nærheten      -- nearby : (easy search nerheten narheten)
-nær/nærme       -- near : (pl)
+nær/nærme       -- near, close: (pl)
 nærmest         -- nearest
 en tid/tiden    -- the time : har du tid
 gjør/å gjøre    -- to do : hva gjør du (easy search gjor/gjore)
@@ -479,7 +483,7 @@ kødder du       -- are you f*cking
 hele/helt       -- whole, totally, completely : hele tida -- all the time , hele dagen -- the whole day
 sikker/sikkert/sikre -- surely: me siguri : helt sikkert -- definitely
 forsiktig/forsiktige -- careful
-neste           -- next : (adj)
+nest/e           -- next, second : (adj)
 nesten          -- almost : (adv)
 det eneste      -- the only thing
 seg selv        -- them selves
@@ -623,6 +627,7 @@ kald/kaldt/kaldene -- cold : det er kaldt : kaldere -- colder
 varm/varmt/varme -- hot : det er varmt
 synger/å synge  -- to sing
 en sang/sangen/sanger/sangene -- the song
+sang            -- sang : (past)
 et kor/koret    -- the choir
 alltid          -- always
 jogger/å jogge  -- to jog
@@ -742,7 +747,7 @@ vond/vondt      -- hurt, pain : en vond fot -- a sore foot, vondt i hodet -- hea
 trist/triste    -- sad
 glad/glade      -- happy : (-e m, pl) : jeg er glad i deg -- I love you!
 mindre          -- less, smaller : mer eller mindre -- more or less
-minste          -- smallest, least : den miste leiligheten -- the smallest appartment
+minste          -- smallest, least : den minste leiligheten -- the smallest appartment
 minst           -- at least : du må vente minst en time -- you must wait at least an hour
 i hvert fall    -- at least, in any case
 smaker/å smake  -- to taste, tastes
@@ -844,6 +849,7 @@ oransje         -- orange color
 gul/gult/gule   -- yellow : huset er gult
 grå/grått/grå   -- gray : det er grått -- its gray, byen er ful av grå hus -- the city is full of gray houses
 blå/blått/blå   -- blue : et blått hus
+blåere          -- more blue
 lyseblå         -- light blue
 rosa            -- pink
 brun/brunt/brune-- brown
@@ -879,7 +885,7 @@ en flybillete/flybilleten -- the plane ticket
 en bokhandel/bokhandelen/bokhandeler/bokhandelene -- the bookstore
 en utflukt/utflukten/utflukter/utfluktene -- the excursion
 en ettermiddag/ettermiddagen/ettermiddager/ettermiddagene -- the afternoon
-en respsjon/respsjonen/respsjoner/respsjonene -- the reception desk
+en resepsjon/respesjonen/resepsjoner/resepsjonene -- the reception desk
 en balkong/balkongen/balkonger/balkongene -- the balcony
 et treningssenter/treningssenteret/treningssenterer/treningssenterene -- the gym
 et vindu/vinduet/vinduer/vinduene -- the window
@@ -1102,7 +1108,7 @@ gitt            -- given: har gitt
 en skole/skolen/skoler/skolene -- the school
 en post/posten  -- the mail
 et postkontor/postkontoret -- the postoffice
-en bygning/bygningen/bygningene -- the building
+en bygning/bygningen/bygningene/bygninger -- the building
 bruker/å bruke  -- to use: to spend, to wear : ikke bruke bilen -- dont use the car : bruker penger på -- spend money on
 brukte          -- used, spent
 bruk            -- use : gjøre bruk -- make use
@@ -1146,6 +1152,7 @@ dokumentarer    -- the documentaries
 tegner/å tegne  -- to draw
 tegnefilm       -- cartoon :tegnefilm/tegnefilmer/
 hviler/å hvile  -- to rest
+hvile           -- the rest
 en partner/partneren -- the partner
 en ambassade/ambassaden -- the embassy
 ærend           -- erand : (easy search arend)
@@ -1206,7 +1213,7 @@ ro              -- peace
 rolig           -- calm, calmly
 urolig          -- disturbed
 en gavekort/gavekorten -- the giftcard
-et smørbrød/smørbødet -- the sandwitch
+et smørbrød/smørbrødet -- the sandwitch
 en sitron/sitronen/sitroner/sitronene -- the lemon
 en kokk/kokken/kokker/kokkene -- the cook
 kokker          -- to cook
@@ -1306,7 +1313,7 @@ celsius         -- celcius
 gjennom         -- through
 leiebilen       -- the rental car
 forlater/å forlate -- to leave : forlat nå -- leave now!
-forlot          -- left
+forlot          -- left, fled
 en klokke/klokken/klokker/klokkene -- the watch : clock
 vekkerklokken   -- the alarm clock  : en vekkerklokke/vekkerklokken
 en rutine/rutinen/rutiner/rutinene -- the routine
@@ -1332,7 +1339,7 @@ et bånd/båndet/bånd/båndene -- the leash, ribbon, tie, bond
 agurktid        -- slow news season : (cucumber time)
 folk            -- people
 sist/siste      -- last, last : hvem kom sist -- who came last, siste gang -- last time 
-mister/å miste  -- to loose, miss : jeg mister nøklene
+mister/å miste  -- to loose, miss, drop : jeg mister nøklene
 mistet          -- lost : har mistet, jeg mistet bussen -- I missed the bus
 ligger/å ligge  -- to lie : hvor ligger spania -- where is (lies/located) spain
 ligget          -- lay, was lying : ke qenë, katten har ligget på sofaen -- the katt has been lying on the sofa
@@ -1438,7 +1445,7 @@ forleden        -- the other : forleden kveld -- the other night
 et kart/kartet  -- the map
 innflyttingsfest-- house warming party
 overfor         -- accross
-spesielt        -- especially
+spesielt/spesiell        -- special, especially
 typisk          -- typical
 kvadratmeter    -- square meters
 en pølse/pølsen/pølser/pølsene -- the sausage
@@ -1463,11 +1470,11 @@ vinmonopolet    -- the wine monopoly
 utsikten        -- the view
 uvanlige        -- unusual
 opp til meg     -- up to me
-sender/å sende  -- to send : send meg -- send me
+sender/å sende  -- to send, pass : send meg -- send me
 sendte          -- sent
 mater/å mate    -- to feed
 et postkort/postkortet -- the postcard
-tjeneste        -- favor
+tjenesten/en tjeneste        -- the favor
 et dekk/dekket/dekkene -- the tire
 flat/flatt      -- flat : et flatt dekk -- a flat tire
 skifter/å skifte -- to change : to shift
@@ -1561,6 +1568,7 @@ vannkoker       -- water boiler
 ler/å le        -- to laugh
 lo              -- laughed
 forelsket       -- in love : jeg er forelsket -- i'm in love
+forelsker       -- to fall in love 
 himmelen/en himmel -- the heaven : åpen himmel -- open sky
 mennesker       -- people
 ensomt/ensomme  -- lonely : (-me pl)
@@ -1653,6 +1661,7 @@ sjokkerende     -- shockingly
 eksamen         -- the exam
 snur/ø snu      -- to turn : snur seg -- turn around
 snudde          -- turned : snudde seg -- turned around
+like            -- same, similar
 ulik/ulike      -- different, dissimilar
 magen           -- the stomach
 avslører/å avsøre -- to expose, reveal
@@ -1704,14 +1713,93 @@ en politibetjent/politibetjenten -- the policeman
 sjefete         -- bossy
 et produkt/produktet -- the product
 kopier  -- the copies
+kopierte            -- copied: did copy
 et prosjekt/prosjektet -- the project
 en soldat/soldaten -- the soldier
-ferdigheter -- skills
+ferdigheter/ferdigheter -- the skill
 en arkitekt/arkitekten -- the architect
 internasjonalt -- internationally
 gleder         -- to look forward
 en oppfølger/oppfølgeren -- the sequel
 begynnelser -- the beginning
+en elbutikk/elbutikken -- the electronics store
+et område/området -- the area
+en reiseadapter/reiseadapteren. -- the travel adapter
+en stikkontakt/stikkontakten    -- the power outlet
+stinker/å stinke                -- to stinke
+en øredobb/øredobben/øredobbene            -- the earring
+sjenert                         -- shy
+knuser/å knuse                  -- smash
+knuste                          -- smashed
+talentfull                      -- talented
+tålmodig                        -- patient
+sjenert                         -- shy
+tynn/tynne                      -- thin
+pels                            -- fur
+tykk                            -- thick, fat
+mote                            -- fashion
+kreativ                         -- creative
+fysiker/fysikerne               -- the physicist
+et laborator/laboratoriet       -- the laboratory
+Nederland                       -- the netherlands
+kinesisk                        -- Chinese
+sampler på                      -- to collect
+gal                             -- crazy
+farge                           -- color
+fargerik/e/t                    -- colorful
+frisøren                        -- the hair dresser
+lyseblå                         -- lightblue
+mørkebrunt                      -- darkbrown
+bar                             -- mustache
+støvel/stolver                  -- the boot
+armbånd                         -- bracelet
+en gaffel/gaffler               -- the fork
+en skjer/skjeren                -- the spoon
+en kniv/kniven                  -- the knive
+tørker                          -- to dry : easy search (torker)
+foreslår                        -- to propose, suggest
+foreslått                       -- suggested
+kålen                           -- the cabbage
+en vaske/vasken                 -- the sink
+politiet                        -- the police
+bruksanvisningen                -- the user manual
+en drage                        -- the kite 
+papiret                         -- the paper 
+trampoline                      -- trampoline 
+danser/dansere                    -- dancer
+uutholdelig                     -- unbearable 
+hopp                            -- jump 
+varme                           -- warmth 
+krakken                         -- the stool
+barkrakken                      -- the bar stool
+en ide/idden/ideer                       -- the idea
+nachspielet                     -- the afterparty 
+vorspielet                      -- the pre-party
+en rotte/rotten                 -- the rat
+romantisk                       -- romantic
+i natt                          -- last night
+fulle                           -- drunk
+gredder/å gredde                -- to comb
+grer                            -- to comb
+bartendere                      -- the bar tenders
+barberer/å barbere              -- to shave
+puss                            -- to brush
+en tannbørste/tannbørsten       -- the toothbrush
+venninner                       -- female friends
+en klubb                        -- club
+kul                             -- cool
+kar                             -- fellow, guy 
+flørter                         -- to flirt
+dikt                            -- poem 
+interessert                     -- inderested
+innbyggerne                     -- the innhabitant
+Nordmenn                        -- Norwegians
+fylke/fylker                    -- the county
+en ostehøvel                    -- the cheesecutter
+kyst/kystene                    -- the coast
+
+
+
 
 ##
 
@@ -1736,7 +1824,6 @@ befolkningen    -- population
 herjer          -- reign
 lovløshet       -- lawlessness
 øde             -- desolate
-kar             -- fellow
 avhenger        -- depends
 anbefales       -- reccomended
 kjappa          -- quick : kjappa på --
@@ -1781,7 +1868,6 @@ slår/å slå      -- to turn, to turn back: kthehu
 slår av         -- to turn off : å slå av lyset -- to turn off the light
 slår            -- to beat: rreh
 slår opp        -- to look up : in a book, research
-foreslår        -- to propose
 slår av         -- turn off
 slår opp/slå opp -- look up : slå det opp -- look it up
 troen           -- the faith : en tro/troen (also troa)
@@ -1862,9 +1948,10 @@ slappe av       -- to relax : to chill
 stå på ski      -- to go skiing
 henger          -- to hang: å henge : å henge opp klær -- hang clothes
 hengt           -- hung : har hengt
-dekker          -- to prepare : å dekke : å dekke bordet -- to prepare the table
+dekker/å dekke    -- to prepare, cover :  : å dekke bordet -- to prepare the table
 suger           -- to suck : å suge
-støvsuger       -- to vacuum : to dustsuck
+støvsuger/å støvsuge      -- to vacuum : to dustsuck
+støvsugde       -- vacuumed 
 oppvasken       -- dishes : å ta oppvasken -- to wash the dirty dishes
 tørker          -- remove : å tørke : å tørke støv -- to remove dust
 kniv            -- knife
@@ -2013,7 +2100,7 @@ rasar           -- to rage
 vindkraften     -- the wind power
 rettssaken      -- the trial : (lit. right case -- ceshtje drejtsie)
 samboeren       -- the roommate : (lit. live together)
-halsen          -- the neck
+halsen          -- the neck, throat
 melding         -- release
 held fram       -- continues
 grensen         -- border
@@ -2085,5 +2172,3 @@ en straffe/straffen        -- the penalty
 tenåring        -- teenager
 mindreåring     -- minor child
 et nederlage/nederlaget -- the defeat
-
-
